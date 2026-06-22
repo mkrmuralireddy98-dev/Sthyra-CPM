@@ -1,0 +1,26 @@
+{
+ "model": "colmap/sparse",
+ "n_cameras": 307,
+ "n_points": 54066,
+ "floor_rms_sfm": 0.06513320639783726,
+ "ceiling_rms_sfm": 0.07129479591611709,
+ "floor_tilt_deg": 0.47,
+ "ceiling_tilt_deg": 0.47,
+ "floor_ceiling_parallax_deg": 0.94,
+ "ceiling_height_sfm": 1.8814377510911788,
+ "cam_above_floor_sfm": 0.6666159412262236,
+ "walls": [],
+ "wall_planes_found": 0,
+ "wall_geometry_recoverable": false,
+ "dominant_planes_all_horizontal": true,
+ "plan_px_per_m": {
+  "x": 15.5,
+  "y": 239.6
+ },
+ "scale_m_per_sfm_planreg": 1.7654,
+ "scale_m_per_sfm_camH1p45": 2.1752,
+ "ceiling_height_m": 3.32,
+ "cam_above_floor_m": 1.18,
+ "floor_flatness_mm": 115.0,
+ "ceiling_flatness_mm": 125.9
+}

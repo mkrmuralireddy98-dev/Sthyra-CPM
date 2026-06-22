@@ -1,0 +1,567 @@
+[
+ {
+  "tag": "t00",
+  "area": "Reception / entrance",
+  "doors": [
+   {
+    "type": "glass-frameless",
+    "width_mm": 925,
+    "height_mm": 2100,
+    "standard_match": "matches 900x2100",
+    "confidence": 0.55
+   },
+   {
+    "type": "opening-only",
+    "width_mm": 900,
+    "height_mm": 2075,
+    "standard_match": null,
+    "confidence": 0.5
+   }
+  ],
+  "walls": [
+   {
+    "which": "Glazed external wall (window line with glass railing, overlooking road) \u2014 N/W side",
+    "plumb": "plumb",
+    "finish_quality": "good",
+    "flatness": "flat",
+    "issues": "Full-height aluminium-mullion glazing reads vertical against the frameless door mullions; glass safety railing aligned. No obvious defects, though severe panoramic distortion limits a strict plumb check."
+   },
+   {
+    "which": "White plastered feature wall with faceted/triangulated panels + vertical wooden batten (terracotta) cladding behind reception desk",
+    "plumb": "plumb",
+    "finish_quality": "good",
+    "flatness": "flat",
+    "issues": "Geometric panel joints and batten lines look clean and evenly spaced; paint finish even. This is the best-finished surface in the room."
+   },
+   {
+    "which": "White wall / column at stair corner near lift (y180)",
+    "plumb": "slight-lean",
+    "finish_quality": "poor",
+    "issues": "Clear snag: raw, unfinished plaster at the vertical jamb/corner edge \u2014 loose cementitious patch, uneven hacked edge and a vertical crack/gap along the corner that has not been finished or painted. Skirting/junction at this corner incomplete."
+   },
+   {
+    "which": "White return wall / column beside interior opening to workspace (y090)",
+    "plumb": "plumb",
+    "finish_quality": "fair",
+    "issues": "Broad flat painted wall; a faint vertical seam/hairline visible mid-wall and minor patchiness, otherwise acceptable."
+   }
+  ],
+  "room_dim_check": {
+   "plan_dims": "23'4\" x 17'6\" (7.11 x 5.33 m)",
+   "est_clear_width_m": 7,
+   "est_clear_depth_m": 5.2,
+   "looks_consistent": true,
+   "note": "Counting large-format floor tiles (~800 mm) along the long glazed axis gives roughly 8-9 tiles (~6.5-7.2 m), consistent with the 7.11 m plan width. The shorter axis (glass wall to feature/desk wall) reads ~6-7 tiles (~5.0-5.4 m), consistent with the 5.33 m depth. Estimate only \u2014 panoramic projection stretches the centre, so treat as a sanity check rather than a measurement."
+  },
+  "corner_squareness": "cannot-tell",
+  "floor_level_visual": "level",
+  "overall_grade": "B (good)",
+  "grade_reason": "Feature walls, glazing and floor are well executed and the room matches plan dimensions, but a raw unfinished-plaster corner with an unsealed crack and incomplete skirting at the stair/lift junction is a clear as-built snag that drops it from A to B.",
+  "quality_issues": [
+   "Raw/unfinished plaster patch and unsealed crack-gap at the white wall corner/jamb beside the stair and lift (y180) \u2014 most prominent snag; needs making-good, skirting completion and paint.",
+   "Skirting/junction at that stair corner is incomplete.",
+   "Faint vertical seam / patchiness on the white return wall by the workspace opening (y090) \u2014 cosmetic.",
+   "Interior workspace opening is an unfinished bare opening (no door leaf/architrave) \u2014 may be by design, but flagged for completeness.",
+   "Door dimensions and room geometry are estimated off heavily distorted 360 frames; no in-frame ruler/known artifact gave a hard scale lock, so confidence is moderate."
+  ],
+  "door_check": true
+ },
+ {
+  "tag": "t02",
+  "area": "reception",
+  "doors": [
+   {
+    "type": "glass-frameless",
+    "width_mm": 850,
+    "height_mm": 2100,
+    "standard_match": "matches 900x2100 / approx",
+    "confidence": 0.5
+   },
+   {
+    "type": "opening-only",
+    "width_mm": 1000,
+    "height_mm": 2300,
+    "standard_match": "non-standard / cannot tell precisely",
+    "confidence": 0.3
+   }
+  ],
+  "walls": [
+   {
+    "which": "Glazed facade (long wall, curtain wall over parapet) - wall_y270 / wall_y000 window line",
+    "plumb": "plumb",
+    "finish_quality": "good",
+    "flatness": "flat",
+    "issues": "Aluminium-framed structural glazing with regular vertical mullions reads true-vertical and well-aligned; horizontal transom level. A decorative curved sweep is part of the design (mesh/blind), not a defect. Glass clean, joints regular. No visible defects."
+   },
+   {
+    "which": "Reception feature wall (faceted off-white plaster + vertical wooden batten dado) - wall_y090",
+    "plumb": "plumb",
+    "finish_quality": "good",
+    "flatness": "flat",
+    "issues": "Geometric faceted plaster panels with crisp reveal lines; vertical timber-batten cladding to dado is evenly spaced and aligned. Panel joint lines are clean and straight. Apparent skew of panel edges is the intended faceted design, not out-of-plumb construction. Good finish."
+   },
+   {
+    "which": "Entry/back wall with glass door + grey accent (white plaster, grey skirting band) - wall_y180",
+    "plumb": "plumb",
+    "finish_quality": "good",
+    "flatness": "flat",
+    "issues": "White painted plaster reads flat under grazing light; door reveal edges vertical. A faint mark/scuff visible on the upper wall but no cracks. Grey base band terminates cleanly. Minor: verify paint touch-up on isolated scuff."
+   },
+   {
+    "which": "Grey accent wall by corridor (smooth render) - wall_y090 right / equirect",
+    "plumb": "plumb",
+    "finish_quality": "fair",
+    "flatness": "slightly-wavy",
+    "issues": "Grey textured/render finish shows mild tonal mottling typical of textured plaster; slight unevenness under raking light but no cracks or open joints. Acceptable for a feature accent."
+   }
+  ],
+  "room_dim_check": {
+   "plan_dims": "Reception 23'4\" x 17'6\" (7.11 x 5.33 m)",
+   "est_clear_width_m": 5.4,
+   "est_clear_depth_m": 7,
+   "looks_consistent": true,
+   "note": "The space reads as a long rectangle with the ~7.1m dimension running along the glazed facade and the ~5.3m dimension across to the reception-desk/feature wall. Using 800mm floor tiles and the two-seater sofas (~1.6-1.8m each) as scale, the lounge zone plus circulation plus desk zone are consistent with ~5.3m clear depth and ~7m length. No gross discrepancy vs plan; estimate carries +/-0.5m uncertainty due to 360 distortion."
+  },
+  "corner_squareness": "cannot-tell",
+  "floor_level_visual": "level",
+  "overall_grade": "A (excellent)",
+  "grade_reason": "High-spec reception: plumb glazing and feature walls, flat finishes, level floor with clean large-format tiling and well-aligned batten ceiling; only minor cosmetic snags (one wall scuff, slight render mottling) and dimensions consistent with plan.",
+  "quality_issues": [
+   "Faceted feature-wall and curved glazing sweep are intentional architecture, not defects - flagged so they are not mis-scored as out-of-plumb work.",
+   "Isolated scuff/mark on upper white wall (wall_y180) - minor paint touch-up snag.",
+   "Grey render accent wall shows mild tonal mottling/slight waviness - cosmetic, acceptable.",
+   "Back corridor door (wall_y090) only partially visible; leaf size not verifiable from these views - recommend a dedicated close shot.",
+   "Wood-batten false ceiling: battens read straight and evenly spaced in equirect/ceiling views; no visible sag, but seam alignment at the white/wood transition should be spot-checked.",
+   "True corner squareness cannot be judged from 360 imagery (panoramic distortion) - flagged as a measurement limitation, not a defect."
+  ],
+  "door_check": true
+ },
+ {
+  "tag": "t05",
+  "area": "reception / curved accent wall",
+  "doors": [
+   {
+    "type": "glass-frameless",
+    "width_mm": 900,
+    "height_mm": 2100,
+    "standard_match": "matches 900x2100",
+    "confidence": 0.6
+   },
+   {
+    "type": "opening-only",
+    "width_mm": 1000,
+    "height_mm": 2100,
+    "standard_match": "non-standard / cannot tell",
+    "confidence": 0.2
+   }
+  ],
+  "walls": [
+   {
+    "which": "Curved accent feature wall (fluted timber dado + render upper, wall y090/y180)",
+    "plumb": "plumb",
+    "finish_quality": "good",
+    "flatness": "flat",
+    "issues": "Design centerpiece, well executed: vertical fluted-timber slats have regular consistent pitch; the angular reveal/groove lines between render panels are straight and crisp; timber-to-render diagonal junction is clean. Render (microcement-style) shows mild tonal variation/patchiness which is characteristic of the finish, not a defect. No cracks or open joints seen."
+   },
+   {
+    "which": "White partition wall with diagonal grey paint feature (wall y180)",
+    "plumb": "plumb",
+    "finish_quality": "good",
+    "flatness": "flat",
+    "issues": "Crisp diagonal paint cut-line between white and grey, no bleed; reads plumb against the glass door frame and glazing mullions used as plumb references. Clean paint finish, no visible roller marks or patchiness at this resolution."
+   },
+   {
+    "which": "Structural glazing / curtain wall to balcony (wall y000/y270)",
+    "plumb": "plumb",
+    "finish_quality": "good",
+    "flatness": "flat",
+    "issues": "Full-height slim-mullion glazing with a sweeping curved head reveal (the design curve). Mullions read vertical/plumb; reveals around the glazing are clean. Curved soffit reveal is smooth and even. Fisheye barrel distortion exaggerates curvature at frame edges."
+   }
+  ],
+  "room_dim_check": {
+   "plan_dims": "Reception / accent-wall zone (no explicit numeric plan dim supplied)",
+   "est_clear_width_m": 6.5,
+   "est_clear_depth_m": 5,
+   "looks_consistent": true,
+   "note": "Open reception lounge: estimated ~6-7 m wide (glazing run) by ~5 m deep from accent wall to glazing, using 600mm floor tiles counted across the floor and the ~3.3m slab height as cross-checks. Generous open-plan volume consistent with a reception/lounge. Estimate is rough due to 360 distortion; floor-tile count gives best confidence."
+  },
+  "corner_squareness": "square",
+  "floor_level_visual": "level",
+  "overall_grade": "A",
+  "grade_reason": "High-quality fit-out: the signature curved/angular accent wall (fluted timber + render) is cleanly executed with straight reveals and regular fluting, glazing and partitions read plumb, tiled floor is level with tight joints, and paint cut-lines are crisp; only minor snags (a dangling cable stub, normal render tonal variation).",
+  "quality_issues": [
+   "Mild tonal/patch variation on the microcement-style render of the accent wall (inherent to finish, cosmetic, not a defect)",
+   "Exposed surface-mounted conduit / hanging wire stub near ceiling at left of wall y090 (a dangling looped cable from the slab) - minor snag, incomplete electrical termination",
+   "360 fisheye distortion limits precise plumb/dimension reads at frame edges; verticals confirmed using mullions and door frame near image centers"
+  ],
+  "door_check": true
+ },
+ {
+  "tag": "t13",
+  "area": "workspace",
+  "doors": [
+   {
+    "type": "glass-framed",
+    "width_mm": 800,
+    "height_mm": 2080,
+    "standard_match": "narrower than standard",
+    "confidence": 0.6
+   },
+   {
+    "type": "flush-wooden",
+    "width_mm": 820,
+    "height_mm": 2050,
+    "standard_match": "cannot tell",
+    "confidence": 0.35
+   },
+   {
+    "type": "opening-only",
+    "width_mm": 900,
+    "height_mm": 2100,
+    "standard_match": "cannot tell",
+    "confidence": 0.35
+   }
+  ],
+  "walls": [
+   {
+    "which": "Grey accent / feature wall (boxed column wall holding framed artwork, wall_y180/y090 junction)",
+    "plumb": "plumb",
+    "finish_quality": "good",
+    "flatness": "flat",
+    "issues": "Crisp external corner; dark-grey painted finish is even with no visible roller marks or patchiness at this exposure. Vertical arris reads true against the glazing mullions. No cracks seen."
+   },
+   {
+    "which": "Black-framed glazed partition (cabin enclosure, wall_y180)",
+    "plumb": "plumb",
+    "finish_quality": "good",
+    "flatness": "flat",
+    "issues": "Slim steel mullions are vertical and parallel; head transom level. Glass clean. Door pivot/threshold hardware neatly set into floor. Minor reflection only - no obvious gaps or misaligned frames."
+   },
+   {
+    "which": "White painted plaster perimeter walls + ceiling soffit (wall_y000)",
+    "plumb": "plumb",
+    "finish_quality": "fair",
+    "flatness": "slightly-wavy",
+    "issues": "Broadly clean white emulsion, but a faint patch/blemish and uneven plaster sheen are visible on the white ceiling soffit near the ceiling fan and around the AC grille; some shadowing suggests minor surface undulation. Cosmetic, not structural."
+   }
+  ],
+  "room_dim_check": {
+   "plan_dims": "~41'8\" (12.7 m) wide floor plate, open workspace, 4 desk clusters",
+   "est_clear_width_m": 12.5,
+   "est_clear_depth_m": 9,
+   "looks_consistent": true,
+   "note": "Open-plan workspace with long bench desks in 4 clusters spanning the plate; the lateral span of desks + circulation reads consistent with a ~12.7m wide plate. Depth (down the room toward the glazed far-end opening) estimated ~8-10m from desk-row counts; treat as approximate - no boxed dimension was given for depth. Large-format vitrified floor tiles (~800mm) and the slab height (~3.3m by SfM) are consistent with the references."
+  },
+  "corner_squareness": "square",
+  "floor_level_visual": "level",
+  "overall_grade": "B (good)",
+  "grade_reason": "Clean fit-out: plumb steel-glazed cabin partition, crisp grey accent corner, level large-format tiling and consistent open-plate geometry; only minor cosmetic plaster blemishes on the white soffit keep it from an A.",
+  "quality_issues": [
+   "Minor plaster patch / uneven sheen on the white ceiling soffit near the fan and AC grille (wall_y000) - cosmetic",
+   "Corridor door leaf (wall_y090) largely in shadow / partly out of frame, limiting QA confidence on that opening",
+   "Selfie operator's head/arm occludes the lower portion of the far-end window opening (wall_y270) and floor in several frames - reduces measurement confidence there",
+   "Loose cabling under bench desks and clutter (bags, helmet) on worktops - housekeeping, not construction"
+  ],
+  "door_check": true
+ },
+ {
+  "tag": "t18",
+  "area": "workspace",
+  "doors": [
+   {
+    "type": "sliding",
+    "width_mm": 1400,
+    "height_mm": 2750,
+    "standard_match": "non-standard (continuous glazed system, not a leaf door)",
+    "confidence": 0.3
+   },
+   {
+    "type": "flush-wooden",
+    "width_mm": 900,
+    "height_mm": 2100,
+    "standard_match": "matches ~900x2100 (cannot confirm exactly)",
+    "confidence": 0.3
+   },
+   {
+    "type": "glass-framed (full-height partition)",
+    "width_mm": 950,
+    "height_mm": 2350,
+    "standard_match": "cannot tell (likely standard glazed partition door)",
+    "confidence": 0.25
+   }
+  ],
+  "walls": [
+   {
+    "which": "West glazed wall (y000 / y270 - perimeter glazing)",
+    "plumb": "plumb",
+    "finish_quality": "fair",
+    "flatness": "flat",
+    "issues": "Curtain track and glazing mullions read vertical (used as plumb lines); apparent lean in equirect is panoramic distortion. Glazing/curtain system intact. Curtains/blinds hang reasonably even. Junction of glazing to floor tile is clean."
+   },
+   {
+    "which": "Long solid wall behind desks (y270 / y000 white plaster wall with switchboards)",
+    "plumb": "plumb",
+    "finish_quality": "poor",
+    "flatness": "slightly-wavy",
+    "issues": "Visible blotchy/patchy paint, roller lap marks and sheen/colour variation across the white plaster (clearest in y270 under raking light) - a paint-finish defect. Surface shows mild waviness under grazing light. Switch plates (y000) appear partly finished. No major cracks seen, but finish is below A-grade."
+   },
+   {
+    "which": "Two-tone feature partition wall with flush door (y180)",
+    "plumb": "slight-lean",
+    "finish_quality": "fair",
+    "flatness": "flat",
+    "issues": "Two-tone painted partition (white upper / dark grey lower dado). The grey/white waist line is the design intent, but the band line appears slightly off-level where it meets the door reveal. Seen obliquely so lean is low-confidence (panoramic distortion likely). Dark drop-beams/coves are architectural, not defects."
+   }
+  ],
+  "room_dim_check": {
+   "plan_dims": "not provided numerically; AS-DESIGNED = open WORKSPACE, west-side perimeter glazing",
+   "est_clear_width_m": 6.5,
+   "est_clear_depth_m": 12,
+   "looks_consistent": true,
+   "note": "Open-plan workspace consistent with the as-designed intent: long open floor with continuous west glazing and bench-desk clusters. Width (glazing wall to opposite partition) est ~6-7m; depth runs well beyond ~12m into the deeper open-office zone (extent not fully bounded in frame). Slab/false-ceiling height consistent with the ~3.3m slab measured by SfM: false ceiling/cove reads ~2.7-2.9m, exposed dark soffit higher. No plan number to test against, so consistency is qualitative (layout + glazing position match)."
+  },
+  "corner_squareness": "cannot-tell",
+  "floor_level_visual": "level",
+  "overall_grade": "C (fair, snags)",
+  "grade_reason": "Layout, glazing and ceiling design match the as-designed open workspace, but the long desk-wall shows blotchy/patchy paint with visible roller lap marks (poor finish), a dangling slab cable in the ceiling (y090) and a slightly off-level dado line - cosmetic snags that pull it below B.",
+  "quality_issues": [
+   "Blotchy/patchy paint with roller lap marks and sheen variation on the long white desk-wall (y270, y000) - poorest finish in the stop",
+   "Dangling/loose cable hanging from the slab soffit in the open-office ceiling (y090) - unfinished/loose service",
+   "Dado (two-tone) line on the feature partition appears slightly off-level at the door reveal (y180)",
+   "Modular switch plates on the desk-wall appear only partly finished (y000)",
+   "Mild surface waviness on the long plaster wall under raking light (cannot confirm severity)"
+  ],
+  "door_check": false
+ },
+ {
+  "tag": "t24",
+  "area": "workspace",
+  "doors": [
+   {
+    "type": "flush-wooden",
+    "width_mm": 880,
+    "height_mm": 2080,
+    "standard_match": "matches 900x2100 (approx; width low-confidence)",
+    "confidence": 0.62
+   },
+   {
+    "type": "glass-framed",
+    "width_mm": 880,
+    "height_mm": 2080,
+    "standard_match": "cannot tell (width indeterminate)",
+    "confidence": 0.32
+   }
+  ],
+  "walls": [
+   {
+    "which": "Left long plastered wall (y090) running along window/blind line",
+    "plumb": "plumb",
+    "finish_quality": "good",
+    "flatness": "flat",
+    "issues": "Long white-painted plaster wall; corner and window mullion read vertical (used as plumb lines). Surface flat, clean paint, no visible cracks or patches in the lit zone."
+   },
+   {
+    "which": "Grey two-tone partitions with flush door + glass partitions (y180/y270)",
+    "plumb": "plumb",
+    "finish_quality": "good",
+    "flatness": "flat",
+    "issues": "Two-tone grey/white exposed-look partitions per as-designed intent. Door frame and glazing mullions read plumb. Junction lines between white false-ceiling raft and grey soffit are crisp. Minor snag: loose surface-mounted cable/conduit drooping from ceiling near partitions (y090/y180) and surface ducting; consistent with exposed-look design but the drooping cable loop is untidy."
+   },
+   {
+    "which": "White ceiling-side walls / soffit junctions (equirect, y270)",
+    "plumb": "cannot-tell",
+    "finish_quality": "good",
+    "flatness": "flat",
+    "issues": "Ceiling raft and cove-light strip clean; warm two-tone cove reads as designed. Some surface conduit runs visible (intended exposed look)."
+   }
+  ],
+  "room_dim_check": {
+   "plan_dims": "not provided (no single plan dimension supplied for this open floorplate)",
+   "est_clear_width_m": 8,
+   "est_clear_depth_m": 14,
+   "looks_consistent": true,
+   "note": "Large open-plan workspace, not a discrete room. Clear width across the desk banks reads ~7-9m; depth down the desk rows is long, >12m (estimated ~14m). Estimated from desk-bank widths (desks ~750mm high, ~1500mm modules) and chair spacing. Reads as a large open floorplate consistent with an open-WORKSPACE as-designed intent. No specific plan dimension was given to verify against, so consistency is qualitative only."
+  },
+  "corner_squareness": "square",
+  "floor_level_visual": "level",
+  "overall_grade": "B (good)",
+  "grade_reason": "Walls plumb, surfaces flat with clean paint, false ceiling matches the as-designed two-tone exposed look and reads well-executed; only minor snags (drooping/untidy surface cables, oblique-angle door widths needing tape verification) keep it from an A.",
+  "quality_issues": [
+   "Loose surface-mounted cable/conduit loops drooping from ceiling near partitions (y090, y180) - untidy cable management, minor snag",
+   "Exposed surface ducting and conduit runs (intended per exposed-look design, but verify they are dressed/clamped neatly)",
+   "Door width measurements are low-confidence due to oblique viewing angles - flag for tape verification on site",
+   "Heavy desk clutter/cabling at workstations obscures skirting and wall-floor junctions, limiting skirting-gap inspection"
+  ],
+  "door_check": true
+ },
+ {
+  "tag": "t32",
+  "area": "cabin",
+  "doors": [
+   {
+    "type": "glass-framed (full-height partition)",
+    "width_mm": 880,
+    "height_mm": 2450,
+    "standard_match": "wider/taller than standard internal 900x2100 \u2014 partition-integrated full-height glass swing door",
+    "confidence": 0.42
+   }
+  ],
+  "walls": [
+   {
+    "which": "Glass-partition wall (cabin / open-office divider, y000 & y180 left)",
+    "plumb": "plumb",
+    "finish_quality": "good",
+    "flatness": "flat",
+    "issues": "Slim black steel-framed glazed partition; vertical mullions read true-vertical and parallel, glass panels clean and consistent. Frame joints at head and corner look tidy. No visible gaps or misalignment. The one open door leaf is operational state, not a defect."
+   },
+   {
+    "which": "Solid painted wall behind sofa / camera-left (y000 left, y090)",
+    "plumb": "plumb",
+    "finish_quality": "good",
+    "flatness": "flat",
+    "issues": "White-painted plastered wall, clean and uniform. Corner with ceiling reads sharp and straight. No cracks, patchiness or roller marks evident at this resolution."
+   },
+   {
+    "which": "Window wall with vertical blinds (y180)",
+    "plumb": "plumb",
+    "finish_quality": "good",
+    "flatness": "flat",
+    "issues": "Two windows with vertical-blind treatments; low sill with skirting continuous. Plaster/paint flat. Minor: cabling runs loose along skirting on the floor (housekeeping/wire-management snag, not structural)."
+   },
+   {
+    "which": "Side wall with switchboard & wall-mounted AC (y270, y090)",
+    "plumb": "plumb",
+    "finish_quality": "good",
+    "flatness": "slightly-wavy",
+    "issues": "Largely clean white wall. Switch/socket plate set straight. Faint broad shading/undulation visible under raking light near the AC could be very slight plaster waviness or just lighting; not a clear defect. No cracks."
+   }
+  ],
+  "room_dim_check": {
+   "plan_dims": "one of 3.23x2.49 m / 3.45x3.53 m / 4.17x2.79 m",
+   "est_clear_width_m": 4.1,
+   "est_clear_depth_m": 2.8,
+   "looks_consistent": true,
+   "note": "The cabin is clearly longer than it is deep: a long ~3m sofa fits comfortably along the glass-partition wall with a wide desk and circulation opposite, and the window wall (y180) shows two windows across the longer run. This reads as the larger elongated option, ~4.17 x 2.79 m (13'8\"x9'2\"), most consistent. Scale anchored on the ~3m sofa, large-format floor tiles (~800mm modules) and ~3.0-3.3m slab height. The two squarer options (3.23x2.49 / 3.45x3.53) feel too short for the visible furniture run, so 4.17x2.79 is the best match. Estimate +/- ~0.4m given 360-stitch distortion."
+  },
+  "corner_squareness": "square",
+  "floor_level_visual": "level",
+  "overall_grade": "B (good)",
+  "grade_reason": "Clean, plumb walls, flat finishes, level glossy tiling and a well-fabricated black-framed glass partition; minor snags only (loose floor cabling, slight raking-light wall undulation), so good rather than excellent.",
+  "quality_issues": [
+   "Loose cabling run along skirting/floor on the window wall (wire-management housekeeping snag)",
+   "Faint plaster undulation possible on AC-side wall under raking light (low confidence, may be lighting only)",
+   "Glass-partition door caught mid-swing prevents precise clear-opening measurement (data-capture limitation, not a build defect)"
+  ],
+  "door_check": true
+ },
+ {
+  "tag": "t33",
+  "area": "cabin",
+  "doors": [
+   {
+    "type": "glass-framed (full-height partition)",
+    "width_mm": 820,
+    "height_mm": 2850,
+    "standard_match": "narrower than standard",
+    "confidence": 0.5
+   }
+  ],
+  "walls": [
+   {
+    "which": "Left solid wall (y000/y270) with wall-split AC and switchboard",
+    "plumb": "plumb",
+    "finish_quality": "good",
+    "flatness": "flat",
+    "issues": "Large plain painted partition wall; reads flat and uniformly painted with no visible cracks or patchy plaster. Single modular switch plate mounted ~1.2 m AFL looks level. Minor sheen/lighting gradient only (camera vignetting), not a finish defect."
+   },
+   {
+    "which": "Glass-partition divider wall (y000/equirect) - black-framed glazed partition + hinged glass door",
+    "plumb": "plumb",
+    "finish_quality": "good",
+    "flatness": "flat",
+    "issues": "Vertical mullions read true/plumb against ceiling and frame. Frame joints (head-to-mullion mitres) look clean. One loose/leaning glass panel propped on the floor inside the far cabin (visible through glazing) is store/snag, not this partition. Door leaf left ajar."
+   },
+   {
+    "which": "Window wall with corner glazing & vertical blinds (y090/y180)",
+    "plumb": "plumb",
+    "finish_quality": "good",
+    "flatness": "flat",
+    "issues": "Wall-to-window reveals and blind tracks appear level/plumb. Trailing power/data cable run loose across the floor below the window and along skirting - workmanship/tidiness snag. Faint dark mark/streak on wall below window sill near socket (possible scuff or adhesive residue). Skirting line continuous and straight."
+   }
+  ],
+  "room_dim_check": {
+   "plan_dims": "as t32 (right-side cabin; exact metres not provided in this brief)",
+   "est_clear_width_m": 3.6,
+   "est_clear_depth_m": 4.2,
+   "looks_consistent": true,
+   "note": "Estimated from furniture scale: a single long desk run (~2.4-3.0 m) with sofa opposite plus circulation reads to a cabin of roughly 3.5-3.8 m x 4.0-4.5 m. Equirectangular projection exaggerates width, so figures are indicative only. Consistent with a standard mid-size director cabin matching the t32 reference; no gross deviation from a t32-sized cabin apparent."
+  },
+  "corner_squareness": "square",
+  "floor_level_visual": "level",
+  "overall_grade": "B (good)",
+  "grade_reason": "Walls plumb and flat, glazed partition and corner window cleanly finished and matching the t32-cabin intent; downgraded from A only by minor snags (loose cabling, a wall scuff, door left ajar) and limited metrology confidence from the distorted 360 capture.",
+  "quality_issues": [
+   "Glass partition door left standing open/ajar - either not self-closing or simply unlatched at time of capture (functional, not a defect, but worth noting on snag list)",
+   "Loose trailing power/data cabling run across floor and along skirting beneath the corner window (cable management incomplete)",
+   "Faint dark streak/scuff on wall below window sill near socket (minor paint/finish blemish)",
+   "A spare/loose glass panel propped against floor inside the adjacent open-office area (housekeeping/material left on site)",
+   "Strong wide-angle/equirect distortion and operator-head occlusion in lower-centre reduce measurement confidence for the door and room dimensions"
+  ],
+  "door_check": false
+ },
+ {
+  "tag": "t34",
+  "area": "cabin",
+  "doors": [
+   {
+    "type": "glass-framed (full-height partition)",
+    "width_mm": 850,
+    "height_mm": 2650,
+    "standard_match": "cannot tell (full-height glazed partition with integrated leaf; not a standard door size)",
+    "confidence": 0.5
+   }
+  ],
+  "walls": [
+   {
+    "which": "Left / AC partition wall (solid plaster, white paint) \u2014 y000/y270",
+    "plumb": "plumb",
+    "finish_quality": "good",
+    "flatness": "flat",
+    "issues": "Clean white painted plaster, no visible cracks. Wall corner (y270) reads vertical against the window-reveal edge. Wall-mounted split AC and modular switch plate mounted neatly. Minor sheen/roller texture only; no defects of note."
+   },
+   {
+    "which": "Window wall (corner glazing, two adjacent faces with grey vertical blinds) \u2014 y090/y180/y270",
+    "plumb": "plumb",
+    "finish_quality": "good",
+    "flatness": "slightly-wavy",
+    "issues": "Plaster returns / window reveals look generally straight; reveal jamb in y180 shows very slight plaster waviness and the head-to-jamb junction is acceptable. Skirting band along floor is a marble-look border, clean. A loose cable runs along the skirting at the window (workmanship/cable-management snag rather than structural). Blinds installed level."
+   },
+   {
+    "which": "Glazed partition wall (black-framed) to open office \u2014 y000",
+    "plumb": "slight-lean",
+    "finish_quality": "fair",
+    "flatness": "flat",
+    "issues": "Mullions read close to vertical but equirect curvature makes plumb hard to confirm \u2014 judged from the framed-glass edge. Frame joints look reasonably tight. Cannot fully verify plumb from this distorted view; flagged as slight-lean conservatively, likely acceptable in reality."
+   }
+  ],
+  "room_dim_check": {
+   "plan_dims": "as t32 (right-side cabin; exact plan dimension not supplied in this brief)",
+   "est_clear_width_m": 3.2,
+   "est_clear_depth_m": 4,
+   "looks_consistent": true,
+   "note": "Corner cabin roughly 3.2 m (window-wall direction) x 3.8-4.2 m (depth toward glass partition), estimated from tile module (~800 mm tiles, ~4 tiles across desk run), desk length (~2.4-2.8 m executive desk) and sofa length (~2.0-2.2 m three-seater). Reads consistent with a typical t32-class cabin footprint. No plan number given to check exactly, so consistency is judged on proportion only."
+  },
+  "corner_squareness": "square",
+  "floor_level_visual": "level",
+  "overall_grade": "B (good)",
+  "grade_reason": "Walls plumb and flat, clean paint, square corners, level vitrified flooring and a well-executed glazed partition; downgraded from A only by unmanaged floor/skirting cables and minor plaster/false-ceiling cosmetic irregularities.",
+  "quality_issues": [
+   "Loose/exposed cable running along the floor and window skirting near the gridded credenza (cable management snag) \u2014 y090/y180/ceiling",
+   "Cluster of cables behind the desk credenza left unmanaged (y090, ceiling view)",
+   "Minor plaster waviness in window reveal jamb (y180) \u2014 cosmetic only",
+   "False-ceiling cove/step line slightly irregular near the curved corner (y090) \u2014 minor",
+   "Plumb of black-framed glass partition cannot be fully verified due to equirectangular distortion (measurement limitation, not a defect)"
+  ],
+  "door_check": true
+ }
+]

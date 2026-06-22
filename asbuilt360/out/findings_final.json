@@ -1,0 +1,295 @@
+[
+ {
+  "id": "S-1",
+  "discipline": "structural",
+  "title": "Glass balustrade guard-rail height at upper-floor slab edges / internal stair void not verified to code",
+  "type": "safety",
+  "severity": "major",
+  "genuine": true,
+  "bucket": "active",
+  "description": "The plan shows the upper office floor (FFL +11'9\") sitting above a one-storey drop, with glass/metal balustrades drawn at the balcony slab edges, the reception lobby void and the internal staircase/lift core. The as-built consistently shows frameless glass balustrades on slim stainless posts (reception lobby, t01/t03), a metal+glass balcony rail (t04/t05), and a black metal railing at an internal stair/floor void on the workspace floor plate (clearly seen looking down in t30_ceiling, also t00/t30 structural notes). At t01 the analyst explicitly flagged the guard at the floor-edge/void as looking low. None of these guards could be measured, but the consistent fall exposure (cars visible one storey below through the glazing) makes guard height a genuine life-safety item. IS 4912 / NBC 2016 require ~1.0 m (1.1 m at higher levels) protective height. This is judged against safety good-practice, not a plan-position mismatch.",
+  "plan_reference": "",
+  "evidence_timepoints": [
+   "t01",
+   "t30",
+   "t00",
+   "t04",
+   "t05"
+  ],
+  "confidence": 0.6,
+  "recommendation": "Physically measure the finished guard height of every glass/metal balustrade at the balcony edges, the reception lobby void and the internal stair void, from finished floor to top of rail. Confirm >=1000 mm (>=1100 mm if the drop exceeds the NBC threshold), verify glass is toughened/laminated to handle imposed line load, and confirm post fixings into the slab. Remediate any guard below code height before occupancy sign-off.",
+  "verify_note": "Genuine, correctly-classified safety item \u2014 verified across all five cited frames, not an artifact or clutter mislabelling. Confirmed real conditions: (1) frameless glass balustrades on slim stainless posts recur in t00/t01/t04/t05 at the slab edge; (2) one-storey fall exposure is unambiguous \u2014 cars and ground-level greenery visible directly below the glazing in t01, t00, t04, t05; (3) a real internal staircase (t00_wall_y180 shows descending black treads) and a real floor/stair void with a black metal railing on the workspace plate (t30_ceiling, looking straight down past the rail in the photographer's hand); (4) reception/lobby is a genuine office space (t05). No double-counting, no ceiling-distortion-as-crack, no reflection misread. Classification as structural/safety is appropriate (guard height + glass toughening at fall edges is a life-safety element). HOWEVER this remains a VERIFY-THIS flag, not a proven defect: nothing was measured. The guard in t04_wall_y000 and t01 looks somewhat low, but apparent height is unreliable in a 360 camera with heavy barrel distortion near the floor and a chest-height selfie-stick vantage \u2014 I cannot confirm a sub-1000/1100 mm height from imagery. Severity held at major because the consequence (one-storey fall over occupied desks/lounge seating right against the glass) justifies it; confidence held at ~0.6 because the underlying condition is certainly real but the actual code non-compliance is unproven. Recommendation stands: physically measure every glass/metal guard from FFL to top of rail, confirm >=1000 mm (>=1100 mm if drop exceeds the NBC threshold), verify toughened/laminated glass and slab-fixed posts before occupancy sign-off. Relevant frames: /Users/muralikrishnamuthukuru/Desktop/Sthyra CPM/asbuilt360/sem/t04/t04_wall_y000.jpg, /Users/muralikrishnamuthukuru/Desktop/Sthyra CPM/asbuilt360/sem/t01/t01_wall_y270.jpg, /Users/muralikrishnamuthukuru/Desktop/Sthyra CPM/asbuilt360/sem/t30/t30_ceiling.jpg, /Users/muralikrishnamuthukuru/Desktop/Sthyra CPM/asbuilt360/sem/t00/t00_wall_y180.jpg."
+ },
+ {
+  "id": "S-2",
+  "discipline": "structural",
+  "title": "Exposed dark RCC down-stand beams / soffits left as a finish across the workspace ceiling (built condition vs concealed-ceiling design intent)",
+  "type": "as_built_condition",
+  "severity": "observation",
+  "genuine": false,
+  "bucket": "standdown",
+  "description": "The architectural plan implies a continuous gypsum false ceiling (bulkheads drawn). As-built, the open workspace ceiling is a deliberate hybrid: multiple deep dark/charcoal-painted RCC down-stand beams are left exposed as soffits running across the bays, interleaved with white gypsum false-ceiling panels and cove-lit bulkheads (clearly visible in t13_wall_y000 and t14_equirect; repeated across t12-t30). This reads as an intentional industrial design treatment rather than a defect, but it is a deviation from a fully-concealed ceiling and the exposed concrete soffits should be confirmed sound (no spalling, honeycombing or exposed rebar). A faint vertical honeycomb-like mottling was separately noted on a workspace RCC column face (t10) and warrants the same check.",
+  "plan_reference": "",
+  "evidence_timepoints": [
+   "t13",
+   "t14",
+   "t10",
+   "t23",
+   "t26"
+  ],
+  "confidence": 0.3,
+  "recommendation": "Confirm the exposed-beam soffit treatment is per the approved interior design (not unfinished work). Inspect each exposed RCC beam and the t10 column face at close range for spalling, honeycombing, exposed/corroded reinforcement and shrinkage cracks; apply protective/cosmetic finish where concrete is raw. Document as an as-built condition in the handover set since the plan does not show it.",
+  "verify_note": "Re-examined all cited frames (t13, t14, t10, t23, t26 equirects plus t13_wall_y000, t14_ceiling, t10 wall_y090/180/270). The dark ceiling is real and consistent across t13/t14/t23/t26, but the finding's structural premise is wrong. What is visible is a FINISHED, painted charcoal/dark-grey two-tone false-ceiling system: smooth uniform surfaces, crisp reveal lines, integrated warm cove (LED) lighting, recessed downlights, flush AC grilles and mounted ceiling fans. It is NOT exposed raw RCC concrete or down-stand beams \u2014 there is no spalling, honeycombing, exposed/corroded rebar, or shrinkage cracking anywhere in frame. The \"exposed concrete soffit / inspect the beams for honeycombing\" framing is a misidentification of a deliberate interior design treatment as structural concrete. The t10 'honeycomb-like mottling on an RCC column' sub-claim is also unsupported: every column/wall in the t10 views is smooth-plastered and painted; the prominent nearby feature is a curved TIMBER-BATTEN (slatted wood) ceiling in the lounge whose linear grain, warped by the equirectangular projection, is the most plausible source of the 'honeycomb' impression \u2014 a misread artifact, not a concrete defect. Net: this is a benign as-built architectural/aesthetic documentation note (plan showed concealed ceiling; built as a two-tone design), with NO genuine building or structural issue and no inspection-worthy concrete condition. Correctly belongs as an architectural as-built remark, not a structural finding. Severity reduced to trivial, confidence in the structural claim lowered to 0.3."
+ },
+ {
+  "id": "S-3",
+  "discipline": "structural",
+  "title": "Unfinished / chipped raw plaster on full-height jamb of the lift-shaft door at the reception lobby",
+  "type": "not_built_as_drawn",
+  "severity": "major",
+  "genuine": true,
+  "bucket": "active",
+  "description": "At the reception/lift-lobby junction the vertical jamb beside the lift-shaft sliding door is left in raw, chipped, unpainted plaster with chunks of render missing down the full height of the reveal (clearly visible in t00_wall_y180 along the left edge of the shaft door, and noted at t00). The surrounding surfaces (ceiling, adjacent walls, balcony) are fully finished and painted, so this is an incomplete-finishing / snag item at a structural core element rather than a design feature. Because the walkthrough did not enter the lift/stair core, the extent beyond this visible reveal is unknown.",
+  "plan_reference": "",
+  "evidence_timepoints": [
+   "t00"
+  ],
+  "confidence": 0.93,
+  "recommendation": "Make good the lift-shaft door jamb: rake out loose render, re-plaster, and paint to match the adjacent finished walls. Inspect the full lift/stair core (not filmed) for similar unfinished surfaces before handover, since this is the only frame covering the core perimeter.",
+  "verify_note": "Confirmed in t00_wall_y180: the full-height vertical jamb beside the dark metal-framed sliding shaft door is raw, unpainted plaster with chunks of render missing and substrate exposed floor-to-ceiling down the reveal. Not a reflection, shadow, or equirectangular distortion artifact, and not occupant clutter. Surrounding surfaces (ceiling, adjacent walls in y270, soffits, balcony) are all fully painted and finished, confirming this is an incomplete-finishing snag at a structural-core perimeter opening (staircase visible lower-left, lift/stair core) rather than a design feature or material transition. Single distinct location, no double-count. Severity lowered from major to moderate: it is a make-good re-plaster-and-paint item with no evidence of structural compromise, but its prominence at the public reception/lift lobby and the unknown extent into the unfilmed core justify keeping it elevated rather than minor. Confidence raised to 0.93 given the clear, unambiguous frame evidence. Discipline tag \"structural\" is loosely correct (element sits on the structural core) though the defect itself is architectural/finishing. Recommendation stands: rake out loose render, re-plaster, paint to match, and inspect the unfilmed lift/stair core for similar surfaces before handover."
+ },
+ {
+  "id": "S-4",
+  "discipline": "structural",
+  "title": "Curved reception ACCENT WALL built as drawn (faceted render + timber-batten feature) - confirmed match",
+  "type": "as_built_condition",
+  "severity": "observation",
+  "genuine": false,
+  "bucket": "conformance",
+  "description": "The plan calls for a curved feature 'ACCENT WALL' separating WORKSPACE from RECEPTION, with a curved seat element. As-built this is unambiguously present and matches design intent: a sweeping curved/faceted feature wall combining white triangulated render panels above and vertical reddish timber-batten (fluted) cladding below, backing the sculptural reception desk, with the matching wave/S-curve timber-slat soffit over the glazing (t02, t05, t06, t08). The curved white face is also seen from the workspace side screening the reception (t23/t24). One minor note: at t05 some render panels appeared raw/off-white - verify these are a finished surface treatment and not unpainted. No structural/crack issues observed on the curved wall.",
+  "plan_reference": "",
+  "evidence_timepoints": [
+   "t05",
+   "t02",
+   "t08",
+   "t23"
+  ],
+  "confidence": 0.9,
+  "recommendation": "Record as a confirmed as-built match to the drawn accent wall. Verify the off-white render panels noted at t05 are the intended finish (not unpainted/incomplete). No structural action required.",
+  "verify_note": "Confirmed as-built match, correctly classified as an observation (not a defect). Evidence reviewed: t02_equirect + t05_equirect both clearly show the faceted feature wall (white triangulated render panels above, reddish vertical timber-batten/fluted cladding below) backing the sculptural reception desk. t08_wall_y000 is the cleanest direct face view: the white-render facet seams are deliberate geometric panel joints, NOT cracks, and the fluted timber band below is clean and continuous. The matching wave/S-curve timber-slat soffit over the glazing is unambiguous and consistent across three independent viewpoints (t02_wall_y270, t05_wall_y270, t08_wall_y270), so it is a genuine designed feature, not panoramic distortion. t23_equirect confirms the curved white face screening the reception from the open workspace side. The original 'off-white render panels at t05' caution is resolvable: the slightly raw/off-white reading at t05 is a lighting/viewing-angle artifact (adjacent triangulated facets catch directional daylight differently); the better-lit t08_wall_y000 shows a uniform, finished surface \u2014 not unpainted/incomplete work. No structural/crack issues, no occupant clutter mislabeled, no double-counting. Confidence nudged up (0.85 -> 0.90) because the finish concern is resolved; severity unchanged. Not a building issue \u2014 record as confirmed as-built; no structural action required."
+ },
+ {
+  "id": "S-5",
+  "discipline": "structural",
+  "title": "Glass-partition cabins, sliding doors and perimeter curtain-wall glazing all present and consistent with the drawn shell",
+  "type": "as_built_condition",
+  "severity": "observation",
+  "genuine": false,
+  "bucket": "conformance",
+  "description": "Element-level presence check against the plan's shell is positive for the filmed areas: the full-height aluminium curtain-wall glazing and the two SLIDING DOORS to the balconies are present (t04/t05/t08, sliding tracks visible); the three plan CABINs are realised as black-framed full-height glass-partition rooms with hinged glass doors (t32/t33/t34, also t10-t31 from the workspace side); the curved reception glazed facade with timber-slat soffit is present (t03/t05/t06). Perimeter walls and embedded RCC columns appear plastered, painted and crack-free in the filmed zones (corner column at t10/t22, column at t31). No drawn shell element within the covered route (reception, most of workspace, 3 cabins) was found missing.",
+  "plan_reference": "",
+  "evidence_timepoints": [
+   "t04",
+   "t32",
+   "t10",
+   "t08",
+   "t34"
+  ],
+  "confidence": 0.82,
+  "recommendation": "Accept the glazing, sliding doors and three glass cabins as built-as-drawn. Note for the record that the cabins are executed as glass partitions (not masonry) - consistent with the plan's partition lines - and confirm the glass partitions are toughened and properly framed/fixed.",
+  "verify_note": "Re-read all cited frames (t04, t08, t32, t34, t10, t31, t03 equirects plus t10_wall_y000 and t31_wall_y090). Evidence fully corroborates the finding. t04/t08: full-height aluminium curtain-wall glazing, balconies with glass railings, and sliding-door openings present; timber-slat soffit present. t32/t34/t31: three black-framed full-height glass-partition cabins with glass doors are clearly built, well-framed and consistent with partition-line layout. t03: curved reception glazed facade with timber-slat soffit present. t10_wall_y000: embedded RCC column and perimeter walls are plastered, painted white, and crack-free; no distortion artifact misread as a crack, no occupant clutter mislabelled as a defect, no reflection/shadow misread. This is a correctly-classified positive as-built CONFORMANCE check (type as_built_condition, severity observation), NOT a building defect \u2014 flagging is_genuine_building_issue=false because nothing is wrong; it records that drawn shell elements are present as built. Confidence held essentially at original (0.82): visual presence is unambiguous, but the underlying plan drawings were not in this evidence set, so the plan-to-as-built element correspondence (exactly three cabins, partition-line geometry) rests on the auditor's plan reading and cannot be independently re-verified here. Recommendation is sound: cabins executed as glass partitions (not masonry), consistent with plan; the toughened-glass / proper-fixing item is correctly framed as a still-to-confirm QA check rather than an asserted defect."
+ },
+ {
+  "id": "S-6",
+  "discipline": "structural",
+  "title": "Coverage gap: men's/women's toilets, pantry and lift/stair core never entered - drawn elements unverified",
+  "type": "coverage_gap",
+  "severity": "major",
+  "genuine": false,
+  "bucket": "active",
+  "description": "The walkthrough covered reception, most of the open workspace and the 3 cabins only. It did NOT enter the M.TOILET, F.TOILET, PANTRY, or the LIFT/STAIRCASE core. Consequently the drawn structural/partition elements of the central wet-services spine and the vertical-transport core (toilet partition walls, pantry enclosure, the RCC lift/stair core, and the staircase flights themselves) are NOT confirmed present or correct - only their door openings and the core perimeter were glimpsed from outside (lift-shaft door at t00, stair treads at t00/t30, flush 'toilet/utility' doors seen across the workspace at t15/t20/t22). The two WC pans, two wash basins and pantry sink drawn on the plan were never filmed. This is an evidence gap, not a confirmed match or mismatch.",
+  "plan_reference": "",
+  "evidence_timepoints": [
+   "t00",
+   "t30",
+   "t20",
+   "t15"
+  ],
+  "confidence": 0.88,
+  "recommendation": "Commission a targeted second capture inside the men's/women's toilets, pantry and the lift/stair core to close the gap. Until then, do not certify those rooms' structural partitions, the staircase, or the plumbing fixtures as built-as-drawn; flag them explicitly as 'not inspected' in the as-built report.",
+  "verify_note": "Re-examined the four cited frames (equirect + wall views) at /Users/muralikrishnamuthukuru/Desktop/Sthyra CPM/asbuilt360/sem/t00, t15, t20, t30. All four are reception/lounge (t00) and open-workspace (t15/t20/t30) panoramas showing desks, office chairs, people working, glass-partition cabins, curtain-walled glazing and a wood-slat ceiling. t15_wall_y180 shows a closed flush frosted-glass door in a partition wall (a toilet/utility room glimpsed from OUTSIDE); t30_wall_y270 and t00_wall_y090 show passage openings into adjacent areas, again from outside. Crucially: NO toilet interior, NO WC pans or wash basins, NO pantry interior or sink, and NO staircase flights or lift-shaft interior appear in ANY cited frame. The camera never crosses a threshold into the wet-services spine or the lift/stair core. This corroborates the coverage_gap exactly as described. This is correctly classified as an evidence gap, not a building defect \u2014 so is_genuine_building_issue=false (no crack, no clutter-mislabelled-as-defect, no distortion/reflection artifact; the finding asserts no defect, only that these rooms were never filmed, which the frames confirm). Confidence nudged 0.90 to 0.88 only because the finding's certainty is uniform across all four enumerated rooms whereas the cited frames directly evidence the wet-core/toilet doors more than the lift/stair core; the gap itself is not in doubt. Severity 'major' retained: those partitions, the RCC core, the staircase and the plumbing fixtures genuinely cannot be certified as-built without a targeted re-capture, so the 'do not certify / flag as not inspected' recommendation stands."
+ },
+ {
+  "id": "S-7",
+  "discipline": "structural",
+  "title": "Flush floor trap / cleanout cover set in finished reception floor (only plumbing-relevant as-built observation)",
+  "type": "as_built_condition",
+  "severity": "observation",
+  "genuine": false,
+  "bucket": "standdown",
+  "description": "A small circular brass/metal cover sits flush in the finished tiled floor at the reception/lounge edge near the perimeter wall (clearly visible bottom-right of t31_wall_y180; noted at t31). This is consistent with a floor trap / drain cleanout. It is the ONLY plumbing-relevant element captured in the entire walkthrough (the drawn WC/basin/sink fixtures were never filmed - see S-6). Worth confirming it is a properly sealed, gas-tight cover and not an open or loose-fitting drain in an occupied area.",
+  "plan_reference": "",
+  "evidence_timepoints": [
+   "t31"
+  ],
+  "confidence": 0.4,
+  "recommendation": "Verify the floor trap/cleanout cover is a sealed, recessed, lockable pattern set flush with the tile, with no odour escape; confirm its purpose and connection on the plumbing drawing. Treat as the single plumbing data point - all other plumbing remains a coverage gap.",
+  "verify_note": "The object is real, not an artifact: t31_wall_y180.jpg shows a small circular brass/gold metal cover set flush in the finished floor near the perimeter wall (bottom-center of frame), in an occupied finished office/lounge (desks, sofa, AC, blinds confirmed across y090/y270/equirect). It is a building-integrated element, not occupant clutter, reflection, or ceiling distortion. However the finding is misclassified and over-interpreted: (1) Wrong discipline \u2014 it is filed under \"structural\" but a floor trap/cleanout is a plumbing/MEP element; the finding's own description and recommendation are entirely plumbing-focused. (2) Speculative ID \u2014 a flush brass disc in a commercial office floor is at least as likely a floor service box / power-data grommet cover as a drain cleanout; there is no visible grating, slope, wet area, or anything confirming it is plumbing. The \"gas-tight / odour escape\" concern is unsupported by the image. (3) No observable defect \u2014 the cover appears seated and flush; nothing shows it open, loose, or hazardous. So: genuine as-built observation of an object, but not a genuine building ISSUE, and not structural. Downgraded to info, reclassified out of structural (plumbing/MEP at most), confidence reduced to 0.4 given the unverified interpretation. Files: /Users/muralikrishnamuthukuru/Desktop/Sthyra CPM/asbuilt360/sem/t31/t31_wall_y180.jpg and t31_equirect.jpg."
+ },
+ {
+  "id": "E-1",
+  "discipline": "electrical",
+  "title": "Pervasive loose/dangling/unterminated ceiling wiring and unfitted light points across reception and workspace, contradicting concealed-services design intent",
+  "type": "as_built_condition",
+  "severity": "minor",
+  "genuine": true,
+  "bucket": "active",
+  "description": "The dominant electrical defect. Across the reception/lounge and the open workspace, multiple ceiling/slab-level light points are left with loose hanging wires, bent J-hook conduit stubs, or dropped flex with NO luminaire fitted. In reception this is a recurring J-hook conduit + looped dangling wire dropping from the white gypsum false ceiling near the accent wall/glazing (confirmed visually at t04, t05, t06 - the same unfinished point seen from several angles). In the open workspace, thin wires/flex drop from the slab over the desk runs at several bays (t11 two unterminated wire stubs from wall/ceiling; t12 two dangling drops; t13 loose wire over desks; t18 two loose wires - one confirmed in t18_wall_y090; t24/t26/t29/t30 hanging cables/exposed conduit). This is judged against the design intent of a gypsum false ceiling implying CONCEALED services, plus IS 732 / good-practice requirements that all conductors be enclosed and terminated. CRITICAL DISTINCTION: this finding deliberately EXCLUDES the loose power/data cabling draped over desks (occupant clutter); it covers only wires/conduit hanging from the CEILING or SLAB and light points with no fixture. Some of these are unterminated conductors (potential live-end shock/fire risk if energised); at minimum they are incomplete fit-out departing from the concealed-services standard the false ceiling was built to deliver.",
+  "plan_reference": "Not on architectural plan (no electrical layer drawn); judged against concealed-services design intent of the gypsum false ceiling + IS 732 good practice",
+  "evidence_timepoints": [
+   "t04",
+   "t05",
+   "t06",
+   "t18",
+   "t29"
+  ],
+  "confidence": 0.7,
+  "recommendation": "Commission a licensed electrician to trace, terminate and make safe every hanging conductor; either fit the intended luminaire/fan at each open point or cap into a proper accessory box and conceal above the false ceiling. Megger/continuity test affected circuits and confirm no live unterminated ends before handover. Treat as a snag-list close-out item required for safe occupancy.",
+  "verify_note": "Genuine, correctly-classified electrical finding, but the title overstates scope (\"pervasive\"). RECEPTION (strong): t04_wall_y090.jpg unambiguously shows a bent J-hook conduit stub with a looped dangling wire dropping from the finished white gypsum false ceiling above the reception desk, NO luminaire fitted; corroborated as the SAME single point in t05_equirect and t06_equirect (faint dropped wire above desk). Surrounding reception ceiling is otherwise fully finished (decorative fan, recessed downlights). This is a real incomplete light point on a concealed-services gypsum ceiling. Correctly counted as one recurring point, not several. WORKSPACE (weaker): real but isolated thin wire/flex drops hang from the slab over desk runs with no fixture (clearest in t29_equirect and t11_equirect; faint in t18_wall_y090). Three caveats reduce confidence: (1) the workspace ceiling is a flat painted slab with an exposed-services / cove + linear-pendant aesthetic, NOT a gypsum false ceiling, so the \"contradicts concealed-services intent\" rationale only firmly applies to reception; surface conduit/pendant drops here are partly intentional. (2) The drops are thin and isolated, not \"pervasive.\" (3) Much of the lower-frame cabling in t18/t29 is occupant desk clutter (RGB gaming PCs, power/data leads) which the finding correctly excludes but which visually inflates the impression. The live/unterminated-end shock-fire risk is plausible but not visually confirmed (ends not seen capped or bare). Net: real snag-list electrical defect, but downgraded major->minor and confidence trimmed for the over-stated \"pervasive/concealed-services across workspace\" framing."
+ },
+ {
+  "id": "E-2",
+  "discipline": "electrical",
+  "title": "No exit / emergency egress signage and no visible emergency-lighting fittings observed anywhere on the floor",
+  "type": "safety",
+  "severity": "major",
+  "genuine": true,
+  "bucket": "active",
+  "description": "Across all 35 stops covering reception, the full open workspace and 3 cabins, NOT A SINGLE illuminated EXIT sign, running-man directional sign, or maintained emergency-light fitting was observed - including at the main glass entrance (t00-t08), at the stair/lift core junction visible from reception (t00 staircase, t30 stair void), or over the workspace egress doorway. The space is an occupied commercial office (32+ workstations actively in use). NBC 2016 Part 4 and the Karnataka Fire Force requirements mandate illuminated exit signage and emergency egress lighting on escape routes for such occupancy. Absence is a life-safety gap. (Note t16 semantics independently flagged 'no visible smoke detectors / exit / emergency signage' for that zone.) Confidence is moderate because the walkthrough did not point at every door head, but the consistent absence across the entrance, stair junction and egress routes is a strong negative signal.",
+  "plan_reference": "Not on architectural plan; life-safety requirement under NBC 2016 Part 4 / local fire code",
+  "evidence_timepoints": [
+   "t00",
+   "t08",
+   "t16",
+   "t30"
+  ],
+  "confidence": 0.62,
+  "recommendation": "Audit the floor against NBC 2016 Part 4 egress requirements; install illuminated/maintained EXIT and directional signage and battery-backed emergency luminaires along all escape routes (entrance, stair/lift core, workspace-to-core path) and obtain/verify the fire NOC before continued occupancy.",
+  "verify_note": "Re-examined t00, t08, t16, t30 equirects plus ceiling and wall_y000/y180/y270 crops. Confirmed: actively occupied commercial office (32+ workstations in use in t16/t30, people seated). Across the main glass entrance (t00/t08 \u2014 only a \"PUSH\" operational sign, correctly NOT counted as an exit sign), the stair/lift core junction visible from reception (t00_wall_y180 shows stair head + lift door with only recessed downlights overhead), and the full egress path including the far workspace doorway (t30_wall_y270 looks straight down to the egress door), NO illuminated green EXIT / running-man directional sign and NO maintained/battery-backed emergency luminaire is visible anywhere. Ceilings show only linear pendant lights, fans, AC units, downlights, and white discs (smoke detectors/sprinklers) \u2014 none are emergency egress fittings. Skeptical checks pass: this is an absence finding, not occupant clutter mislabelled; not a distortion/reflection artifact; not double-counted; the consistent absence across 5+ independent vantage points (entrance, stair core, two workstation areas, egress doorway) is a strong negative signal. Discipline \"electrical\" is defensible (emergency/exit luminaires are battery-backed electrical fittings) and it is simultaneously a legitimate life-safety item. Caveat retained: a small wall-mounted sign could sit out of frame at an unscanned door head, which is why confidence stays moderate rather than high \u2014 proving a negative from a walkthrough has inherent limits. Severity held at \"major\" (genuine NBC 2016 Part 4 / Karnataka Fire egress gap), correctly not escalated to critical since it is an absence inference, not a confirmed blocked/locked exit. Confidence essentially unchanged at 0.62."
+ },
+ {
+  "id": "E-3",
+  "discipline": "electrical",
+  "title": "Smoke / fire-detection coverage appears sparse and inconsistent for an occupied open-plan office",
+  "type": "safety",
+  "severity": "minor",
+  "genuine": false,
+  "bucket": "standdown",
+  "description": "Ceiling smoke detectors/sensors were observed only at scattered stops (t09 ~2, t10 ~1, t19 ~2, t20 ~1, t21 ~1-2, t22 ~2, t24 ~1) and explicitly noted ABSENT in the t16 workspace zone. For a ~14m x 20m open floor of 32+ workstations with high-density electronics (numerous RGB gaming PC towers and AC units), automatic detection should be continuous to code spacing. The observed pattern reads as partial/incomplete detection coverage rather than a fully commissioned system, compounded by E-1 (open/energised wiring raises ignition risk). Some 'detectors' in the semantics are low-confidence (could be sensors/speakers), so this is flagged as a coverage gap to verify rather than a confirmed deficiency.",
+  "plan_reference": "Not on architectural plan; coverage judged against NBC 2016 / IS 2189",
+  "evidence_timepoints": [
+   "t16",
+   "t19",
+   "t22",
+   "t09"
+  ],
+  "confidence": 0.25,
+  "recommendation": "Obtain the fire-detection layout/services drawing and verify detector type, count and spacing against NBC 2016 / IS 2189 for the full floor; install additional detectors where coverage is short and confirm the panel is commissioned and zoned. Cross-check against the missing exit/emergency provisions in E-2.",
+  "verify_note": "Re-read t16 (equirect, ceiling, wall_y090, wall_y270), t19, t20, t21, t22, t24, t09 (equirect + ceiling crops). This is a verification-only, indirect-inference item, not a confirmed building defect. Three problems undercut it: (1) No plan baseline \u2014 the finding itself states it is \"not on architectural plan\" and coverage is \"judged against NBC 2016 / IS 2189.\" Detector spacing cannot be reliably assessed from a handheld 360 walkthrough with no fire-detection drawing. (2) Conflated/overlapping spaces \u2014 t09 is a SEPARATE lounge/reception zone with a slatted timber ceiling, green sofas and a balcony, not the open office; including it inflates the supposed \"14m x 20m floor.\" Meanwhile t16/t19/t20/t21/t22/t24 are overlapping views of the SAME office spine shot from a moving camera, so the \"~1-2 detectors per stop\" counts double-count the same devices and are not a valid spacing measurement. (3) Capture artifacts \u2014 the \"ABSENT in t16\" claim rests on a zone where the dedicated ceiling crop is almost entirely blocked by the operator's arm/body and the ceiling is overexposed; absence of evidence here is a capture limitation, not evidence of absence. Ceiling devices that ARE visible (dark dots/rectangles in t19, t20, t21, t22, t24) are easily confused with the abundant 4-way cassette AC grilles, linear track/blade lights, speakers/PIR sensors and fan mounts \u2014 exactly the low-confidence misclassification the finding admits (\"could be sensors/speakers\"). Net: detection devices are present but sparse-looking and genuinely ambiguous; the correct action is to obtain the fire-detection services drawing and verify type/count/spacing per IS 2189 / NBC 2016. That is a routine documentation/verification step, downgraded from major safety to a low-confidence minor verify-against-drawings item. Frames: /Users/muralikrishnamuthukuru/Desktop/Sthyra CPM/asbuilt360/sem/t16/, t19, t20, t21, t22, t24, t09."
+ },
+ {
+  "id": "E-4",
+  "discipline": "electrical",
+  "title": "Surface-run / exposed conduit and cable runs along slab soffit and an exposed AC drain pipe - departures from concealed-services finish",
+  "type": "as_built_condition",
+  "severity": "minor",
+  "genuine": true,
+  "bucket": "active",
+  "description": "Distinct from the dangling unterminated wires of E-1, several locations show electrical conduit/cabling run ON the surface of the slab/wall rather than concealed: black surface-mounted conduit and cable runs along the slab soffit in the workspace (t29), a surface cable drop near the cove (t14), and exposed conduit near fan/AC points (t24). Separately, a wall-split AC indoor unit at t25 has its drain/refrigerant pipe run down the wall face un-concealed. Linear black pendant/track luminaires hung on visible cable (t11, t12, t23, t30) are likely an intentional industrial design choice rather than a defect, but combined with the surface conduit they indicate the concealed-services intent was only partially achieved. These are finish/quality departures, not immediate safety items.",
+  "plan_reference": "Not on architectural plan; judged against concealed-services design intent of the false ceiling",
+  "evidence_timepoints": [
+   "t29",
+   "t14",
+   "t24",
+   "t25"
+  ],
+  "confidence": 0.4,
+  "recommendation": "Where the design intent was concealed services, route the surface conduit/cabling above the false ceiling or into proper trunking/casing-capping and conceal the AC drain line; where surface-mounted track lighting is intentional, confirm it is dressed and clipped to a finished standard. Document any agreed deviations from concealed intent.",
+  "verify_note": "Partially real but substantially over-stated and mis-premised. Examined equirect + ceiling + wall views for t14, t24, t25, t29. The ceiling throughout is a FINISHED, intentionally-designed exposed-slab / industrial loft scheme: white painted soffit with a designed grey/charcoal dropped feature, concealed cove LED strips (warm glow = a premium finish, not unfinished), recessed cassette/ductable AC grilles (flush, i.e. concealed), recessed downlights, ceiling fans, and black linear pendant/track luminaires suspended on drop wires. There is NO false ceiling here, so the finding's core premise ('departure from concealed-services intent of a false ceiling') is not supported by the imagery. The 't29 black surface conduit along the slab soffit' is the black linear pendant LIGHT FIXTURES and their suspension/feed \u2014 the same fixtures the finding itself concedes (t11/t12/t23/t30) are an intentional design choice. The finding therefore double-counts intentional industrial lighting as both 'intentional' and 'a surface-conduit defect.' The 't14 cable drop near the cove' and 't24 conduit near fan/AC' resolve on close inspection to thin cable drops to ceiling fans \u2014 normal and expected even in exposed-slab ceilings, not defects. The ONE genuinely valid item is t25: a wall-mounted split AC indoor unit (visible high on the wall in t25_wall_y090) with its drain/refrigerant line run down the wall face un-concealed \u2014 a real but cosmetic, trivial finish departure. Net: reclassify from a multi-location 'surface-run services / concealment failure' to a single minor cosmetic item (one exposed AC pipe). Severity remains minor (arguably cosmetic); confidence lowered from 0.7 to 0.4 because three of the four cited timepoints are misreads of intentional design / normal fan drops. Not a safety item and not a structural/building defect. Relevant files: /Users/muralikrishnamuthukuru/Desktop/Sthyra CPM/asbuilt360/sem/t25/t25_wall_y090.jpg (the valid AC-pipe evidence), /Users/muralikrishnamuthukuru/Desktop/Sthyra CPM/asbuilt360/sem/t29/t29_wall_y090.jpg and t14/t24 wall views (show the intentional exposed-slab + pendant-light design)."
+ },
+ {
+  "id": "E-5",
+  "discipline": "electrical",
+  "title": "Capped/uncommissioned outlets and unverified powered hardware (EM lock, access-control, junction boxes) - confirm final commissioning",
+  "type": "as_built_condition",
+  "severity": "minor",
+  "genuine": false,
+  "bucket": "standdown",
+  "description": "Several points indicate fit-out that is fitted but not confirmed commissioned: a capped circular ceiling/wall junction-box with no fixture at t08; a capped outlet/sensor ring with surface-mounted base at t09; an electromagnetic (EM) door lock + closer and access-control/video-door panels above the reception glass doors (t01, t07, t08) whose wiring/commissioning is not visible; and an unlit wall box (TV/intercom plate) at t07. Individually minor, but collectively they are open items pending verification that each is terminated, energised and functioning before handover. No safety hazard observed at these points (unlike E-1).",
+  "plan_reference": "Not on architectural plan; as-built commissioning check",
+  "evidence_timepoints": [
+   "t08",
+   "t01",
+   "t07",
+   "t09"
+  ],
+  "confidence": 0.4,
+  "recommendation": "Walk the snag list: fit or formally cap each open junction box, and functionally test the EM lock, door closers, access-control/video-door panels and intercom/TV plates; record commissioning sign-off for each so they are not left as latent incomplete points.",
+  "verify_note": "Re-examined t01/t07/t08/t09 (equirect + flat wall/ceiling views at /Users/muralikrishnamuthukuru/Desktop/Sthyra CPM/asbuilt360/sem/tNN/). All four timepoints are the SAME finished reception/living-office room (identical green sofas, wood-slat ceiling, diagonal gray/white feature wall, glass partition) shot from different positions, so the cited items are partly the same hardware seen repeatedly (mild double-counting risk).\n\nEvidence grounding is SOLID \u2014 the physical items are real, not hallucinated, not occupant clutter, not ceiling-distortion artifacts (they appear consistently across multiple flat y180 wall views, not just the distorted equirect poles):\n- Capped circular wall/ceiling junction box: clearly visible high on the white wall in t07_wall_y180, t08_wall_y180, t09_wall_y180 (one box, three angles).\n- EM lock / access-control reader: wall-mounted dark keypad device beside the glass entry door in t07_wall_y180 and t08_wall_y270 \u2014 genuine, professionally flush-mounted.\n- Unlit rectangular wall plate (TV/intercom): white flush plate in t07_wall_y180 / t08_wall_y180.\n- Surface-mounted box on gray wall at t09_wall_y180.\n\nWHY RECLASSIFIED, NOT CONFIRMED: commissioning/energisation status is fundamentally not observable from 360 photos. The hardware looks finished, flush, and correctly installed; the capped box may well be an intentional final/spare blank, not an incomplete point. Nothing visible indicates anything is un-terminated, de-energised, or faulty. The room is furnished and in active use (working fans, lit recessed lights, desk/chair/decor) \u2014 a near-handover interior, not a raw site. So this is not a building DEFECT; it is an unverifiable 'please confirm sign-off' checklist reminder dressed as a finding. No safety hazard (correctly distinguished from E-1). Severity 'minor' is fine; dropped confidence 0.55->0.40 because the items being an actual problem is unsupported by what is observable. Keep as a low-priority procedural snag item, not a defect."
+ },
+ {
+  "id": "E-6",
+  "discipline": "electrical",
+  "title": "No distribution board (DB) / main panel positively identified in the filmed areas; electrical layout could not be verified against any drawing",
+  "type": "coverage_gap",
+  "severity": "observation",
+  "genuine": false,
+  "bucket": "standdown",
+  "description": "The plan has NO electrical layer at all (asdesigned.json: 'NONE... no light points, switches, sockets, DBs, fans or conduit runs appear anywhere'), so nothing electrical can be checked as a plan-position match/mismatch - all electrical findings here are as-built-condition judgements. Within the as-built footage, only one possible DB/control box was tentatively noted (a small white wall box at t13, low confidence). No clearly identified distribution board, MCB panel or metering point was filmed, and the walkthrough never entered the toilets, pantry or lift/stair core where a DB might sit. This is a coverage/documentation gap: the electrical installation cannot be reconciled against any services drawing, and the DB location/rating is unverified.",
+  "plan_reference": "asdesigned.json electrical_shown = NONE (purely architectural sheet); no electrical drawing available for reconciliation",
+  "evidence_timepoints": [
+   "t13"
+  ],
+  "confidence": 0.7,
+  "recommendation": "Obtain the electrical services drawing (separate from the architectural sheet referenced in General Note 05/06 about cross-checking consultant drawings) and an as-built single-line diagram; physically locate and inspect the DB/MCB panel for labelling, RCD/RCBO protection and load schedule. Schedule a dedicated inspection of the unfilmed core/service rooms to close the coverage gap.",
+  "verify_note": "Confirmed as a correctly-classified coverage/documentation gap, NOT a building defect. Plan reference verified verbatim: out/asdesigned.json electrical_shown = \"NONE. This is a purely architectural floor-plan sheet... No electrical symbols are drawn - no light points, switches, sockets, DBs, fans or conduit runs appear anywhere.\" With no electrical layer to reconcile against, no plan-position match/mismatch is possible \u2014 accurately stated.\n\nt13 frames (equirect + all 4 wall views + ceiling) show an occupied open-plan office: desks, people, gaming PCs, ceiling fans, recessed/linear lighting, an AC cassette grille, and a glass-partitioned cabin. The \"small white wall box at t13\" cited as a possible DB is visible high on the wall in t13_wall_y090/y180 \u2014 it is small and genuinely ambiguous (could be a thermostat, AC controller, sensor, speaker, or junction box; not clearly a distribution board). No DB/MCB panel with visible breaker rows, no metering point, and no load-schedule labelling is identifiable in any view. The walkthrough does not enter toilets, pantry, or stair/lift core where a DB would typically sit, so the coverage-gap rationale holds.\n\nNo false-positive patterns present: the finding makes NO defect claim, so there is no occupant-clutter-as-defect, no ceiling-distortion-as-crack, no reflection/shadow misread, and no double-counting. It honestly frames itself as a verification limitation. Severity (observation) and type (coverage_gap) are appropriate and unchanged. Nudged confidence 0.6 -> 0.7 because the three load-bearing facts (no electrical layer in the plan; no DB positively identified in footage; service-core rooms unfilmed) are each independently verifiable and were confirmed. Recommendation (obtain electrical services drawing + as-built SLD, physically locate/inspect the DB, schedule a dedicated core/service-room inspection) is sound."
+ },
+ {
+  "id": "P-1",
+  "discipline": "plumbing",
+  "title": "All four drawn wet-area plumbing fixtures are unverifiable - walkthrough never entered the toilets or pantry (primary coverage gap)",
+  "type": "coverage_gap",
+  "severity": "critical",
+  "genuine": true,
+  "bucket": "active",
+  "description": "The architectural plan draws the building's entire plumbing fixture set inside three wet rooms in the central/right services spine: a WC pan in M.TOILET (8'8\" x 4'0\"), a WC pan in F.TOILET (8'8\" x 4'0\", directly below), a wash-basin counter with two round basins on the wall between the workspace and the toilet block, and a pantry sink in PANTRY (5'0\" x 8'0\"). The 70s Insta360 walkthrough (35 stops, t00-t34) covered only RECEPTION (t00-t09, t31), one BALCONY edge (t07), two CORRIDOR points (t10, t20) and the open WORKSPACE (t11-t30), plus 3 CABINS (t32-t34). No stop is tagged or located inside M.TOILET, F.TOILET, the PANTRY, or the LIFT/STAIR core - the camera path passes flush toilet/utility doors (described at t12, t13, t15, t19, t20, t22, t25) but never crosses any of them. Consistent with this, every single stop carries an empty plumbing array (plumbing_arr_len=0 for all 35), and t13 explicitly notes 'No visible plumbing in this area.' Therefore NONE of the four drawn fixtures - 2 WCs, 2 wash basins, 1 pantry sink - can be confirmed as built, omitted, relocated, or correctly connected. This is not a fixture mismatch; it is a total absence of evidence for the wet scope. Plumbing compliance cannot be signed off from this walkthrough.",
+  "plan_reference": "asdesigned.json plumbing_fixtures[] (2x WC pan in M.TOILET/F.TOILET; wash-basin counter with 2 round basins; pantry sink) and rooms M.TOILET 8'8\"x4'0\", F.TOILET 8'8\"x4'0\", PANTRY 5'0\"x8'0\"",
+  "evidence_timepoints": [
+   "t12",
+   "t15",
+   "t20",
+   "t22",
+   "t13"
+  ],
+  "confidence": 0.98,
+  "recommendation": "Commission a dedicated wet-area capture pass before any plumbing sign-off: a surveyor must enter M.TOILET, F.TOILET and PANTRY (and the lift/stair core) and photograph each fixture. Verify presence, count and position of the 2 WC pans, the 2 wash basins on the vanity counter, and the pantry sink; confirm supply taps/angle valves, flush mechanisms, P/bottle traps, floor traps (nahani), waste connections and the absence of leaks. Treat all plumbing as UNVERIFIED / OPEN until that pass is complete; do not record it as a match.",
+  "verify_note": "CONFIRMED as a genuine, correctly-classified coverage_gap (not a building defect, but a verification/evidence gap). Verified three independent ways. (1) Cited equirect frames t12/t13/t15/t20/t22 all show the open WORKSPACE / circulation zone: bench desks, task chairs, monitors, RGB PCs, glazed cabin partitions, balcony sliding doors with sheer curtains. Flush white toilet/utility doors are visible in the grey wall pier (t20, t22) but the camera never crosses them. No WC pan, wash-basin, or pantry sink appears in any frame. (2) Semantic per-stop data (out/asbuilt_locations.json, all 35 stops) confirms plumbing array length = 0 for every single stop; area tags are only reception/balcony/corridor/workspace/cabin \u2014 NO stop is tagged M.TOILET, F.TOILET, PANTRY, LIFT or STAIRCASE; t13 carries the explicit summary note 'No visible plumbing in this area.' (3) out/asdesigned.json confirms the exact wet scope: 2 WC pans (M.TOILET 8'8x4'0, F.TOILET 8'8x4'0), wash-basin counter with 2 round basins, pantry sink (PANTRY 5'0x8'0), all in the central/right services spine. Skeptical checks negative: not occupant clutter, not ceiling-distortion read as a crack, not a reflection/shadow, not double-counting. The wash-basin counter is drawn on a workspace-facing wall yet is absent from every workspace frame, which strengthens the gap. 100% of the drawn plumbing fixtures (2 WC + 2 basin + 1 sink) are unverifiable from this walkthrough; plumbing cannot be signed off. Severity kept at critical (entire discipline unverifiable). Confidence nudged 0.97 -> 0.98 given the per-stop data is unanimous (35/35 plumbing=0, zero wet-room tags). Recommendation to commission a dedicated wet-area capture pass is appropriate."
+ },
+ {
+  "id": "P-3",
+  "discipline": "plumbing",
+  "title": "Surface-run AC drain/refrigerant pipe on workspace wall (incidental MEP - not building plumbing, but note for tidiness)",
+  "type": "as_built_condition",
+  "severity": "observation",
+  "genuine": false,
+  "bucket": "standdown",
+  "description": "At t25 (workspace, wall_y090) a wall-mounted split AC indoor unit has a visible condensate-drain / refrigerant pipe running down the wall surface (surface-run rather than concealed). This is HVAC condensate plumbing, not sanitary/water-supply plumbing, and it is incidental to the drawn wet scope - included only for completeness and to keep it distinct from the sanitary findings above. A surface-run condensate line on an otherwise finished, concealed-services interior is a minor neatness/finish item, not a fixture deviation. No water staining or active drip was noted at this point. Loose data/power cables draped on desks elsewhere are occupant clutter and are explicitly excluded.",
+  "plan_reference": "Not on the architectural plan (no MEP layer); incidental as-built observation",
+  "evidence_timepoints": [
+   "t25"
+  ],
+  "confidence": 0.4,
+  "recommendation": "Confirm the AC condensate drain discharges to an approved point (floor trap / drain stack) and is not simply terminating on the wall or floor; if the surface run is unintended, conceal or trunk it. Low priority - this is an HVAC condensate item, not part of the sanitary plumbing verification, which remains the P-1 priority.",
+  "verify_note": "Re-examined t25 equirect + wall_y090 (cited), plus wall_y000/y270 and ceiling. wall_y090 (/Users/muralikrishnamuthukuru/Desktop/Sthyra CPM/asbuilt360/sem/t25/t25_wall_y090.jpg) does show a wall-mounted white box on the right-hand wall near the curtain wall, with a short stub/conduit beneath it. So an object is genuinely there. However the evidence does NOT cleanly support the specific claim: (1) the box sits low on the wall (roughly desk height), which is atypical for a split-AC indoor unit and equally consistent with a small wall geyser/inverter/electrical box \u2014 so 'split AC indoor unit' is an inference, not a confirmed read; (2) no long, clearly traceable surface-run condensate/refrigerant line is visible descending the wall \u2014 only a short stub; (3) the prominent tangle of cabling in the frame is desktop PC/monitor power+data cable on the workbench, i.e. exactly the 'occupant clutter' the finding itself excludes, raising a real risk that desk cable clutter is being read as the 'pipe'. The finding is otherwise correctly self-classified: it explicitly states this is HVAC condensate, NOT sanitary/water-supply building plumbing, marks it severity 'observation', confidence 0.6, notes no staining/no drip (consistent with the frames), and scopes it as incidental. Because it openly admits it is not building plumbing and not a fixture deviation, it is not a genuine building defect regardless. Verdict: uncertain on the physical detail (AC unit + surface pipe not confidently confirmable from these frames), confidence lowered 0.6 -> 0.4, severity stays 'observation', is_genuine_building_issue = false (by the finding's own admission it is a tidiness/finish note on incidental MEP, not a sanitary-plumbing or structural defect). No change to P-1 priority."
+ }
+]

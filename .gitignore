@@ -1,0 +1,21 @@
+# OS / editor
+.DS_Store
+*.log
+# local / secrets (never commit)
+.env
+.env.*
+.claude/settings.local.json
+node_modules/
+
+# ── asbuilt360: heavy, regenerable reconstruction intermediates ──
+# (reproduce with the pipeline scripts; not source)
+asbuilt360/colmap/
+asbuilt360/frames/
+asbuilt360/persp/
+asbuilt360/sem/
+asbuilt360/cube/
+asbuilt360/views/
+asbuilt360/_t/
+asbuilt360/plan/*.png
+asbuilt360/plan/*.svg
+asbuilt360/out/*.npy

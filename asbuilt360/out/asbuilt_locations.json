@@ -1,0 +1,3643 @@
+[
+ {
+  "tag": "t00",
+  "area": "reception",
+  "area_confidence": 0.82,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "glass_entrance_door",
+    "description": "Frameless/minimal-frame glass swing door with stainless tubular pull handle and blue 'PUSH' decal, marking the reception entry",
+    "view": "wall_y000, ceiling, equirect"
+   },
+   {
+    "element": "glass_partition",
+    "description": "Full-height glass partition flanking the entrance door, separating reception from adjoining lobby/balcony",
+    "view": "wall_y000, wall_y270, ceiling"
+   },
+   {
+    "element": "curtain_wall_glazing",
+    "description": "Full-height aluminium-framed curved glazing/window wall running along the lounge, exterior trees and street/parked cars visible",
+    "view": "wall_y000, wall_y270, equirect"
+   },
+   {
+    "element": "sliding_door",
+    "description": "Aluminium-framed glass sliding door with top track visible leading to balcony",
+    "view": "wall_y270"
+   },
+   {
+    "element": "feature_wall",
+    "description": "Angular/geometric white painted feature wall with triangulated reveals and a timber-slat accent panel (curved accent treatment of reception)",
+    "view": "wall_y090, equirect"
+   },
+   {
+    "element": "reception_desk",
+    "description": "Angular sculptural white reception/console desk with vertical timber-slat cladding",
+    "view": "wall_y000, equirect, ceiling"
+   },
+   {
+    "element": "rcc_column",
+    "description": "Plastered/painted structural columns; a prominent corner column at the lobby junction plus columns within the glazing line",
+    "view": "wall_y180, wall_y270, equirect"
+   },
+   {
+    "element": "ceiling_bulkhead",
+    "description": "Stepped gypsum false-ceiling bulkheads framing the timber-batten ceiling zone",
+    "view": "wall_y000, wall_y270, ceiling"
+   },
+   {
+    "element": "doorway_opening",
+    "description": "Open doorway/passage leading into the dark open workspace (desks/monitors visible beyond)",
+    "view": "wall_y090"
+   },
+   {
+    "element": "glass_railing",
+    "description": "Glass-panel balustrade/railing along balcony edge and stair",
+    "view": "wall_y270, wall_y180"
+   },
+   {
+    "element": "staircase",
+    "description": "Staircase with dark/timber treads descending, adjacent to lift wall",
+    "view": "wall_y180"
+   },
+   {
+    "element": "slab_level_change",
+    "description": "Upper-floor balcony/floor level with railing at slab edge",
+    "view": "wall_y180, wall_y270"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "recessed_downlight",
+    "description": "Recessed circular downlights set into white gypsum false ceiling",
+    "view": "wall_y180, wall_y270, ceiling",
+    "count": 4
+   },
+   {
+    "element": "ceiling_fan",
+    "description": "Ceiling fan suspended below the timber-batten ceiling in the lounge zone",
+    "view": "wall_y000, equirect, ceiling",
+    "count": 1
+   },
+   {
+    "element": "cove_led",
+    "description": "Indirect/cove LED lighting along the gypsum ceiling perimeter / bulkhead edge",
+    "view": "wall_y000, ceiling",
+    "count": 1
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Exposed/chipped unfinished plaster along the jamb edge of the lift/shaft door in the y180 view (incomplete finishing)",
+   "Loose conduit/cable visible near floor at base of the lift wall column (y180 view) - possible exposed wiring/unfinished electrical",
+   "Reflections/handprints on glass partition and door obscure some surfaces; verify glazing for scratches"
+  ],
+  "summary": "Timestamp t00 is the entrance RECEPTION/lounge at the lift-lobby and staircase junction of the upper office floor. It is finished and furnished: leather lounge sofas line a full-height curved aluminium curtain-wall glazing overlooking trees and the street; a glass entrance door with a 'PUSH' decal and stainless pull handle sits between full-height glass partitions; an angular sculptural white reception desk with timber-slat cladding sits to the side; a geometric white feature wall carries a timber-batten accent panel. Ceiling is a timber-batten (slat) feature ceiling bordered by stepped white gypsum false ceiling with recessed downlights, cove LED and a ceiling fan. A doorway leads into the dark open workspace (desks/monitors visible). A balcony with glass railing and an aluminium sliding door is reached on one side; a staircase with dark/timber treads sits by the lift wall. ELECTRICAL seen: recessed downlights, one ceiling fan, cove LED. No PLUMBING fixtures visible. Defects: chipped/unfinished plaster around the lift/shaft door jamb and a loose conduit/cable near the floor at the lift wall - localized incomplete finishing."
+ },
+ {
+  "tag": "t01",
+  "area": "reception",
+  "area_confidence": 0.55,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Painted white solid walls on multiple sides; grey-painted dado/lower band on the right-hand wall (equirect, y090)",
+    "view": "equirect, y090"
+   },
+   {
+    "element": "wall",
+    "description": "Geometric faceted/triangulated panelled accent wall with reveal lines above wood-slat dado (y180, y000)",
+    "view": "y180, y000"
+   },
+   {
+    "element": "partition",
+    "description": "Vertical wood-slat (timber batten) accent wall / partition cladding the lower wall, gable-shaped profile",
+    "view": "y000, y180, equirect"
+   },
+   {
+    "element": "glazing",
+    "description": "Full-height structural glass curtain-wall / window glazing with slim mullions, outdoor trees, parked cars and adjacent building visible (upper-floor level)",
+    "view": "y000, y270, equirect, ceiling"
+   },
+   {
+    "element": "glass_door",
+    "description": "Frameless glass swing door with stainless steel pull handle and patch fittings adjacent to the lounge",
+    "view": "equirect, y090, y180"
+   },
+   {
+    "element": "railing",
+    "description": "Frameless glass balustrade/railing on stainless-steel round posts marking an edge/void or stair opening",
+    "view": "y270, y180, ceiling, equirect"
+   },
+   {
+    "element": "beam",
+    "description": "Ceiling bulkhead / dropped soffit where the white false ceiling meets the wood-slat ceiling raft",
+    "view": "y000, y090, ceiling"
+   },
+   {
+    "element": "slab",
+    "description": "Large-format tiled floor slab; level/edge change implied by the glass-railed opening",
+    "view": "ceiling, equirect, y000"
+   },
+   {
+    "element": "door",
+    "description": "Open doorway/passage leading to a darker adjacent room with framed artwork on the wall",
+    "view": "y180"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "recessed_downlight",
+    "description": "Recessed ceiling downlights set into the white false-ceiling soffit",
+    "view": "equirect, y000, y090, ceiling",
+    "count": 4
+   },
+   {
+    "element": "ceiling_fan",
+    "description": "Ceiling fan with retractable/hidden blades (no integral light) mounted on the wood-slat ceiling",
+    "view": "y000, equirect",
+    "count": 1
+   },
+   {
+    "element": "modular_switchboard",
+    "description": "Modular switch/socket plates mounted on the grey dado wall",
+    "view": "y090, equirect",
+    "count": 2
+   },
+   {
+    "element": "modular_switchboard",
+    "description": "Legrand modular plate (large single-gang, likely scene/doorbell or AC controller) on white wall near the glass door",
+    "view": "y180",
+    "count": 1
+   },
+   {
+    "element": "modular_switchboard",
+    "description": "Modular switch plate on the white return wall to the left of the glass door",
+    "view": "y180",
+    "count": 1
+   },
+   {
+    "element": "magnetic_door_lock",
+    "description": "Electromagnetic (EM) door lock striker plate mounted on the soffit above the glass door opening",
+    "view": "y180",
+    "count": 1
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Glass balustrade at a floor-edge/void with relatively low-looking guard height - verify it meets safe railing height (fall hazard at upper-floor edge)",
+   "Faint vertical scuff/streak marks on the white wall near the glass door (minor surface blemish)",
+   "Unable to confirm whether the EM lock / door-closer hardware above the glass door is fully commissioned (wiring not visible)"
+  ],
+  "summary": "Finished, furnished lounge/reception zone at an upper-floor level: white painted walls with a grey dado, a triangulated geometric accent wall over a vertical wood-slat (timber batten) dado, a wood-slat feature ceiling raft within a white false ceiling, and large-format tiled flooring. Full-height structural glass curtain-wall glazing on two sides looks out onto trees, parked cars and a neighbouring building. Furniture present: two dark-green leather sofas with cushions and a white faceted reception/lounge desk. A frameless glass swing door (stainless pull handle, EM lock + closer overhead) and a frameless glass balustrade on stainless posts mark an edge/void or stair opening. Electrical visible: recessed downlights, one bladeless ceiling fan, and several modular switch plates (incl. a Legrand plate). No plumbing fixtures visible. Main flag: confirm the glass guard-rail height at the floor edge."
+ },
+ {
+  "tag": "t02",
+  "area": "reception",
+  "area_confidence": 0.92,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Painted white plastered perimeter walls; one wall has a grey-painted lower band forming an angular/diagonal feature",
+    "view": "y000,y180,y090"
+   },
+   {
+    "element": "feature_wall",
+    "description": "Signature reception accent wall - white render panels with engraved diagonal joint lines above, vertical wood-batten (rust/brown slat) cladding below forming a peaked profile",
+    "view": "y090,equirect"
+   },
+   {
+    "element": "glazing",
+    "description": "Large floor-to-ceiling structural glazing / curtain-wall on two sides (left and front) framing the balcony, mullion grid visible",
+    "view": "y000,y270,wall_y180"
+   },
+   {
+    "element": "glass_railing",
+    "description": "Frameless glass balustrade / railing along the balcony edge behind the glazing",
+    "view": "y000,y270"
+   },
+   {
+    "element": "door",
+    "description": "Frameless glass swing door (with floor pivot patch fitting) in white wall leading toward balcony/adjacent space",
+    "view": "y180"
+   },
+   {
+    "element": "door",
+    "description": "Dark internal doorway/opening leading into rear corridor with framed artwork beyond",
+    "view": "y090,equirect"
+   },
+   {
+    "element": "ceiling_bulkhead",
+    "description": "White gypsum false-ceiling bulkhead / cove transition framing the central wood-slat ceiling raft",
+    "view": "equirect,y000,ceiling"
+   },
+   {
+    "element": "slab_level",
+    "description": "Tiled (large-format) floor; this is an upper-floor reception per plan, no internal step change visible",
+    "view": "y000,ceiling"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "ceiling_fan",
+    "description": "Decorative caged/ringed ceiling fan with downlight, centrally mounted on gypsum ceiling",
+    "count": 1,
+    "view": "equirect,y000"
+   },
+   {
+    "element": "cove_led",
+    "description": "Cove / indirect LED lighting in the perimeter gypsum ceiling pocket",
+    "count": 1,
+    "view": "y000,equirect"
+   },
+   {
+    "element": "recessed_downlight",
+    "description": "Small recessed downlights/spots in the white gypsum ceiling",
+    "count": 4,
+    "view": "y000,y090"
+   },
+   {
+    "element": "ac_grille",
+    "description": "Linear slot AC supply grille / cassette diffuser set into the false ceiling near the fan",
+    "count": 1,
+    "view": "y000"
+   },
+   {
+    "element": "ac_supply_diffuser",
+    "description": "Rectangular ceiling AC supply/return diffuser",
+    "count": 1,
+    "view": "y000"
+   },
+   {
+    "element": "switchboard",
+    "description": "Modular switch/socket plates on walls (white plates) - one near glass door, others on feature wall area",
+    "count": 2,
+    "view": "y180,y090"
+   },
+   {
+    "element": "power_socket",
+    "description": "Low-level modular socket plate on white wall",
+    "count": 1,
+    "view": "y180"
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "No structural cracks, dampness or water staining visible on walls or ceiling",
+   "Reception desk top has loose items (water bottles, plant, brochures) - housekeeping only, not a defect",
+   "Frameless glass door pivot/patch fitting visible - confirm floor spring/lock is fully fitted",
+   "Photographer/hand occludes part of lower frame in several views, limiting floor inspection"
+  ],
+  "summary": "Timestamp t02 (location t02, 4s) is the entrance RECEPTION of the HSR Layout office, finished and furnished. Defining features: the angular grey+white faceted reception desk, two green leather lounge sofas with floral cushions, and the signature curved accent wall (white render panels with engraved diagonal joints above, vertical wood-batten cladding below). Ceiling is a wood-slat raft inside a white gypsum cove with indirect LED, recessed downlights, a decorative caged ceiling fan, and a slot AC diffuser. Two sides are full-height structural glazing/curtain-wall opening to a balcony with frameless glass railing; a frameless glass swing door and a rear corridor (framed artwork, dark feature wall) lead deeper into the floor. Electrical: ceiling fan, cove LED, ~4 downlights, AC diffuser/grille, and 2-3 modular switch/socket plates. No plumbing fixtures in view. No cracks, dampness or unsafe wiring observed; interior reads as completed/handover-ready.\""
+ },
+ {
+  "tag": "t03",
+  "area": "reception",
+  "area_confidence": 0.82,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Painted white perimeter walls; partial grey-painted accent wall section on right (y270, y180)",
+    "view": "y180,y270,equirect"
+   },
+   {
+    "element": "feature_wall",
+    "description": "Geometric faceted accent wall with light render panels above and vertical wood-batten cladding lower section (reception backdrop)",
+    "view": "y180,equirect"
+   },
+   {
+    "element": "curved_accent",
+    "description": "Wave / S-curve wood-batten and mesh accent element running across the balcony glazing head",
+    "view": "y270,equirect"
+   },
+   {
+    "element": "glazing",
+    "description": "Full-height fixed glass curtain glazing on two balcony-facing sides overlooking street and neighbouring tiled-roof house",
+    "view": "y000,y270,equirect"
+   },
+   {
+    "element": "glass_railing",
+    "description": "Frameless glass balustrade/railing along the balcony edge inside the glazing",
+    "view": "y000,y270,ceiling"
+   },
+   {
+    "element": "glass_partition_door",
+    "description": "Framed glass partition door to a cabin/room visible in background beyond reception",
+    "view": "y180,y090"
+   },
+   {
+    "element": "door",
+    "description": "Glazed door/opening with frame in white wall (background, behind photographer)",
+    "view": "y180"
+   },
+   {
+    "element": "ceiling_bulkhead",
+    "description": "Gypsum false-ceiling bulkheads and down-stand beams/coffers framing the wood-slat ceiling zone",
+    "view": "y000,y090,equirect"
+   },
+   {
+    "element": "slab_level",
+    "description": "Upper-floor slab level (+11'9 typical), balcony beyond glass at same level overlooking street one storey down",
+    "view": "y000,equirect"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "decorative_ceiling_fan",
+    "description": "Designer ceiling fan with wood-frame decorative shroud and central light",
+    "view": "y090,equirect,ceiling",
+    "count": 1
+   },
+   {
+    "element": "cassette_ac",
+    "description": "Recessed ceiling cassette AC indoor units (4-way grille type)",
+    "view": "y000,y090,equirect",
+    "count": 2
+   },
+   {
+    "element": "recessed_downlight",
+    "description": "Recessed circular downlights in gypsum false ceiling",
+    "view": "y000,y090,equirect,ceiling",
+    "count": 6
+   },
+   {
+    "element": "cove_led",
+    "description": "Indirect cove/LED lighting along bulkhead edges",
+    "view": "equirect,y000"
+   },
+   {
+    "element": "modular_switch_plate",
+    "description": "Modular switch/socket plate on white wall near glass door (white rectangular plate)",
+    "view": "y180",
+    "count": 1
+   },
+   {
+    "element": "modular_switch_plate",
+    "description": "Modular switch plate / control on white wall left of glass partition door",
+    "view": "y180",
+    "count": 1
+   },
+   {
+    "element": "thermostat_or_plate",
+    "description": "Wall-mounted white control plate (likely AC thermostat/switch) on white wall",
+    "view": "y180",
+    "count": 1
+   },
+   {
+    "element": "wall_socket_plate",
+    "description": "Low-level wall socket/outlet plate on grey accent wall near floor",
+    "view": "y180",
+    "count": 1
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "No structural cracks, dampness or water stains visible in any view; surfaces appear finished and clean",
+   "Photographer's body/arm partially obscures floor and lower walls (y000,y180,ceiling) limiting low-level inspection",
+   "Top/bottom of equirect view is distorted - ceiling fixture counts approximate"
+  ],
+  "summary": "Upper-floor (+11'9) RECEPTION / lounge zone of the HSR Layout office. Furnished and near-complete: two dark-green leather lounge sofas with cushions, an angular faceted quartz reception desk with chair, and a geometric render+wood-batten accent feature wall behind it. Two balcony-facing sides are full-height fixed glazing with a frameless glass balustrade, fronted by a wave/S-curve wood-batten accent, overlooking the street and a neighbouring tiled-roof house. Ceiling is a mix of wood-slat battens and white gypsum false ceiling with cove LED, recessed downlights, two 4-way cassette AC units and one decorative wood-framed ceiling fan with light. Electrical seen: modular switch/control plates and a low wall socket. No plumbing fixtures present. Finish state is finished_with_furniture; no cracks, dampness or unsafe wiring observed, though the photographer's body obscures some low-level surfaces."
+ },
+ {
+  "tag": "t04",
+  "area": "reception",
+  "area_confidence": 0.9,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "glazed_curtain_wall",
+    "description": "Full-height structural glazing / glass curtain wall enclosing the reception toward the balcony, with a distinctive curved (parabolic) mullion line and external metal railing visible beyond",
+    "view": "wall_y000, wall_y270, equirect"
+   },
+   {
+    "element": "sliding_door",
+    "description": "Aluminium-framed glass sliding doors (sheer/frameless glass panels) giving access from reception out to the balcony",
+    "view": "wall_y000, ceiling"
+   },
+   {
+    "element": "glass_entrance_door",
+    "description": "Frameless/glass swing entrance door with floor-mat behind it, set in a white wall with grey diagonal accent paint",
+    "view": "wall_y180"
+   },
+   {
+    "element": "glass_partition",
+    "description": "Dark-framed glass partition wall (cabin/corridor enclosure) seen to the side of the reception zone",
+    "view": "wall_y090, wall_y180"
+   },
+   {
+    "element": "wall",
+    "description": "Painted white solid walls with grey diagonal accent painted panel and a geometric off-white/grey feature wall behind the reception desk",
+    "view": "wall_y090, wall_y180"
+   },
+   {
+    "element": "ceiling_bulkhead",
+    "description": "Gypsum false-ceiling with stepped bulkheads/coves; section with timber-slat (wood batten) ceiling over the reception/lounge",
+    "view": "wall_y090, wall_y270, ceiling, equirect"
+   },
+   {
+    "element": "railing",
+    "description": "External metal balcony railing and a glass balustrade at the edge of the balcony beyond the glazing",
+    "view": "wall_y000, wall_y270"
+   },
+   {
+    "element": "reception_desk",
+    "description": "Sculptural angular/faceted reception desk (grey + white geometric counter) standing in front of the wood-slat feature wall",
+    "view": "wall_y090, equirect"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "ac_indoor_unit",
+    "description": "Ceiling-mounted cassette AC indoor unit (4-way grille) in the false ceiling",
+    "view": "wall_y090, equirect",
+    "count": 1
+   },
+   {
+    "element": "ceiling_fan",
+    "description": "Decorative ceiling fan with curved/swept blades mounted over the lounge/reception, on the timber-slat ceiling",
+    "view": "wall_y180, equirect",
+    "count": 1
+   },
+   {
+    "element": "recessed_downlight",
+    "description": "Recessed LED downlights set into the gypsum false ceiling",
+    "view": "wall_y000, ceiling, equirect",
+    "count": 6
+   },
+   {
+    "element": "cove_led",
+    "description": "Cove / indirect LED lighting along the stepped false-ceiling bulkheads",
+    "view": "ceiling, equirect",
+    "count": 1
+   },
+   {
+    "element": "modular_switch_plate",
+    "description": "Modular switch/socket plate(s) on the white wall near the entrance door",
+    "view": "wall_y180",
+    "count": 1
+   },
+   {
+    "element": "pendant_light_point",
+    "description": "Exposed/unfinished ceiling light point (loose wire hanging from a ceiling box, no fixture fitted)",
+    "view": "wall_y090",
+    "count": 1
+   },
+   {
+    "element": "cctv_camera",
+    "description": "Small dome/CCTV-type camera mounted at the ceiling/wall junction near the glazing",
+    "view": "wall_y270",
+    "count": 1
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Exposed/loose ceiling wiring at an unfitted light point in the false ceiling near the reception desk (light fixture missing/half-fitted)",
+   "Photographer (person) and arm/hand obstruct portions of several frames, partially blocking the view"
+  ],
+  "summary": "Reception/lounge zone (location t04) of the HSR Layout office, finished and furnished. Defined by a curved structural glass curtain wall and aluminium sliding doors opening to a balcony with metal railing/glass balustrade, a green leather lounge sofa, and a sculptural faceted grey/white reception desk set against a wood-slat feature wall with grey diagonal accent paint. Ceiling is gypsum false ceiling with stepped coves, a timber-slat panel, cove LED + recessed downlights, one 4-way AC cassette and one decorative ceiling fan. A frameless glass entrance door and dark-framed glass partitions border the space. Electrical near-complete except one exposed/loose ceiling light point with no fixture fitted. No plumbing visible."
+ },
+ {
+  "tag": "t05",
+  "area": "reception",
+  "area_confidence": 0.85,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "reception_desk_accent_wall",
+    "description": "Curved/angular reception desk with grey countertop and white base, backed by a geometric accent feature wall combining plastered off-white triangular panels and brown vertical-batten (fluted) wood cladding",
+    "view": "equirect, wall_y090, ceiling"
+   },
+   {
+    "element": "curved_glass_balcony_facade",
+    "description": "Full-height curved/sweeping glazed curtain-wall facade enclosing balcony on multiple sides; clear glass panels in slim frames overlooking street and tiled roofs",
+    "view": "equirect, wall_y180, ceiling"
+   },
+   {
+    "element": "glass_partition_door",
+    "description": "Frameless glass swing door with vertical pull handle leading to lobby/staircase area, set in grey-painted diagonal accent wall",
+    "view": "wall_y180"
+   },
+   {
+    "element": "glass_partition_cabin",
+    "description": "Dark-tinted glass partition (cabin) visible to the left of the entry door with framed glazing",
+    "view": "wall_y180, wall_y090"
+   },
+   {
+    "element": "metal_railing",
+    "description": "Black metal balustrade/railing along the balcony edge behind the glazing",
+    "view": "wall_y000, wall_y270, ceiling"
+   },
+   {
+    "element": "sliding_door",
+    "description": "Aluminium-framed sliding glazed door panels along the glazed facade giving balcony access",
+    "view": "wall_y000, ceiling"
+   },
+   {
+    "element": "walls",
+    "description": "Plastered and painted white walls; one wall has a grey diagonal painted accent band and brown fluted wood dado",
+    "view": "wall_y180, wall_y090"
+   },
+   {
+    "element": "false_ceiling_with_bulkhead",
+    "description": "Gypsum false ceiling with multi-level stepped bulkheads/coves and a sloping brown timber-slat (fluted) ceiling soffit over the balcony zone",
+    "view": "equirect, wall_y270, ceiling"
+   },
+   {
+    "element": "tiled_floor",
+    "description": "Large-format grey vitrified floor tiles throughout",
+    "view": "wall_y000, ceiling"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "ac_indoor_unit",
+    "description": "Ceiling-mounted ductable/cassette AC unit with grille recessed into the false ceiling above reception",
+    "view": "wall_y090",
+    "count": 1
+   },
+   {
+    "element": "decorative_ceiling_fan",
+    "description": "Decorative caged/industrial-style ceiling fan with downlight over the lounge/balcony zone",
+    "view": "wall_y180, equirect",
+    "count": 1
+   },
+   {
+    "element": "recessed_downlights",
+    "description": "Recessed LED downlights set into the gypsum false ceiling",
+    "view": "ceiling, wall_y000, wall_y270",
+    "count": 6
+   },
+   {
+    "element": "cove_led",
+    "description": "Cove/indirect LED lighting in the stepped false-ceiling coves",
+    "view": "ceiling, wall_y000"
+   },
+   {
+    "element": "modular_switch_plate",
+    "description": "Modular switch/control plate(s) mounted on the white wall beside the glass entry door",
+    "view": "wall_y180",
+    "count": 2
+   },
+   {
+    "element": "exposed_dropped_conduit",
+    "description": "Loose/exposed electrical conduit with wiring hanging down from the ceiling near the accent wall - appears as a dangling looped cable",
+    "view": "wall_y090, wall_y000",
+    "count": 1
+   },
+   {
+    "element": "cctv_camera_or_dome",
+    "description": "Small ceiling-mounted dome device (likely CCTV/sensor) near the wall-ceiling junction",
+    "view": "wall_y090",
+    "count": 1
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Exposed/loose electrical conduit with looped wiring hanging down from the false ceiling near the accent wall - unfinished/unsafe wiring (visible in wall_y090 and wall_y000)",
+   "Dangling cable/conduit also visible drooping along ceiling in wall_y000 right side",
+   "Reception accent wall finish is a mix of plastered and fluted-wood panels; some plaster panels appear raw/unpainted (off-white cement render) - possibly unfinished surface treatment"
+  ],
+  "summary": "Reception/entry lounge at the upper-floor (+11'9') level: a curved geometric reception desk (grey top, white base) backs a feature accent wall of triangular plastered panels and brown fluted-wood cladding. The space opens onto a balcony through a sweeping full-height curved glazed curtain wall with aluminium sliding doors and black metal railings, plus a frameless glass entry door (with modular switches beside it) leading to the lobby/cabin/staircase zone past dark-tinted glass partitions. Finishes are essentially complete: gypsum false ceiling with stepped coves, cove LED + recessed downlights, a sloping fluted-timber ceiling soffit, grey vitrified floor tiles, two green leather lounge sofas. Electrical: 1 cassette AC unit, 1 decorative caged ceiling fan with light, ~6 downlights, cove LED, a ceiling dome (CCTV/sensor). DEFECT: a loose/exposed conduit with looped wiring hangs from the false ceiling near the accent wall (seen in wall_y090 and wall_y000) - flag as unfinished/unsafe wiring. No plumbing fixtures visible."
+ },
+ {
+  "tag": "t06",
+  "area": "reception",
+  "area_confidence": 0.82,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Painted white/grey perimeter walls; one wall has a diagonal white-over-grey paint split as a design feature",
+    "view": "wall_y180,equirect"
+   },
+   {
+    "element": "feature_wall",
+    "description": "Geometric reception accent wall - cream painted angular panels above vertical timber slat (batten) cladding behind the reception desk",
+    "view": "wall_y090,equirect"
+   },
+   {
+    "element": "curved_glazing",
+    "description": "Curved/sweeping full-height glazed balcony wall with venetian/roller blinds drawn in an arc (the reception 'curved accent' glazing)",
+    "view": "wall_y180(equirect view),ceiling"
+   },
+   {
+    "element": "glazing",
+    "description": "Large full-height fixed glass curtain walls / windows to balcony on multiple sides, aluminium framed",
+    "view": "wall_y000,wall_y180,equirect"
+   },
+   {
+    "element": "glass_door",
+    "description": "Frameless glass swing/pivot door with long stainless-steel pull handle leading to adjoining room/corridor",
+    "view": "wall_y180"
+   },
+   {
+    "element": "glass_partition",
+    "description": "Glass-partition cabin enclosure (dark framed glazed wall) visible to the side of reception",
+    "view": "wall_y090,wall_y180,equirect"
+   },
+   {
+    "element": "railing",
+    "description": "Metal balcony railing visible through the glazing on the balcony side",
+    "view": "wall_y000,equirect,ceiling"
+   },
+   {
+    "element": "reception_desk",
+    "description": "Built-in grey-top reception/front desk counter with raised modesty panel",
+    "view": "wall_y090,equirect,ceiling"
+   },
+   {
+    "element": "ceiling_bulkhead",
+    "description": "Gypsum false-ceiling bulkheads / cove drops and a stepped timber-slat ceiling raft over the lounge",
+    "view": "equirect,wall_y270,ceiling"
+   },
+   {
+    "element": "slab_level",
+    "description": "Typical upper floor slab; cars visible below through balcony glazing confirming raised level",
+    "view": "equirect,ceiling"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "recessed_downlight",
+    "description": "Recessed ceiling downlights in the gypsum false ceiling",
+    "view": "equirect,wall_y000,wall_y270,ceiling",
+    "count": 6
+   },
+   {
+    "element": "cove_led",
+    "description": "Cove / indirect LED lighting in the perimeter false-ceiling drops",
+    "view": "equirect,wall_y270"
+   },
+   {
+    "element": "ceiling_fan",
+    "description": "Decorative timber-finish bladed ceiling fan over the lounge",
+    "view": "equirect,wall_y270,ceiling",
+    "count": 1
+   },
+   {
+    "element": "modular_switchboard",
+    "description": "Modular switch/socket plates on walls near the glass door and feature wall",
+    "view": "wall_y180",
+    "count": 3
+   },
+   {
+    "element": "ac_grille",
+    "description": "Linear slot AC supply-air grille in false ceiling (concealed/ducted AC)",
+    "view": "equirect,wall_y000,ceiling",
+    "count": 2
+   },
+   {
+    "element": "ac_indoor_unit",
+    "description": "Wall-mounted AC indoor unit (white) high on wall near glazing",
+    "view": "wall_y000"
+   },
+   {
+    "element": "loose_wiring",
+    "description": "A loose dropped electrical wire/flex hanging from the ceiling near the bulkhead (light/point not yet fixed)",
+    "view": "wall_y000"
+   },
+   {
+    "element": "sensor_point",
+    "description": "Small ceiling-mounted point (likely smoke detector / sensor) on bulkhead",
+    "view": "equirect"
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Loose/dangling electrical wire hanging from ceiling bulkhead near glazing (light fitting not terminated)",
+   "Open ceiling point/junction visible near the dropped wire - fixture appears not yet fitted",
+   "Wash-area/wet-area not in view; reception otherwise finished"
+  ],
+  "summary": "Reception / entrance lounge of the upper office floor, finished and furnished. Defined by the geometric reception accent wall (cream angular panels over vertical timber-slat cladding) behind a built-in grey reception desk, and a curved full-height glazed balcony wall with arc-drawn blinds. Two green leather lounge sofas with cushions sit against floor-to-ceiling glass curtain walls opening to balconies with metal railings (cars visible below = upper floor). A frameless glass swing door with SS pull handle leads to an adjoining room; a dark glass-partition cabin is visible to the side. Ceiling is gypsum false ceiling with cove LED, recessed downlights, a decorative timber-blade fan, and linear ducted-AC grilles; a wall-mounted AC indoor unit is also present. Tiled flooring throughout. No plumbing fixtures visible. Key defect: a loose electrical wire/flex dangling from the ceiling bulkhead near the glazing where a fixture appears not yet terminated."
+ },
+ {
+  "tag": "t07",
+  "area": "balcony",
+  "area_confidence": 0.6,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "external glazing / curtain-wall window",
+    "description": "Floor-height fixed glazing on multiple sides overlooking neighbouring tiled-roof buildings and trees; one bay has a curved/arched top mullion (sweeping curve seen in 270deg view). Aluminium framing.",
+    "view": "equirect, wall_y000, wall_y090, wall_y270"
+   },
+   {
+    "element": "balcony railing",
+    "description": "Metal/MS railing visible beyond the glazing on the open balcony edge with tiled-roof buildings behind.",
+    "view": "wall_y000, wall_y090"
+   },
+   {
+    "element": "feature wall - geometric panel + fluted wood",
+    "description": "Painted off-white wall with angled geometric jointing lines, lower band clad in vertical reddish fluted timber/WPC battens forming a chevron/triangular profile.",
+    "view": "wall_y090, equirect"
+   },
+   {
+    "element": "feature wall - grey diagonal paint accent",
+    "description": "White wall with a large grey triangular diagonal paint accent terminating at a glass entrance door; skirting at base.",
+    "view": "wall_y180"
+   },
+   {
+    "element": "glass partition (cabin)",
+    "description": "Black-framed full-height glass partition enclosing an adjacent glazed cabin/meeting room, dark interior beyond.",
+    "view": "wall_y090, wall_y180"
+   },
+   {
+    "element": "glazed swing entrance door",
+    "description": "Frameless/glass pivot door with vertical pull handle and floor patch fitting, leading to an external balcony/corridor with doormat; daylight and greenery beyond.",
+    "view": "wall_y180"
+   },
+   {
+    "element": "reception / low partition desk",
+    "description": "Low white-and-grey counter/partition (knee-height parapet wall) separating the lounge from the workspace side; flat top used as a ledge.",
+    "view": "equirect, wall_y000, ceiling"
+   },
+   {
+    "element": "false ceiling - fluted timber slat panels",
+    "description": "Large suspended reddish-brown wooden slatted (linear batten) ceiling panels over the lounge, with flat white gypsum margins.",
+    "view": "equirect, wall_y180, wall_y270, ceiling"
+   },
+   {
+    "element": "tiled flooring",
+    "description": "Large-format light grey vitrified floor tiles throughout the lounge/balcony area.",
+    "view": "equirect, wall_y000, ceiling"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "AC indoor unit - cassette",
+    "description": "Ceiling-recessed 4-way cassette AC unit with grille in the gypsum false ceiling.",
+    "view": "wall_y000",
+    "count": 1
+   },
+   {
+    "element": "decorative ceiling fan / bladeless-style fan light",
+    "description": "Designer ring/cage-style ceiling fan with integrated light fitting mounted on the white ceiling over the sofa.",
+    "view": "equirect, wall_y270",
+    "count": 1
+   },
+   {
+    "element": "recessed downlights",
+    "description": "Small recessed LED downlights / spotlights set into the white gypsum false ceiling.",
+    "view": "equirect, wall_y000, wall_y270, ceiling",
+    "count": 4
+   },
+   {
+    "element": "modular switch plate",
+    "description": "White modular switch/socket plate mounted on the grey accent wall near floor/skirting level.",
+    "view": "wall_y180",
+    "count": 1
+   },
+   {
+    "element": "modular switchboard with socket",
+    "description": "White modular plate with switches and a power socket on the white wall beside the glass door.",
+    "view": "wall_y180",
+    "count": 1
+   },
+   {
+    "element": "access control / video door panel",
+    "description": "Wall-mounted electronic access-control or video-door reader panel beside the glass entrance door.",
+    "view": "wall_y180",
+    "count": 1
+   },
+   {
+    "element": "exposed ceiling junction / pendant drop point",
+    "description": "Bent conduit / wiring drop hook protruding from ceiling near the partition with no fixture fitted (loose pendant point).",
+    "view": "wall_y000",
+    "count": 1
+   },
+   {
+    "element": "wall-mounted box / fixture (unlit)",
+    "description": "White rectangular wall-mounted box (likely TV outlet plate, intercom, or sanitiser/notice box) on white wall above switch.",
+    "view": "wall_y180",
+    "count": 1
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Exposed bent conduit / pendant wiring drop hook hanging from ceiling near the partition with no light fixture fitted (incomplete electrical / missing fixture)",
+   "Loose items on the partition ledge (drink bottle, packaging) - housekeeping, not a building defect",
+   "Glass pivot door appears to lack a clearly visible bottom rail/threshold seal - verify weather sealing"
+  ],
+  "summary": "Location t07 is a finished, furnished lounge/balcony zone at the workspace edge: light-grey vitrified tiled floor, white gypsum false ceiling with large reddish fluted-timber slat panels and cove margins, full-height aluminium glazing (one curved/arched bay) onto an external railed balcony overlooking neighbouring tiled-roof buildings. Furnishings include a green leather sofa with cushions and a designer ring ceiling fan. A low white/grey reception-style partition counter divides this area from the open workspace, and a black-framed glass-partition cabin plus a glazed pivot entrance door (with access-control panel) sit on the inner walls. Electrical: 1 ceiling cassette AC, ~4 recessed downlights, the decorative fan-light, two modular switch/socket plates, and one wall box. No plumbing fixtures visible. Main defect/incomplete-work flag: an exposed bent conduit / pendant drop hook from the ceiling with no fixture fitted. Area read as balcony/reception-edge lounge (moderate confidence; it straddles reception and balcony)."
+ },
+ {
+  "tag": "t08",
+  "area": "reception",
+  "area_confidence": 0.82,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Painted geometric accent walls - white/grey diagonal-split plaster and a dark grey wall, with vertical wood-batten (rust/brown slat) cladding panels forming a triangular feature",
+    "view": "wall_y090, wall_y180, wall_y270, equirect"
+   },
+   {
+    "element": "curtain_wall_glazing",
+    "description": "Full-height curved glass facade/window wall with mullions and a decorative sine-curve line, looking out to greenery and a tiled roof; spans the lounge side",
+    "view": "wall_y000, wall_y270, equirect"
+   },
+   {
+    "element": "sliding_door",
+    "description": "Aluminium-framed glass sliding door at left of lounge giving access to balcony/exterior",
+    "view": "wall_y270, equirect"
+   },
+   {
+    "element": "glass_partition",
+    "description": "Black-framed glass-partition cabin enclosure visible through corridor/opening to one side",
+    "view": "wall_y180, wall_y270"
+   },
+   {
+    "element": "reception_desk",
+    "description": "Long curved white reception/console desk with stepped ledge running along the lounge",
+    "view": "wall_y000, equirect, ceiling"
+   },
+   {
+    "element": "beam_bulkhead",
+    "description": "Gypsum false-ceiling bulkheads / level changes between wood-slat ceiling zone and flat white ceiling zone",
+    "view": "wall_y000, wall_y090, wall_y180, equirect"
+   },
+   {
+    "element": "balcony_railing",
+    "description": "Glass/metal balcony railing visible through the glazing",
+    "view": "wall_y270, equirect"
+   },
+   {
+    "element": "tiled_floor",
+    "description": "Large-format grey/beige vitrified tiled flooring throughout",
+    "view": "all views"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "ceiling_fan",
+    "description": "Decorative chandelier-style ceiling fan (retractable-blade design) mounted on flat white ceiling over lounge",
+    "view": "wall_y000, wall_y270, equirect",
+    "count": 1
+   },
+   {
+    "element": "cove_led",
+    "description": "Indirect cove LED lighting along perimeter of gypsum false ceiling",
+    "view": "equirect, wall_y000",
+    "count": 1
+   },
+   {
+    "element": "panel_light",
+    "description": "Large recessed ceiling AC supply/return grille panel (also appears as a flush ceiling panel)",
+    "view": "wall_y000",
+    "count": 1
+   },
+   {
+    "element": "recessed_downlight",
+    "description": "Recessed downlights in the gypsum ceiling near the corridor/cabin opening",
+    "view": "wall_y180, wall_y270",
+    "count": 3
+   },
+   {
+    "element": "modular_switchboard",
+    "description": "Modular switch/socket plates mounted on the white wall (one near top-right and lower units near skirting/desk level)",
+    "view": "wall_y180, wall_y270, equirect",
+    "count": 3
+   },
+   {
+    "element": "video_door_phone",
+    "description": "Wall-mounted intercom / video door phone or access-control panel near the sliding door / glass entry",
+    "view": "wall_y180, wall_y270, equirect",
+    "count": 1
+   },
+   {
+    "element": "junction_box",
+    "description": "Circular ceiling/wall junction-box cover plate on the white accent wall (capped outlet/sensor point)",
+    "view": "wall_y180",
+    "count": 1
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Capped circular junction-box / outlet on white wall (wall_y180) with no fixture fitted - confirm whether a fixture is pending",
+   "Wood-batten ceiling/wall slats show slight tonal variation; verify finish consistency (no clear defect, low confidence)"
+  ],
+  "summary": "Reception/lounge area of the office floor at t08. Finished and furnished: green leather lounge sofa, curved white reception console desk with office chair, large-format tiled floor. Strong feature finishes - vertical wood-batten slat ceiling and triangular wood-slat accent wall, geometric grey/white painted plaster walls, full-height curved glass facade with decorative sine-curve line opening to a balcony beyond, and an aluminium glass sliding door at left. A black-framed glass-partition cabin is visible through a side opening. Electrical: a decorative chandelier-style ceiling fan, cove/indirect LED, recessed downlights, a large flush ceiling AC grille panel, several modular switch/socket plates, a wall-mounted intercom/video door phone, and one capped circular junction box. No plumbing fixtures visible. Only minor open item: the capped junction box pending a fixture."
+ },
+ {
+  "tag": "t09",
+  "area": "reception",
+  "area_confidence": 0.45,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Painted off-white/cream plastered walls plus a grey accent wall with a diagonal grey/white split; tall RCC wall mass with bulkhead separating the balcony/lounge zone from the workspace corridor",
+    "view": "wall_y000, wall_y180, wall_y270"
+   },
+   {
+    "element": "wall_feature",
+    "description": "Wood-slat (timber batten) cladding on a curved/angled accent wall and on a low lounge counter base; matching wood-slat slatted false ceiling overhead",
+    "view": "equirect, wall_y000, ceiling"
+   },
+   {
+    "element": "beam",
+    "description": "Ceiling bulkhead / down-stand beam where the flat white gypsum ceiling meets the wood-slat ceiling and over the corridor opening into the workspace",
+    "view": "wall_y000, wall_y090, wall_y180"
+   },
+   {
+    "element": "glazing",
+    "description": "Full-height aluminium-framed structural glazing / window wall along the balcony side overlooking trees and a tiled roof outside",
+    "view": "equirect, wall_y000, wall_y270"
+   },
+   {
+    "element": "sliding_door",
+    "description": "Aluminium-framed glass sliding door / glass partition leaf at the balcony lounge enclosure (curved glass screen with arc detail)",
+    "view": "wall_y270, equirect"
+   },
+   {
+    "element": "partition",
+    "description": "Black-framed glass partition wall enclosing a meeting cabin on the workspace side",
+    "view": "wall_y090, wall_y180"
+   },
+   {
+    "element": "doorway",
+    "description": "Wide open corridor / doorway opening leading from this lounge area into the open workspace",
+    "view": "wall_y090, equirect"
+   },
+   {
+    "element": "slab_level_change",
+    "description": "Tiled flooring in lounge/reception zone transitions to wood-look (laminate/timber) flooring in the workspace corridor; subtle finish/level transition at threshold",
+    "view": "wall_y090, ceiling"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "cove_led",
+    "description": "Recessed cove / indirect LED light strip glowing warm in the ceiling pocket over the corridor into the workspace",
+    "view": "wall_y090",
+    "count": 1
+   },
+   {
+    "element": "recessed_downlight",
+    "description": "Recessed ceiling downlights in the flat gypsum ceiling over the corridor and workspace area",
+    "view": "wall_y090, wall_y180",
+    "count": 4
+   },
+   {
+    "element": "panel_light",
+    "description": "Recessed flat panel / linear light fixtures in the white false ceiling of the lounge area",
+    "view": "wall_y000",
+    "count": 2
+   },
+   {
+    "element": "ceiling_fan",
+    "description": "Decorative ceiling fans (retractable-blade style) mounted in the lounge/balcony ceiling",
+    "view": "equirect, wall_y000, wall_y270",
+    "count": 2
+   },
+   {
+    "element": "modular_switch_plate",
+    "description": "White modular switch/socket plates surface-mounted on the grey accent wall and on the cream lounge wall",
+    "view": "wall_y180, wall_y270",
+    "count": 3
+   },
+   {
+    "element": "smoke_detector",
+    "description": "Ceiling-mounted circular smoke detector / sensor on the white ceiling/upper wall",
+    "view": "wall_y180, wall_y270",
+    "count": 2
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Diffuse grey shadow/smudge marks on the grey accent wall (could be handling marks or uneven paint) - wall_y180",
+   "Ceiling-mounted circular fittings on upper wall appear to be sensors but a couple have visible surface-mounted base rings suggesting incomplete trim/finishing - wall_y180, wall_y270"
+  ],
+  "summary": "Timestamp t09 (t09) sits at the junction between a finished BALCONY/lounge zone and the open WORKSPACE corridor. Structurally: painted plastered walls plus a grey diagonal accent wall, a wood-slat clad curved feature wall and matching slatted timber false ceiling, ceiling bulkheads/beams, full-height aluminium structural glazing to the balcony with a curved glass sliding screen, a black-framed glass-partition cabin on the workspace side, and a finish/level transition from tiled to wood-look flooring at the corridor. Electrical: warm cove/indirect LED over the corridor, ~4 recessed downlights, ~2 ceiling panel lights, 2 decorative ceiling fans, ~3 modular switch/socket plates, and ~2 ceiling smoke detectors. No plumbing fixtures are visible. Minor possible defects: smudging on the grey accent wall and a couple of surface-mounted ceiling sensor rings that look not fully trimmed. Area is ambiguous between reception/lounge and balcony; furniture (green sofa, lounge) and wood-slat counter lean reception/lounge, confidence moderate."
+ },
+ {
+  "tag": "t10",
+  "area": "corridor",
+  "area_confidence": 0.55,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "RCC column",
+    "view": "wall_y000, equirect",
+    "description": "Large plastered/painted structural column at the junction between the reception/lounge zone and the open workspace; a faint vertical seam/honeycomb-like shading is visible on its face."
+   },
+   {
+    "element": "beam / ceiling bulkhead",
+    "view": "wall_y000, wall_y090, equirect",
+    "description": "Dark horizontal gypsum bulkheads / down-stand beams running along the workspace ceiling, one carrying the cove-LED reveal and concealed AC/services."
+   },
+   {
+    "element": "wall",
+    "view": "all views",
+    "description": "Painted white perimeter and partition walls; a sage-grey accent-painted wall section near the corridor/cabin (curved reception accent wall visible in equirect)."
+   },
+   {
+    "element": "glazing / curtain wall",
+    "view": "wall_y000, wall_y090, wall_y270, equirect",
+    "description": "Floor-to-ceiling aluminium-framed glazing onto the balcony/garden (reception lounge side), with an arched mullion pattern; greenery visible beyond."
+   },
+   {
+    "element": "glass partition",
+    "view": "wall_y090, wall_y180, equirect",
+    "description": "Black-framed full-height glass partition enclosing a CABIN (manager/meeting room) on the right of the corridor; multiple framed glass panels."
+   },
+   {
+    "element": "door",
+    "view": "wall_y180",
+    "description": "Glazed door leaf within the black-framed glass partition giving access into the cabin."
+   },
+   {
+    "element": "sliding door",
+    "view": "wall_y000, wall_y270",
+    "description": "Aluminium sliding glazed doors to the balcony at the reception/lounge edge (sheer-curtained track-glazing system)."
+   },
+   {
+    "element": "railing",
+    "view": "wall_y270, equirect",
+    "description": "Glass/metal balcony railing visible through the reception glazing beyond the sofa."
+   }
+  ],
+  "electrical": [
+   {
+    "element": "cove / indirect LED",
+    "view": "wall_y000, wall_y090, equirect",
+    "description": "Warm concealed cove LED running along the curved gypsum ceiling reveal over the workspace and reception transition.",
+    "count": 2
+   },
+   {
+    "element": "recessed downlight",
+    "view": "wall_y090, wall_y180, wall_y270, ceiling, equirect",
+    "description": "Multiple circular recessed LED downlights in the gypsum false ceiling across workspace, corridor and cabin.",
+    "count": 8
+   },
+   {
+    "element": "panel / linear light",
+    "view": "wall_y000, wall_y090, equirect",
+    "description": "Suspended linear/profile LED light fittings over the workspace desk clusters.",
+    "count": 2
+   },
+   {
+    "element": "ceiling fan",
+    "view": "wall_y090, wall_y270, ceiling, equirect",
+    "description": "White ceiling fans - one over the reception lounge and one over the workspace; one appears suspended on a long drop-rod with loose cabling.",
+    "count": 2
+   },
+   {
+    "element": "AC indoor unit",
+    "view": "wall_y000, wall_y090, equirect",
+    "description": "Recessed ceiling cassette / ducted AC grille units set into the false ceiling over the workspace.",
+    "count": 2
+   },
+   {
+    "element": "modular switch plate",
+    "view": "wall_y180",
+    "description": "White modular switchboard plate mounted low on the sage-grey accent wall in the corridor."
+   },
+   {
+    "element": "modular switch / socket plate",
+    "view": "equirect",
+    "description": "White modular plate on the grey accent wall to the operator's left near the column."
+   },
+   {
+    "element": "smoke detector",
+    "view": "wall_y090, ceiling",
+    "description": "Small circular ceiling-mounted device (likely smoke detector) on the workspace ceiling.",
+    "count": 1
+   },
+   {
+    "element": "workstation power/data (desk)",
+    "view": "wall_y000, wall_y090, wall_y270, equirect",
+    "description": "Powered desk clusters with monitors and CPUs in use, implying floor/desk power and data points (cable management spines under benches)."
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Ceiling fan over the workspace appears hung on a long exposed drop-rod with loose/dangling wiring at the canopy (wall_y090) - verify fixing and cable dressing.",
+   "Faint vertical honeycomb-like shading / surface mottling on the RCC column face (wall_y000) - possible plaster/finish irregularity to inspect.",
+   "Operator's hand/body blocks lower-front field in several views; floor-level fixtures near the column base are partially obscured and unverified."
+  ],
+  "summary": "Transition/corridor point at t10 between the reception lounge (curved timber-batten ceiling, full-height balcony glazing with arched mullions, green sofa, sheer-curtained sliding doors) and the open workspace. A large plastered RCC column marks the junction. To the right a black-framed full-height glass partition encloses a cabin with a glazed door. Ceiling is gypsum false ceiling with warm cove LED, recessed downlights, suspended linear lights, two ceiling fans, recessed AC cassettes and a probable smoke detector. Modular switch plates are mounted on the sage-grey accent corridor wall. Workspace desk clusters are occupied and powered (monitors/CPUs). No plumbing fixtures visible. Finish is complete and furnished. Noted issues: a workspace ceiling fan on a long exposed drop-rod with loose canopy wiring, and faint surface mottling on the column face."
+ },
+ {
+  "tag": "t11",
+  "area": "workspace",
+  "area_confidence": 0.85,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Long blank white painted partition wall running down left side of the open workspace",
+    "view": "y000"
+   },
+   {
+    "element": "wall",
+    "description": "Grey-painted accent wall niche carrying decorative art panel, between workspace and corridor",
+    "view": "y090"
+   },
+   {
+    "element": "beam",
+    "description": "Ceiling bulkhead / down-stand beam in gypsum false ceiling running along the workspace, painted dark accent",
+    "view": "y000"
+   },
+   {
+    "element": "glass_partition",
+    "description": "Black-framed full-height glass partition enclosing a cabin, with framed glass door and pull handle",
+    "view": "y180"
+   },
+   {
+    "element": "glass_partition",
+    "description": "Second black-framed glass-partition cabin on the right edge of workspace",
+    "view": "y090"
+   },
+   {
+    "element": "glazing",
+    "description": "Curtained exterior window glazing with sheer curtains at far end of workspace and inside cabin",
+    "view": "y000"
+   },
+   {
+    "element": "glazing",
+    "description": "Full-height balcony glazing seen through reception/balcony doorway with sofa beyond",
+    "view": "ceiling"
+   },
+   {
+    "element": "door",
+    "description": "Wide open doorway from workspace into reception/balcony lounge with wood-slat ceiling beyond",
+    "view": "ceiling"
+   },
+   {
+    "element": "slab",
+    "description": "Tiled flooring throughout; large-format light beige floor tiles",
+    "view": "y180"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "cove_led",
+    "description": "Indirect cove LED lighting concealed behind gypsum false-ceiling bulkheads, warm glow",
+    "view": "y000",
+    "count": 1
+   },
+   {
+    "element": "recessed_downlight",
+    "description": "Recessed ceiling downlights distributed across the false ceiling",
+    "view": "y090",
+    "count": 4
+   },
+   {
+    "element": "linear_pendant_light",
+    "description": "Black linear LED pendant/panel light suspended on cables over the desk run",
+    "view": "y000",
+    "count": 1
+   },
+   {
+    "element": "ceiling_fan",
+    "description": "White ceiling fans suspended from the slab over the workspace",
+    "view": "y000",
+    "count": 2
+   },
+   {
+    "element": "ac_indoor_unit",
+    "description": "Ceiling-mounted 4-way cassette AC indoor unit with square grille",
+    "view": "y000",
+    "count": 1
+   },
+   {
+    "element": "modular_switch_plate",
+    "description": "Modular switch/socket plate mounted on grey accent wall near art panel",
+    "view": "y090",
+    "count": 1
+   },
+   {
+    "element": "modular_switch_plate",
+    "description": "Modular switch plate on cabin partition wall near glass door",
+    "view": "y180",
+    "count": 1
+   },
+   {
+    "element": "monitors_pcs",
+    "description": "Desktop monitors and RGB-lit PC tower workstations along the desk clusters",
+    "view": "y090",
+    "count": 6
+   },
+   {
+    "element": "exposed_wiring",
+    "description": "Loose dangling wire stubs / unterminated cable ends protruding from the white left wall and ceiling above the desk run",
+    "view": "y000",
+    "count": 2
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Loose/unterminated wire stubs hanging from the left white wall and ceiling near the desk run - incomplete electrical termination or pending fixture",
+   "Linear pendant light hung on exposed cable rather than flush-mounted - possible temporary/incomplete fixing"
+  ],
+  "summary": "Walkthrough point t11 is in the large open WORKSPACE, near its junction with the reception/balcony opening and the glass-partition cabins. Visible structure: long white painted partition wall (left), grey accent wall with art panel, gypsum false ceiling with dark down-stand bulkhead beams, two black-framed glass-partition cabins, curtained exterior window glazing, and a wide doorway into the reception/balcony lounge (wood-slat ceiling, full-height glazing, sofa). The space is finished and occupied: modular white bench desks, mesh task chairs, monitors and RGB PC towers, people working. Electrical includes cove LED, recessed downlights, a suspended black linear pendant light, two ceiling fans, a 4-way cassette AC indoor unit, and modular switch plates on the grey wall and cabin partition. No plumbing fixtures are visible. Defects: a couple of loose/unterminated wire stubs hang from the left wall and ceiling above the desks, suggesting incomplete electrical termination; the pendant light is cable-hung. No structural cracks, dampness, or water ponding observed."
+ },
+ {
+  "tag": "t12",
+  "area": "workspace",
+  "area_confidence": 0.92,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Painted white plaster perimeter walls on left (y000) and around the open floor; plain, finished",
+    "view": "wall_y000"
+   },
+   {
+    "element": "wall",
+    "description": "Grey-painted feature wall on a projecting column/pier face carrying framed wall art, separating workspace from corridor",
+    "view": "wall_y180"
+   },
+   {
+    "element": "rcc_column",
+    "description": "Projecting column/pier forming the grey feature wall return between the open workspace and the corridor on the right",
+    "view": "wall_y180"
+   },
+   {
+    "element": "beam",
+    "description": "Dark/brown gypsum ceiling bulkhead (boxed beam line) running across the ceiling defining the workspace zone; multiple parallel bulkhead bands",
+    "view": "equirect"
+   },
+   {
+    "element": "glass_partition",
+    "description": "Full-height black-framed glass partition enclosing a CABIN at one end of the workspace, with framed glazing modules",
+    "view": "wall_y180"
+   },
+   {
+    "element": "glazing",
+    "description": "Aluminium-framed window/glazed wall with sheer white curtains at far end of the desk run (balcony/exterior glazing)",
+    "view": "wall_y090"
+   },
+   {
+    "element": "sliding_door",
+    "description": "Aluminium glazed sliding door opening (curtained) giving balcony access at end of workspace; daylight and greenery visible",
+    "view": "wall_y270"
+   },
+   {
+    "element": "door",
+    "description": "Dark recessed doorway/opening at the end of the corridor beyond the grey feature wall (leads to lobby/toilet block)",
+    "view": "wall_y180"
+   },
+   {
+    "element": "floor",
+    "description": "Large-format light beige/cream vitrified floor tiles throughout, with floor mats at corridor entry",
+    "view": "wall_y180"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "recessed_downlight",
+    "description": "Recessed LED downlights in the gypsum false ceiling across the workspace and over the cabin",
+    "view": "equirect",
+    "count": 6
+   },
+   {
+    "element": "linear_suspended_led",
+    "description": "Long black linear suspended LED pendant luminaire running along the desk axis",
+    "view": "wall_y000",
+    "count": 1
+   },
+   {
+    "element": "cove_led",
+    "description": "Cove/indirect LED lighting along the gypsum bulkhead edges (warm glow at far end near curtains)",
+    "view": "wall_y090",
+    "count": 1
+   },
+   {
+    "element": "ceiling_fan",
+    "description": "White ceiling fans suspended from the slab over the workspace",
+    "view": "equirect",
+    "count": 3
+   },
+   {
+    "element": "exposed_wiring",
+    "description": "Loose hanging wires / dangling cable drops from the ceiling slab (incomplete fixture points) on the left wall area",
+    "view": "wall_y000",
+    "count": 2
+   },
+   {
+    "element": "power_socket",
+    "description": "Desktop power/data outlets and trunking feeding the workstation PCs and laptops along the bench desks",
+    "view": "wall_y090",
+    "count": 1
+   },
+   {
+    "element": "computer_workstation",
+    "description": "Multiple desktop PC towers with RGB lighting plus monitors and laptops on the bench desks (occupant equipment)",
+    "view": "wall_y090",
+    "count": 8
+   },
+   {
+    "element": "switchboard",
+    "description": "Modular switch/socket plates visible on the wall near the glass cabin partition",
+    "view": "wall_y180",
+    "count": 1
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Loose/dangling electrical wires hanging from the ceiling slab on the left side (incomplete light/fan fixture points)",
+   "Exposed bunched cabling on desks (occupant cable management, not building fault)",
+   "Far-end work area dimly lit - some ceiling fixtures appear unpowered/incomplete"
+  ],
+  "summary": "Location t12 is inside the open WORKSPACE of the office floor. Long white bench-desk runs in clusters seat staff working at RGB-lit desktop PCs, monitors and laptops. Structure: painted white perimeter walls, a projecting RCC column forming a grey feature wall (with framed art) that separates the workspace from a corridor leading to a dark doorway (lobby/toilet block), boxed gypsum ceiling bulkheads/beams, a black-framed full-height glass-partition CABIN at one end, and an aluminium glazed sliding door / curtained glazing giving balcony access. Electrical: recessed downlights, a black linear suspended LED, cove LED, three ceiling fans, modular switch plates, and notably several loose dangling wires from the slab (incomplete fixture points). No plumbing fixtures are visible. Finish state is finished with furniture/occupied. Confidence workspace 0.92."
+ },
+ {
+  "tag": "t13",
+  "area": "workspace",
+  "area_confidence": 0.95,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Painted white perimeter walls plus a grey-painted accent wall/column corner forming the transition to the cabin lobby",
+    "view": "y090, y180, y270, equirect"
+   },
+   {
+    "element": "beam",
+    "description": "Multiple exposed dark/charcoal RCC beams and ceiling bulkheads running across the open workspace ceiling",
+    "view": "y000, y090, y270, ceiling, equirect"
+   },
+   {
+    "element": "glass_partition",
+    "description": "Black-framed glass partition wall enclosing a glass-walled cabin, with a framed sliding/swing glass door",
+    "view": "y180, y270, equirect"
+   },
+   {
+    "element": "door",
+    "description": "Frosted/glass door at the end of the corridor beyond the workspace (leads toward toilets/other rooms)",
+    "view": "y090"
+   },
+   {
+    "element": "sliding_door",
+    "description": "Aluminium sliding-door glazed opening leading out to a balcony with exterior greenery",
+    "view": "y270"
+   },
+   {
+    "element": "glazing",
+    "description": "Full-height glazing with sheer white curtains along the workspace perimeter wall",
+    "view": "y000, y090, y180"
+   },
+   {
+    "element": "window",
+    "description": "Window visible inside the glass cabin (right side of partition)",
+    "view": "y180"
+   },
+   {
+    "element": "false_ceiling",
+    "description": "Gypsum false ceiling with cove (indirect) lighting reveals and stepped bulkheads",
+    "view": "y000, y270, ceiling, equirect"
+   },
+   {
+    "element": "floor",
+    "description": "Tiled/large-format vitrified flooring throughout the workspace",
+    "view": "all views"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "cove_led",
+    "description": "Indirect cove LED lighting along the stepped false-ceiling bulkheads",
+    "count": 3,
+    "view": "y000, y090, equirect"
+   },
+   {
+    "element": "recessed_downlight",
+    "description": "Recessed ceiling downlights in the cabin-lobby/transition zone and over corridor",
+    "count": 4,
+    "view": "y180, y270, ceiling, equirect"
+   },
+   {
+    "element": "panel_light",
+    "description": "Linear/strip LED light fitting mounted on perimeter wall above desks",
+    "count": 1,
+    "view": "y000"
+   },
+   {
+    "element": "ceiling_fan",
+    "description": "Ceiling fans mounted on the slab between beams over the workspace",
+    "count": 3,
+    "view": "y000, y090, equirect"
+   },
+   {
+    "element": "ac_indoor_unit",
+    "description": "Ceiling cassette AC unit(s) recessed in the false ceiling, plus a wall-mounted split indoor unit near the curtained glazing",
+    "count": 2,
+    "view": "y000, y090, equirect"
+   },
+   {
+    "element": "power_socket",
+    "description": "Desk-mounted power/socket points and chargers on the bench desks (laptops/PCs plugged in)",
+    "count": 4,
+    "view": "y000, y270"
+   },
+   {
+    "element": "computer_workstation",
+    "description": "Numerous desktop monitors and custom RGB-lit gaming/workstation PCs (water-cooled rigs) across the desk clusters",
+    "count": 8,
+    "view": "y000, y090, y270, equirect"
+   },
+   {
+    "element": "switchboard",
+    "description": "Wall-mounted modular switch/socket plates on the perimeter wall near the glazing",
+    "count": 2,
+    "view": "y090, equirect"
+   },
+   {
+    "element": "loose_wiring",
+    "description": "A loose wire/cable hanging down from the ceiling slab (near a fan/fixture point) over the workspace",
+    "count": 1,
+    "view": "y270"
+   },
+   {
+    "element": "distribution_board",
+    "description": "Small wall-mounted white box (likely DB/control panel) on perimeter wall near curtains",
+    "count": 1,
+    "view": "y000, equirect"
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Loose/dangling electrical wire hanging from ceiling slab over the workspace (y270) - unfinished fixture point or removed fan",
+   "Irregular off-white patching/possible water stain or repaired area on the false ceiling near the AC cassette (y000)",
+   "No visible plumbing in this area - none expected for an open workspace"
+  ],
+  "summary": "Location t13 (26s) is inside the open WORKSPACE of the office, looking across four clusters of white bench desks with mesh task chairs, laptops, monitors and several custom RGB water-cooled PCs. Finish is complete and furnished: painted white walls, a grey accent wall with framed relief artwork, gypsum false ceiling with cove LED and exposed charcoal RCC beams/bulkheads, recessed downlights, ceiling fans and cassette + wall-split AC units, large-format tiled flooring. A black-framed glass-partition CABIN sits to one side (y180/y270) with a glass door, and an aluminium sliding door opens to a balcony with greenery. Perimeter glazing carries sheer white curtains. No plumbing fixtures are visible (none expected here). Defects to flag: a loose wire dangling from the ceiling over the desks (y270) and an irregular patched/possible water-stained area on the false ceiling near the AC cassette (y000)."
+ },
+ {
+  "tag": "t14",
+  "area": "workspace",
+  "area_confidence": 0.93,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "view": "all views",
+    "description": "Painted masonry/plastered partition walls, white upper portion. Several walls have a two-tone scheme with a dark grey/olive lower dado band (visible y090, y180, y270)."
+   },
+   {
+    "element": "beams/ceiling bulkheads",
+    "view": "equirect, wall_y000, wall_y090, wall_y270",
+    "description": "Multiple exposed down-stand RCC beams / boxed service bulkheads running across the ceiling, finished dark grey, spanning the open workspace."
+   },
+   {
+    "element": "glass partition",
+    "view": "wall_y180, wall_y270, wall_y090, equirect",
+    "description": "Full-height glazed glass-partition CABIN with black aluminium framing and a framed glass swing door with handle (one of the three plan cabins). Frosted/clear glass panels."
+   },
+   {
+    "element": "sliding doors / glazing",
+    "view": "wall_y000, wall_y090, wall_y270",
+    "description": "Aluminium sliding-door glazing along the far/perimeter walls leading to balconies, fitted with sheer white curtains; bright daylight and greenery visible through an open balcony doorway at y270."
+   },
+   {
+    "element": "door",
+    "view": "wall_y180, wall_y090",
+    "description": "Glass cabin door(s) with black frame and pull handle; an open passage/doorway to balcony at y270."
+   },
+   {
+    "element": "slab/level change",
+    "view": "wall_y270, wall_y000",
+    "description": "Tiled/finished floor at a single level; balcony threshold visible through doorway at y270 (level transition to balcony)."
+   }
+  ],
+  "electrical": [
+   {
+    "element": "cove/indirect LED",
+    "view": "equirect, wall_y000, wall_y180",
+    "description": "Continuous warm-white cove (indirect) LED concealed lighting around the gypsum false-ceiling perimeter and bulkhead edges.",
+    "count": 1
+   },
+   {
+    "element": "recessed downlights",
+    "view": "equirect, wall_y180, wall_y270",
+    "description": "Recessed circular LED downlights in the false ceiling.",
+    "count": 4
+   },
+   {
+    "element": "linear slot/recessed light",
+    "view": "wall_y000, wall_y270",
+    "description": "Recessed linear LED slot luminaires / linear diffusers set into the ceiling.",
+    "count": 2
+   },
+   {
+    "element": "panel/tube light",
+    "view": "wall_y000, equirect",
+    "description": "Surface-mounted linear LED tube light fixed under the left-side ceiling soffit/bulkhead.",
+    "count": 1
+   },
+   {
+    "element": "ceiling fan",
+    "view": "equirect, wall_y000, wall_y090, wall_y180, wall_y270",
+    "description": "White ceiling fans suspended below the slab across the open workspace.",
+    "count": 4
+   },
+   {
+    "element": "AC supply grille / cassette unit",
+    "view": "wall_y000, equirect",
+    "description": "Ceiling-recessed linear slot diffuser / ductable cassette AC supply grille in the false ceiling.",
+    "count": 1
+   },
+   {
+    "element": "power sockets / desk power",
+    "view": "wall_y000, ceiling",
+    "description": "Power feeds to numerous desktop PCs, iMacs and RGB tower workstations imply desk-level power outlets/raceways (sockets themselves mostly hidden under desks).",
+    "count": 0
+   },
+   {
+    "element": "exposed conduit/wiring",
+    "view": "wall_y090, wall_y270",
+    "description": "A thin cable/wire and a faint vertical line run down the wall near the ceiling at y090/y270 (possible surface cable drop to a wall fixture).",
+    "count": 1
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Thin vertical crack/hairline or surface cable line on the upper wall near the ceiling junction (wall_y090 / wall_y270) - verify whether crack or wiring.",
+   "Exposed dark structural beams/bulkheads left as exposed soffits - intentional design but worth confirming no spalling.",
+   "Loose/draped cabling and a fabric-draped mannequin/dress form sitting on a workstation chair at y270 (clutter, not a building defect).",
+   "Surface-run cable drop on wall near cove (y270) appears unfinished/exposed."
+  ],
+  "summary": "Open WORKSPACE area (timestamp t14, location t14), finished and occupied. Rows of white modular desks in clusters with black acrylic privacy screens, mesh task chairs, iMacs/monitors and RGB gaming PC towers. Gypsum false ceiling with warm cove (indirect) LED, recessed downlights, linear LED slots, a surface tube light, ~4 ceiling fans and a linear AC supply grille. Multiple exposed dark down-stand RCC beams/service bulkheads cross the ceiling. A full-height black-framed glass-partition CABIN is visible to one side, and aluminium sliding-door glazing with sheer curtains lines the perimeter walls leading to balconies (open balcony doorway with daylight at y270). Walls are painted white with a dark grey/olive lower dado on several faces. No plumbing fixtures visible. Minor concerns: a hairline crack-or-cable line on the upper wall and an exposed surface cable drop near the cove warrant verification; remaining items are clutter, not defects."
+ },
+ {
+  "tag": "t15",
+  "area": "workspace",
+  "area_confidence": 0.95,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Painted white plaster perimeter walls; one wall has a diagonal grey two-tone paint feature (dado) near the door",
+    "view": "y180,y090"
+   },
+   {
+    "element": "beam",
+    "description": "Multiple dark-grey ceiling bulkheads/false-beams running across the gypsum false ceiling between desk rows",
+    "view": "y090,y180,equirect"
+   },
+   {
+    "element": "glass_partition",
+    "description": "Black-framed full-height glass-partition cabin(s) enclosing meeting/cabin rooms on two sides of the workspace",
+    "view": "y180,y270,equirect"
+   },
+   {
+    "element": "door",
+    "description": "Frosted/glazed single flush door in black frame (toilet or cabin entry) in the grey-painted wall",
+    "view": "y180"
+   },
+   {
+    "element": "door",
+    "description": "Second flush door (dark frame) on the right-hand wall near the glass cabin",
+    "view": "y090,y000"
+   },
+   {
+    "element": "sliding_door",
+    "description": "Aluminium-framed sliding glass doors to balcony behind sheer white curtains on two facades",
+    "view": "y000,y090"
+   },
+   {
+    "element": "slab",
+    "description": "Tiled/IPS finished floor slab, level; light large-format vitrified tiles",
+    "view": "equirect,ceiling"
+   },
+   {
+    "element": "partition",
+    "description": "Low frosted-glass desk privacy screens dividing the bench-desk clusters",
+    "view": "y000,y180,ceiling"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "cove_led",
+    "description": "Indirect warm-white cove LED concealed in the gypsum ceiling perimeter/step",
+    "count": 1,
+    "view": "equirect,y000,y180"
+   },
+   {
+    "element": "recessed_downlight",
+    "description": "Recessed ceiling downlights in the false ceiling",
+    "count": 4,
+    "view": "y180,ceiling"
+   },
+   {
+    "element": "panel_light",
+    "description": "Linear/profile LED batten lights mounted on or recessed in ceiling bulkheads",
+    "count": 3,
+    "view": "y000,y090,y270"
+   },
+   {
+    "element": "ceiling_fan",
+    "description": "White ceiling fans suspended from the slab (motion-blurred blades), at least three across the space",
+    "count": 3,
+    "view": "y000,y090,y270,ceiling"
+   },
+   {
+    "element": "ac_indoor_unit",
+    "description": "Recessed cassette AC indoor units with grille in the false ceiling",
+    "count": 2,
+    "view": "y000,y270"
+   },
+   {
+    "element": "power_socket",
+    "description": "Desk-level power/data provisions and visible loose cabling at the bench-desk cable trays",
+    "count": 1,
+    "view": "y000,ceiling"
+   },
+   {
+    "element": "desktop_pc",
+    "description": "Multiple custom RGB-lit desktop PC towers (blue/purple/cyan) on the desks - heavy power load",
+    "count": 6,
+    "view": "y090,y180,ceiling,equirect"
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Exposed grey conduit/wire stubs hanging from the upper wall in two places (y180) - junction boxes or fixtures not yet terminated/finished",
+   "Loose hanging wire dropping from ceiling bulkhead near a fan/light point (y270) - incomplete fixture connection",
+   "Diagonal grey paint band on wall appears to be unfinished/partial feature finish rather than completed dado (y180,y090)",
+   "Loose cabling and cable management not fully dressed at desk cable trays (y000)",
+   "Minor surface marks/patching visible on upper wall near conduit stubs (y180)"
+  ],
+  "summary": "Open WORKSPACE at t15, camera in the middle of two long white bench-desk rows (selfie hand/face in frame). Several occupied seats with monitors, MacBooks and custom RGB gaming PC towers. Near-finished: painted white walls (one diagonal grey two-tone feature), gypsum false ceiling with warm cove LED, recessed downlights, linear battens, multiple white ceiling fans, and recessed cassette AC units. Black-framed full-height glass-partition cabins on two sides; aluminium sliding doors to balconies behind sheer curtains; flush/frosted doors in the grey wall. Frosted-glass low desk screens divide clusters; light large-format tiled floor. No plumbing fixtures visible. Defects/incomplete work: exposed grey conduit/wire stubs protruding from the upper wall (two spots), a loose wire hanging from a ceiling bulkhead near a fan point, undressed desk cabling, and a partial/unfinished grey paint band."
+ },
+ {
+  "tag": "t16",
+  "area": "workspace",
+  "area_confidence": 0.93,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Painted white perimeter and partition walls; accent walls with grey diagonal/angled paint band near the frosted door (y180) and grey-zoned bulkhead walls",
+    "view": "y000,y090,y180,y270,equirect"
+   },
+   {
+    "element": "beam_bulkhead",
+    "description": "Grey-painted gypsum false-ceiling bulkheads / down-stand coffer grid forming rectangular ceiling panels with cove reveals; reads as beam-line bulkheads",
+    "view": "y000,y090,y180,y270,ceiling,equirect"
+   },
+   {
+    "element": "glass_partition",
+    "description": "Floor-to-ceiling glazed glass partition with slim black framing enclosing cabin(s) at far end of workspace",
+    "view": "y180,y270,equirect"
+   },
+   {
+    "element": "sliding_door",
+    "description": "Aluminium-framed glazed sliding doors to balcony, behind sheer/grey curtains, on at least two sides",
+    "view": "y000,y090,y270,equirect"
+   },
+   {
+    "element": "door",
+    "description": "Frosted/translucent glass flush door with vertical pull handle set into grey accent wall",
+    "view": "y180"
+   },
+   {
+    "element": "glazing",
+    "description": "Large curtained window/glazed openings (balcony glazing) behind sheer white and grey curtains",
+    "view": "y000,y090,y180,equirect"
+   },
+   {
+    "element": "slab_ceiling",
+    "description": "Gypsum false ceiling with multi-level stepped panels and cove recesses; tiled flooring (large-format) throughout",
+    "view": "ceiling,equirect"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "cove_led",
+    "description": "Warm indirect cove LED strip lighting running along stepped false-ceiling reveals around the room",
+    "view": "y000,y090,y180,ceiling,equirect",
+    "count": 1
+   },
+   {
+    "element": "recessed_downlight",
+    "description": "Recessed circular LED downlights distributed across the white gypsum ceiling panels",
+    "view": "y000,y090,y180,ceiling",
+    "count": 8
+   },
+   {
+    "element": "ceiling_fan",
+    "description": "White ceiling fans mounted on rods from false ceiling",
+    "view": "y000,y180,y270,ceiling,equirect",
+    "count": 4
+   },
+   {
+    "element": "linear_track_light",
+    "description": "Black linear / magnetic-track light bars and one white linear panel/tube fixture surface-mounted under bulkheads",
+    "view": "y180,y270,equirect",
+    "count": 3
+   },
+   {
+    "element": "ac_indoor_unit",
+    "description": "Recessed ceiling cassette / ductable AC indoor unit grille with green status LED",
+    "view": "y180,equirect",
+    "count": 1
+   },
+   {
+    "element": "modular_switch_socket",
+    "description": "Wall-mounted modular switch/socket plates on white wall near balcony opening",
+    "view": "y000",
+    "count": 2
+   },
+   {
+    "element": "workstation_pc",
+    "description": "Multiple custom desktop PC towers (several with RGB liquid-cooling, one open white case with red lighting) plugged in and running with loose power/USB cabling on desks",
+    "view": "y090,y270,equirect",
+    "count": 6
+   },
+   {
+    "element": "monitor_laptop",
+    "description": "Numerous desktop monitors, an iMac, and laptops powered on across the desk clusters",
+    "view": "y090,y180,y270,equirect",
+    "count": 10
+   },
+   {
+    "element": "loose_wiring",
+    "description": "Loose/draped power and data cabling running across desktops between PCs, monitors and floor; not concealed",
+    "view": "y090,y270,equirect"
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Faint patchy discoloration / possible scuff or hairline marks on the large white ceiling soffit (y090, y180) - verify whether stains or just lighting/sensor smudges",
+   "Loose and draped power/data cables across desks and floor between gaming PCs - cable-management / trip and electrical-safety concern (y090, y270)",
+   "Hairline crack-like mark visible on grey accent ceiling bulkhead near frosted door (y180) - confirm if surface crack or shadow",
+   "No visible smoke detectors, exit/emergency signage or CCTV in this open workspace zone - possible incomplete life-safety fit-out (all views)"
+  ],
+  "summary": "Location t16 (32s) is inside the open-plan WORKSPACE: a large finished, furnished room with 4+ white modular desk clusters (~32-40 mesh task chairs), many monitors/laptops/iMac and several custom RGB gaming-PC towers in active use. Ceiling is a stepped grey-and-white gypsum false ceiling with warm cove LED, recessed downlights, 4 ceiling fans, black magnetic-track and one linear panel light, plus a ceiling-cassette AC unit. Perimeter has aluminium sliding balcony doors behind sheer/grey curtains on multiple sides, glazed black-framed glass-partition cabins at the far end, and a frosted-glass flush door in a grey accent wall. Modular switch/socket plates seen near the balcony. No plumbing fixtures visible. Defects to flag: heavy loose cabling on desks/floor, faint ceiling marks/possible hairline crack to verify, and no visible smoke detectors/exit signage in this zone."
+ },
+ {
+  "tag": "t17",
+  "area": "workspace",
+  "area_confidence": 0.88,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Painted white perimeter walls; one wall has a grey/charcoal diagonal sloped paint feature (workspace accent)",
+    "view": "wall_y090, wall_y180"
+   },
+   {
+    "element": "RCC column / wall return",
+    "description": "Plastered painted wall returns and pilaster-like returns framing the glass-partition cabins",
+    "view": "wall_y180"
+   },
+   {
+    "element": "beam / ceiling down-stand bulkhead",
+    "description": "Multiple dark grey RCC down-stand beams / gypsum bulkheads crossing the ceiling over the open workspace",
+    "view": "wall_y090, wall_y180, wall_y270, equirect"
+   },
+   {
+    "element": "sliding door",
+    "description": "Aluminium-framed glass sliding doors with sheer vertical-blind curtains giving balcony access (at least 2 bays)",
+    "view": "wall_y000, ceiling, equirect"
+   },
+   {
+    "element": "glazing / window",
+    "description": "Floor-to-ceiling glazing behind the curtains/vertical blinds along the perimeter",
+    "view": "wall_y000, wall_y090, wall_y270"
+   },
+   {
+    "element": "glass partition",
+    "description": "Framed glass-partition CABIN enclosures visible in the background of the open workspace",
+    "view": "wall_y090, wall_y180, equirect"
+   },
+   {
+    "element": "door",
+    "description": "White flush door set into the workspace wall (cabin/utility entry)",
+    "view": "wall_y180"
+   },
+   {
+    "element": "partition screen",
+    "description": "Frosted-glass desk-mounted privacy screens dividing the workstation clusters",
+    "view": "wall_y270, wall_y000"
+   },
+   {
+    "element": "tiled flooring",
+    "description": "Large-format light grey vitrified floor tiles throughout",
+    "view": "equirect, ceiling, wall_y090"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "modular switchboard",
+    "description": "Wall-mounted modular switch/socket plates - a 3-module plate plus two adjacent plates on the white wall near the sliding door",
+    "view": "wall_y000",
+    "count": 3
+   },
+   {
+    "element": "modular switch plate",
+    "description": "Modular plate on wall edge above desk near vertical blinds",
+    "view": "ceiling",
+    "count": 1
+   },
+   {
+    "element": "recessed downlight",
+    "description": "Square recessed LED downlights set in the gypsum false ceiling",
+    "view": "wall_y000, wall_y180, equirect",
+    "count": 3
+   },
+   {
+    "element": "cove / indirect LED",
+    "description": "Warm cove (indirect) LED concealed lighting along the gypsum ceiling step / bulkhead edges",
+    "view": "wall_y000, wall_y090, wall_y270, equirect"
+   },
+   {
+    "element": "linear / batten light",
+    "description": "Surface-mounted linear LED batten tube light on the workspace wall/ceiling",
+    "view": "wall_y270, wall_y090",
+    "count": 2
+   },
+   {
+    "element": "magnetic track light",
+    "description": "Black recessed magnetic-track linear light line running along the ceiling beam soffit",
+    "view": "wall_y090, wall_y180"
+   },
+   {
+    "element": "ceiling fan",
+    "description": "White ceiling fans suspended over the open workspace",
+    "view": "wall_y180, wall_y270, wall_y090, equirect",
+    "count": 3
+   },
+   {
+    "element": "AC indoor unit",
+    "description": "Wall-mounted split AC indoor unit on the far workspace wall",
+    "view": "wall_y090",
+    "count": 1
+   },
+   {
+    "element": "AC indoor unit",
+    "description": "4-way ceiling-cassette AC indoor units recessed in the false ceiling (one shows a green status LED)",
+    "view": "wall_y270, wall_y180, equirect",
+    "count": 2
+   },
+   {
+    "element": "monitors / desktop PCs",
+    "description": "Workstation dual-monitor setups and RGB gaming desktop PCs (high power-draw points) across the desk clusters",
+    "view": "wall_y090, wall_y180, wall_y270, equirect"
+   },
+   {
+    "element": "data / power points at desks",
+    "description": "Desk-mounted power and data wiring serving the workstation clusters (cables visible at desk edges)",
+    "view": "wall_y180, wall_y270"
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Faint vertical hairline marks / possible crack or settlement line on the white ceiling soffit (wall_y090) - verify",
+   "Light surface staining / patchy discoloration on the painted ceiling near the cassette AC and fan (wall_y180) - possible condensation/dust marking",
+   "Loose / hanging cabling and a dangling cord near the ceiling fan down-rod and linear light (wall_y180)",
+   "Vertical-blind curtain panels uneven and partly tangled at the sliding door (wall_y000, ceiling)"
+  ],
+  "summary": "Location t17 (34s) is inside the open WORKSPACE near the balcony sliding-door edge. Finished and furnished: white painted walls with a charcoal diagonal accent, large-format grey floor tiles, and a gypsum false ceiling with warm cove LED, recessed downlights, surface linear battens and a black magnetic track. Multiple desk clusters carry dual monitors and RGB desktop PCs in mesh chairs with frosted privacy screens. Climate is served by 3 ceiling fans plus split and 4-way cassette AC indoor units. Several dark RCC down-stand beams/bulkheads cross the ceiling, and framed glass-partition cabins sit in the background. Aluminium sliding doors with sheer vertical-blind curtains line the perimeter glazing. Electrical observed: 3-module modular switch/socket plates near the sliding door plus one more on a desk wall. No plumbing fixtures visible. Minor defect flags: faint ceiling hairline/staining marks, loose hanging cabling near a fan/light, and tangled curtain panels."
+ },
+ {
+  "tag": "t18",
+  "area": "workspace",
+  "area_confidence": 0.9,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Painted white perimeter walls; two-tone treatment with dark grey lower dado in workspace zone (180 view)",
+    "view": "y000,y090,y180,y270"
+   },
+   {
+    "element": "sliding_door",
+    "description": "Aluminium-framed sliding doors to balcony along perimeter, fitted with sheer white curtains on tracks",
+    "view": "y000,y090,y270,equirect"
+   },
+   {
+    "element": "windows_glazing",
+    "description": "Full-height perimeter glazing behind sheer curtains / vertical blinds (balcony access)",
+    "view": "y000,y090,y270"
+   },
+   {
+    "element": "partition",
+    "description": "Glass-partition CABINs with dark metal framing along far side of workspace",
+    "view": "y180,equirect"
+   },
+   {
+    "element": "door",
+    "description": "Flush solid cabin door (white) set in two-tone wall",
+    "view": "y180"
+   },
+   {
+    "element": "beams_bulkheads",
+    "description": "Dark-painted ceiling beams / bulkhead and gypsum false-ceiling bulkhead with cove recess",
+    "view": "y090,y180,ceiling,equirect"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "modular_switchboard",
+    "description": "Modular switch/socket plate at mid-height on white wall near sliding door",
+    "view": "y000,ceiling",
+    "count": 1
+   },
+   {
+    "element": "power_socket",
+    "description": "Second modular plate / socket-switch group further along the same wall",
+    "view": "y000",
+    "count": 1
+   },
+   {
+    "element": "wall_plate",
+    "description": "Small white modular plate (socket/junction) low on left wall",
+    "view": "y090"
+   },
+   {
+    "element": "cove_led",
+    "description": "Warm indirect cove LED concealed in false-ceiling perimeter recess",
+    "view": "y000,y180,ceiling,equirect"
+   },
+   {
+    "element": "recessed_downlight",
+    "description": "Recessed square/round downlights in gypsum ceiling",
+    "view": "y000,y180,ceiling,equirect",
+    "count": 3
+   },
+   {
+    "element": "tube_light",
+    "description": "Surface-mounted linear LED tube light fixtures on ceiling/bulkhead",
+    "view": "y090,y270,equirect",
+    "count": 2
+   },
+   {
+    "element": "ceiling_fan",
+    "description": "White ceiling fans over workspace",
+    "view": "y090,y180,y270,equirect",
+    "count": 3
+   },
+   {
+    "element": "ac_indoor_unit",
+    "description": "Recessed ceiling AC cassette / slot diffuser with green LED status indicator",
+    "view": "y180,y270,equirect",
+    "count": 2
+   },
+   {
+    "element": "exposed_wiring",
+    "description": "Loose wire / cable dangling from ceiling (unterminated) over workspace",
+    "view": "y090,y270",
+    "count": 2
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Loose unterminated wire/cable hanging from ceiling in workspace (y090 and y270) - incomplete electrical termination / safety",
+   "Patch of wall surface near window appears unevenly finished / unpainted (y270, y090)",
+   "Exposed dark ceiling beams left unfinished/unboxed in places",
+   "Photographer's arm and body partially obstruct lower views (y000, y090, ceiling) limiting floor-level inspection"
+  ],
+  "summary": "Location t18 (36s) sits along the perimeter window wall of the large open WORKSPACE in the HSR Layout office. Views show full-height balcony glazing with aluminium sliding doors, sheer curtains and vertical blinds; the open floor has desk clusters with monitors, RGB gaming PC towers, mesh office chairs and seated staff. Glass-partition cabins with dark metal frames and a flush cabin door line the far side. Ceiling is a finished gypsum false ceiling with warm cove LED, recessed downlights, linear tube lights, ~3 ceiling fans and recessed AC cassettes (one with a green status LED). Electrical seen: 2-3 modular switch/socket plates on the window wall plus a low wall plate. No plumbing fixtures are visible. Finish is essentially complete and furnished. Defects: at least two loose unterminated wires hang from the ceiling and a patch of wall near the window looks unevenly finished/unpainted."
+ },
+ {
+  "tag": "t19",
+  "area": "workspace",
+  "area_confidence": 0.82,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "view": "y000/equirect",
+    "description": "Plain painted white solid wall directly facing camera, full height, carrying two modular electrical plates; appears to be a service/partition wall between workspace and a balcony/sliding-door bay"
+   },
+   {
+    "element": "sliding_door",
+    "view": "y090/y270/equirect",
+    "description": "Aluminium-framed full-height glazed sliding doors on both sides leading to balcony, dressed with grey/sheer vertical-blind curtains; bright daylight visible through gaps"
+   },
+   {
+    "element": "glazing",
+    "view": "y180/equirect",
+    "description": "Glass-partition CABIN walls with aluminium framing visible across the open floor (cabin to the right with a person at a laptop, another glazed partition far left)"
+   },
+   {
+    "element": "partition",
+    "view": "y180",
+    "description": "Glass-partition cabins (at least 2 enclosed glazed rooms) bounding the open workspace"
+   },
+   {
+    "element": "beam",
+    "view": "y090/y180/ceiling",
+    "description": "Dark exposed/clad horizontal beams and a dark linear ceiling bulkhead running across the workspace ceiling"
+   },
+   {
+    "element": "slab_ceiling",
+    "view": "ceiling/equirect",
+    "description": "Flat painted RCC/gypsum soffit with stepped false-ceiling cove edges over the workspace"
+   },
+   {
+    "element": "door",
+    "view": "y180",
+    "description": "Solid flush door (likely to pantry/store or cabin entry) set in the dark dado wall mid-floor"
+   },
+   {
+    "element": "floor",
+    "view": "y180/equirect",
+    "description": "Light vitrified tile / grey resin flooring across the open workspace, level (no level change seen here)"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "modular_switchboard",
+    "view": "y000/equirect",
+    "count": 2,
+    "description": "Two white modular switch/socket plates mounted low on the facing white wall; left plate a 2-3 module switch plate, right plate a wider socket plate with what looks like a 6/16A socket"
+   },
+   {
+    "element": "cove_led",
+    "view": "equirect/y180/y270",
+    "count": 1,
+    "description": "Warm indirect cove LED lighting along the stepped false-ceiling perimeter (visible glow top of reception-side and over workspace)"
+   },
+   {
+    "element": "linear_panel_light",
+    "view": "y090/y180/y270",
+    "count": 3,
+    "description": "Surface/suspended dark linear LED batten/panel lights running over the desk clusters"
+   },
+   {
+    "element": "recessed_downlight",
+    "view": "ceiling/y270/equirect",
+    "count": 4,
+    "description": "Recessed circular/square downlights and small square LED fixtures set into the false ceiling"
+   },
+   {
+    "element": "ceiling_fan",
+    "view": "y090/y180/y270/equirect",
+    "count": 3,
+    "description": "Multiple ceiling fans (3-blade) suspended over the workspace desk clusters"
+   },
+   {
+    "element": "cctv",
+    "view": "y090/equirect",
+    "count": 1,
+    "description": "Dark dome/box CCTV camera fixture mounted on the ceiling soffit near the wall (also a black object on ceiling in equirect)"
+   },
+   {
+    "element": "computer_workstation",
+    "view": "y180/y270/equirect",
+    "count": 8,
+    "description": "Numerous powered desktop PCs with RGB-lit cabinets and dual monitors at desk clusters (indicates active power/data points at desks)"
+   },
+   {
+    "element": "smoke_detector",
+    "view": "ceiling/y090/y180",
+    "count": 2,
+    "description": "Small round white ceiling-mounted detectors (smoke detector type) on the soffit"
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Exposed dark cable/wire dropping loosely from the ceiling near the false-ceiling edge (visible in y270 and y180 over the desk area) - appears to be a hanging/unterminated wire",
+   "Camera operator's hand/face heavily obstructs the lower frame, leaving the wall base and floor junction near him unverifiable",
+   "Several power/data points implied by active PCs but the cable management at desks appears loose/exposed in places"
+  ],
+  "summary": "Interior open-plan WORKSPACE bay: camera is pressed against a plain painted white wall carrying two white modular switch/socket plates (one switch plate, one socket plate). To both sides are aluminium-framed full-height balcony SLIDING DOORS dressed with grey vertical-blind/sheer curtains letting in daylight. The wider floor shows 4-ish desk clusters with powered RGB desktop PCs and dual monitors, occupied seats, glass-partition CABINs (one with a person at a laptop), exposed dark ceiling beams/bulkheads, a stepped gypsum false ceiling with warm cove LED, linear LED battens, recessed downlights, multiple 3-blade ceiling fans, ceiling-mounted detectors and at least one CCTV dome. No plumbing fixtures visible. Finish is complete/occupied (finished_with_furniture). Minor defect: a loose dark wire hangs from the ceiling edge over the desks."
+ },
+ {
+  "tag": "t20",
+  "area": "corridor",
+  "area_confidence": 0.5,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Painted white solid wall section (column/blade wall) the camera is standing beside, dividing the two workspace bays",
+    "view": "wall_y000 / equirect"
+   },
+   {
+    "element": "sliding_door",
+    "description": "Run of aluminium-framed sliding doors to balcony, fronted by a full-height light-grey sheer/vertical curtain on a ceiling track",
+    "view": "equirect / wall_y090 / ceiling"
+   },
+   {
+    "element": "partition",
+    "description": "Glass-partition cabins with metal-framed full-height glazing visible on both workspace bays",
+    "view": "wall_y090 / wall_y180 / equirect"
+   },
+   {
+    "element": "door",
+    "description": "Flush white interior door (toilet/utility) set in the wall between two glass cabins",
+    "view": "wall_y180"
+   },
+   {
+    "element": "beam",
+    "description": "Deep dark RCC beam soffits / false-ceiling bulkheads crossing the workspace ceiling",
+    "view": "wall_y180 / wall_y270 / ceiling"
+   },
+   {
+    "element": "glazing",
+    "description": "Bright daylight glazing/window opening at far end of workspace beyond cabins",
+    "view": "wall_y180 / wall_y270"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "cove_led",
+    "description": "Warm cove/indirect LED concealed behind false-ceiling bulkheads running along the bays",
+    "view": "equirect / wall_y270 / ceiling",
+    "count": 0
+   },
+   {
+    "element": "recessed_downlight",
+    "description": "Recessed circular downlights in the gypsum false ceiling",
+    "view": "wall_y090 / wall_y270 / ceiling",
+    "count": 0
+   },
+   {
+    "element": "linear_led",
+    "description": "Suspended/surface linear LED batten fixtures over the desk benches",
+    "view": "wall_y090 / wall_y180 / wall_y270",
+    "count": 0
+   },
+   {
+    "element": "ceiling_fan",
+    "description": "Ceiling fans mounted on the slab between bulkheads",
+    "view": "wall_y180 / wall_y270 / ceiling",
+    "count": 0
+   },
+   {
+    "element": "ac_indoor_unit",
+    "description": "Linear AC supply/return grille diffusers set into the false ceiling",
+    "view": "wall_y180 / wall_y270",
+    "count": 0
+   },
+   {
+    "element": "smoke_detector",
+    "description": "Round white ceiling-mounted smoke detector at the curtain-track soffit",
+    "view": "wall_y090 / equirect",
+    "count": 1
+   },
+   {
+    "element": "projector",
+    "description": "Ceiling/wall-mounted projector aimed at a bright projection wall in the workspace",
+    "view": "wall_y180 / wall_y270",
+    "count": 1
+   },
+   {
+    "element": "power_socket",
+    "description": "Desktop PCs, monitors and peripherals powered at the bench clusters implying floor/spine power feeds (sockets not individually resolvable)",
+    "view": "equirect / wall_y180",
+    "count": 0
+   },
+   {
+    "element": "data_point",
+    "description": "Networked desktop workstations across the benches implying data/network outlets at the desks",
+    "view": "wall_y180 / wall_y270",
+    "count": 0
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Sheer/vertical curtain drawn across the balcony sliding-door run partially sags/uneven along the track, slightly out of true",
+   "Loose cabling/power leads visible draped across desks at the workstation clusters (typical occupied-office clutter, not fixed wiring)",
+   "Camera operator and selfie-pole hands occlude part of the y000 view; some surfaces near the curtain wall cannot be fully verified"
+  ],
+  "summary": "Location t20 (40s) is a circulation point in the open office: the camera stands beside a painted white blade wall fronted by a full-height aluminium sliding-door run to the balcony, screened by a light-grey sheer/vertical curtain on a ceiling track. The space opens on both sides into the large WORKSPACE with multiple bench-desk clusters (many monitors, PCs, black task chairs, seated occupants) and glass-partition CABINs with metal-framed full-height glazing. Ceiling is a finished gypsum false ceiling with deep dark beam/bulkhead soffits, warm cove indirect LED, recessed downlights, suspended linear LED battens, ceiling fans, linear AC grille diffusers, a ceiling smoke detector, and a projector. A flush white interior (toilet/utility) door sits between two glass cabins. No plumbing fixtures are visible. Finish is complete and furnished/occupied. Minor notes: the balcony curtain hangs slightly uneven, and desk cabling clutter is present. Area is most consistent with the corridor/balcony-sliding-door zone running between workspace bays (confidence moderate; could equally be tagged workspace given the surrounding clusters)."
+ },
+ {
+  "tag": "t21",
+  "area": "workspace",
+  "area_confidence": 0.92,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "White painted partition/perimeter walls with a dark grey diagonal accent band; clean plastered+painted finish",
+    "view": "y090,y180,y270"
+   },
+   {
+    "element": "sliding_door_glazing",
+    "description": "Full-height aluminium sliding-door window glazing behind floor-to-ceiling sheer vertical curtains (balcony access)",
+    "view": "y000,equirect,ceiling"
+   },
+   {
+    "element": "glass_partition",
+    "description": "Glass-partition CABIN walls with black framing flanking the open workspace on both sides",
+    "view": "y180,y270,equirect"
+   },
+   {
+    "element": "beam",
+    "description": "Multiple exposed/painted dark-grey RCC down-stand beams and ceiling bulkheads crossing the workspace",
+    "view": "y090,y180,y270"
+   },
+   {
+    "element": "door",
+    "description": "Flush door (toilet/cabin entry) set into the grey accent wall at far side of workspace",
+    "view": "y180"
+   },
+   {
+    "element": "slab_ceiling",
+    "description": "Gypsum false ceiling with cove recess; flat slab soffit overhead",
+    "view": "ceiling,equirect"
+   },
+   {
+    "element": "window_glazing",
+    "description": "Glass partition / inner glazing into a far room with sheer curtains visible down the corridor axis",
+    "view": "y090"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "ceiling_fan",
+    "description": "White 3-blade ceiling fans over the workspace clusters",
+    "view": "y180,y270,equirect",
+    "count": 3
+   },
+   {
+    "element": "cove_led",
+    "description": "Warm indirect cove LED strip lighting along the false-ceiling perimeter",
+    "view": "y090,y270,equirect",
+    "count": 1
+   },
+   {
+    "element": "recessed_downlight",
+    "description": "Small recessed ceiling downlights in the false ceiling and along bulkhead",
+    "view": "y090,y180,equirect",
+    "count": 4
+   },
+   {
+    "element": "panel_tube_light",
+    "description": "Linear LED panel/tube fixtures suspended/recessed over desk rows",
+    "view": "y180,y270",
+    "count": 2
+   },
+   {
+    "element": "ac_indoor_unit",
+    "description": "Ceiling cassette AC indoor unit (square grille) set in false ceiling",
+    "view": "y180,ceiling",
+    "count": 1
+   },
+   {
+    "element": "ceiling_device",
+    "description": "Dark ceiling-mounted device (likely smoke detector or sensor/speaker) near beam soffit",
+    "view": "y090,y270,equirect",
+    "count": 2
+   },
+   {
+    "element": "desktop_cpu",
+    "description": "Numerous workstation desktop CPUs and dual/curved monitors drawing power at desk clusters (indicates live power/data sockets at desks)",
+    "view": "y090,y180,y270",
+    "count": 8
+   },
+   {
+    "element": "loose_cabling",
+    "description": "A pendant/dropped cable and desk power+data cabling running across worktops",
+    "view": "y090,y270",
+    "count": 1
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Dropped/dangling cable from ceiling near beam in y090/y270 (loose wiring - verify it is terminated and not live/exposed)",
+   "Dense loose desk cabling across worktops at clusters (cable-management not fully dressed)",
+   "Ceiling-mounted dark device unidentified - confirm whether smoke detector is installed/functional vs a placeholder"
+  ],
+  "summary": "Position t21 (~42s) is inside the open WORKSPACE, with the camera standing at the balcony sliding-door glazing line (0deg fully occupied by floor-to-ceiling sheer vertical curtains). Rows of white modular workstation desks with CPUs, monitors and mesh chairs run along both sides and are occupied by staff, confirming a fully finished, furnished and operational space. Structure visible: white painted walls with a grey diagonal accent band, exposed/painted dark-grey RCC down-stand beams and ceiling bulkheads, glass-partition cabins with black framing on both flanks, a flush door in the far accent wall, and gypsum false ceiling with cove recess. Electrical: ~3 ceiling fans, warm cove LED, recessed downlights, linear LED panels, a ceiling cassette AC unit, 1-2 unidentified dark ceiling devices (likely smoke detectors/sensors), and extensive live desktop equipment indicating powered floor sockets/data points. No plumbing fixtures are visible from this position. Minor defects: a dropped/dangling ceiling cable and undressed loose desk cabling; smoke-detector status should be confirmed."
+ },
+ {
+  "tag": "t22",
+  "area": "workspace",
+  "area_confidence": 0.9,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "sliding_door",
+    "description": "Full-height aluminium-framed sliding door to balcony, covered with sheer/vertical-louvre curtains on a head track; the primary feature directly in front (0deg)",
+    "view": "y000/equirect/ceiling"
+   },
+   {
+    "element": "glazing",
+    "description": "Full-height glass partitions enclosing cabins on both left and right sides of the workspace, framed in dark mullions",
+    "view": "y180/y270/equirect"
+   },
+   {
+    "element": "partition",
+    "description": "Glass-partition cabin walls (designer cabins) flanking the open workspace on both sides",
+    "view": "y180/y270"
+   },
+   {
+    "element": "wall",
+    "description": "Painted white plaster walls/columns; a solid wall pier with flush door on the far side (180deg)",
+    "view": "y090/y180/equirect"
+   },
+   {
+    "element": "door",
+    "description": "Single flush white door set in a wall pier on the far wall (likely shaft/pantry/toilet access)",
+    "view": "y180"
+   },
+   {
+    "element": "beam",
+    "description": "Dark-clad linear ceiling bulkheads/beams running along both desk rows, housing cove LED and concealing services",
+    "view": "y180/y270/ceiling/equirect"
+   },
+   {
+    "element": "column",
+    "description": "Plastered/painted RCC column embedded in the partition line dividing workspace from corridor",
+    "view": "y090/y180"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "ceiling_fan",
+    "description": "White ceiling fans suspended from slab over the open workspace",
+    "count": 3,
+    "view": "equirect/y180/y270/ceiling"
+   },
+   {
+    "element": "ac_indoor_unit",
+    "description": "Ceiling-mounted cassette AC unit (4-way) with green status LED visible",
+    "count": 1,
+    "view": "y180"
+   },
+   {
+    "element": "ac_indoor_unit",
+    "description": "Wall/ceiling split AC indoor unit at upper left of equirect near corridor",
+    "count": 1,
+    "view": "equirect"
+   },
+   {
+    "element": "cove_led",
+    "description": "Warm cove / indirect LED strip lighting concealed in ceiling bulkheads along both desk rows and corridor",
+    "view": "equirect/y090/y180/y270"
+   },
+   {
+    "element": "downlight",
+    "description": "Recessed ceiling downlights in the gypsum false ceiling / soffit",
+    "count": 2,
+    "view": "y090/y180"
+   },
+   {
+    "element": "panel_light",
+    "description": "Linear LED panel/batten light over far desks",
+    "count": 1,
+    "view": "y270"
+   },
+   {
+    "element": "power_socket",
+    "description": "Desk power/data provision serving desktop PCs and monitors (cabling visible at desks)",
+    "view": "equirect/y090/y180"
+   },
+   {
+    "element": "data_point",
+    "description": "Network/data cabling to workstations; multiple desktop towers and dual-monitor setups",
+    "view": "y180/y270/equirect"
+   },
+   {
+    "element": "smoke_detector",
+    "description": "Small ceiling-mounted device (likely smoke detector/sensor) on slab near corridor",
+    "count": 2,
+    "view": "equirect/y090/y270"
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Loose/draped data and power cables running across desk surfaces and floor at the open workstations (cable-management not finished)",
+   "Glare/strong daylight ingress at the sliding door - blinds/curtains in use, not a defect but note daylight control"
+  ],
+  "summary": "Position t22 (44s) is in the open WORKSPACE on the balcony side. Directly ahead (0deg) is a full-height aluminium sliding door to a balcony, dressed with sheer vertical-louvre curtains on a head track. Flanking it are two open-plan desk clusters with dual monitors, desktop PC towers and occupied task chairs. Side views (180deg/270deg) show glass-partition cabins on both sides, dark linear ceiling bulkheads/beams carrying warm cove LED, 3 white ceiling fans, a 4-way cassette AC (green LED) plus a split AC indoor unit, recessed downlights, a linear panel light, and a flush white door in a wall pier on the far wall. Finish is complete and furnished (painted walls, tiled floor, gypsum ceiling). No plumbing fixtures visible. Only minor issue: loose/draped data and power cabling across desks and floor (cable management incomplete)."
+ },
+ {
+  "tag": "t23",
+  "area": "workspace",
+  "area_confidence": 0.85,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Large curved white-painted accent/feature wall directly facing camera (0deg), separating workspace from reception zone",
+    "view": "equirect, wall_y000"
+   },
+   {
+    "element": "wall",
+    "description": "Painted white perimeter and partition walls; one wall has a diagonal two-tone (white/dark grey) paint treatment",
+    "view": "wall_y180, wall_y270"
+   },
+   {
+    "element": "glazing",
+    "description": "Floor-to-ceiling glazed wall along right/south side covered with vertical fabric blinds; daylight entering",
+    "view": "equirect, wall_y090, wall_y270"
+   },
+   {
+    "element": "glass_partition",
+    "description": "Glass-partition cabin walls (framed glazing) enclosing meeting/cabin areas visible across the open floor",
+    "view": "equirect, wall_y180, wall_y270"
+   },
+   {
+    "element": "door",
+    "description": "Flush white single-leaf door with vertical handle set into the diagonal two-tone wall (likely toilet/utility access)",
+    "view": "wall_y180"
+   },
+   {
+    "element": "sliding_door",
+    "description": "Aluminium-framed glazed opening / sliding door at end of corridor leading toward balcony with sheer light",
+    "view": "wall_y090, wall_y180"
+   },
+   {
+    "element": "beam",
+    "description": "Exposed dark-grey painted RCC down-stand beams / ceiling bulkheads crossing the open ceiling",
+    "view": "equirect, wall_y090, wall_y180, ceiling"
+   },
+   {
+    "element": "bulkhead",
+    "description": "Dropped gypsum false-ceiling bulkhead housing the cove lighting along the curved wall and right side",
+    "view": "equirect, wall_y090, ceiling"
+   },
+   {
+    "element": "slab",
+    "description": "Tiled flooring (large-format light tiles) continuous across workspace and corridor",
+    "view": "equirect, wall_y180, wall_y270"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "cove_led",
+    "description": "Warm indirect cove LED strip lighting concealed in dropped ceiling along curved wall and right-side bulkhead",
+    "view": "equirect, wall_y090, wall_y180, ceiling",
+    "count": 2
+   },
+   {
+    "element": "recessed_downlight",
+    "description": "Recessed downlights set into the false ceiling / bulkhead soffit",
+    "view": "wall_y090, ceiling",
+    "count": 2
+   },
+   {
+    "element": "panel_light",
+    "description": "Recessed flat panel / tube light fittings in the open-area ceiling",
+    "view": "wall_y180, wall_y270",
+    "count": 2
+   },
+   {
+    "element": "linear_suspended_light",
+    "description": "Black linear suspended/pendant light fixture hanging on cable from ceiling over desks",
+    "view": "wall_y180",
+    "count": 1
+   },
+   {
+    "element": "ceiling_fan",
+    "description": "Ceiling fans mounted on down-rods across the open workspace",
+    "view": "equirect, wall_y090, wall_y180, wall_y270",
+    "count": 4
+   },
+   {
+    "element": "ac_indoor_unit",
+    "description": "Recessed cassette-type AC indoor unit (with green indicator LED) in ceiling",
+    "view": "wall_y180, wall_y270",
+    "count": 2
+   },
+   {
+    "element": "ac_indoor_unit",
+    "description": "Wall-mounted split AC indoor unit high on wall near corridor/glazing",
+    "view": "wall_y090",
+    "count": 1
+   },
+   {
+    "element": "cctv",
+    "description": "Small ceiling/wall-mounted camera near corridor opening above the AC unit",
+    "view": "wall_y090",
+    "count": 1
+   },
+   {
+    "element": "desktop_pc",
+    "description": "Multiple workstation desktop PCs (towers with RGB) and dual monitors at desk clusters (powered equipment indicating live power/data points)",
+    "view": "equirect, wall_y090, wall_y180, wall_y270"
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Exposed pendant light power cable hanging loosely from slab in open ceiling (wall_y180) - flag for conduit/finishing check",
+   "Loose data/power and peripheral cabling draped across desk tops and dropping to floor at workstations (equirect, wall_y180) - cable management incomplete",
+   "Vertical blind operating chain/cord hanging loose and pooling on floor near glazing (wall_y000) - minor trip/safety item"
+  ],
+  "summary": "View t23 (46s) is in the open WORKSPACE, positioned at the curved white feature wall that screens the reception zone. The curved accent wall fills the 0deg view; desk clusters with dual monitors and RGB tower PCs wrap around both sides with staff seated and working. The south/right side is fully glazed with vertical fabric blinds and a corridor leading to an aluminium-framed sliding opening toward a balcony. Ceiling is a mix of exposed dark-grey painted RCC beams and dropped gypsum bulkheads carrying warm cove LED, recessed downlights, panel lights and a black linear suspended fixture; ceiling fans (~4), recessed cassette and wall split AC units, and a corridor CCTV camera are present. One wall carries a diagonal two-tone paint treatment with a flush white door. No plumbing fixtures are visible. Finish is complete and occupied (finished_with_furniture). Minor defects: a loosely hanging pendant power cable from the slab, incomplete desk cable management, and a loose blind cord pooling on the floor."
+ },
+ {
+  "tag": "t24",
+  "area": "workspace",
+  "area_confidence": 0.9,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Painted white plaster walls enclosing the open workspace; tall curved/blank white accent wall in the foreground (reception-side partition) at wall_y000 and equirect",
+    "view": "equirect/wall_y000/wall_y180"
+   },
+   {
+    "element": "beam",
+    "description": "Multiple exposed dark-grey/black painted RCC down-stand beams running across the slab soffit between bays",
+    "view": "wall_y180/wall_y270/ceiling"
+   },
+   {
+    "element": "ceiling_bulkhead",
+    "description": "Gypsum false-ceiling bulkhead with a sloped/angled curved cove edge housing indirect warm LED; large flat gypsum ceiling panels with a triangular dark-grey margin",
+    "view": "wall_y180/equirect/ceiling"
+   },
+   {
+    "element": "glass_partition",
+    "description": "Floor-to-ceiling glazed glass-partition cabin walls with dark framing visible in mid-ground separating cabins from open workspace",
+    "view": "wall_y180/wall_y270"
+   },
+   {
+    "element": "door",
+    "description": "Single flush door (white, with vertical handle) set into wall on right side of workspace, likely cabin/service door",
+    "view": "wall_y180"
+   },
+   {
+    "element": "glass_door",
+    "description": "Glazed framed door/entry into glass-partition cabin",
+    "view": "wall_y180"
+   },
+   {
+    "element": "sliding_door",
+    "description": "Aluminium-framed full-height sliding doors / glazing along balcony edges, covered by light grey/white sheer vertical-blind curtains, daylight visible through them",
+    "view": "wall_y090/wall_y270/equirect"
+   },
+   {
+    "element": "window_glazing",
+    "description": "Full-height window glazing behind sheer curtains and vertical blinds along two sides of the floor",
+    "view": "wall_y090/wall_y270"
+   },
+   {
+    "element": "partition",
+    "description": "Low fabric desk-divider screens between desk clusters",
+    "view": "wall_y180/wall_y270"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "cove_led",
+    "description": "Continuous warm-white cove (indirect) LED strip running along the angled false-ceiling bulkhead edge",
+    "view": "equirect/wall_y180/ceiling",
+    "count": 1
+   },
+   {
+    "element": "recessed_downlight",
+    "description": "Square recessed multi-cell LED downlight fittings in the gypsum ceiling",
+    "view": "wall_y090/equirect",
+    "count": 2
+   },
+   {
+    "element": "ceiling_fan",
+    "description": "Ceiling-suspended fans on down-rods over the workspace desks",
+    "view": "wall_y090/wall_y180/wall_y270/equirect",
+    "count": 4
+   },
+   {
+    "element": "tube_light",
+    "description": "Suspended/surface linear tube light fittings over the far desk clusters",
+    "view": "wall_y270",
+    "count": 2
+   },
+   {
+    "element": "ac_indoor_unit",
+    "description": "Black/dark slim ductable or wall-mounted AC indoor unit / linear diffuser bodies mounted high on walls and ceiling line",
+    "view": "wall_y090/wall_y180/wall_y270/equirect",
+    "count": 3
+   },
+   {
+    "element": "cctv_camera",
+    "description": "Wall-mounted CCTV camera high on the wall near the sliding-door/curtain line",
+    "view": "wall_y090",
+    "count": 1
+   },
+   {
+    "element": "exposed_conduit",
+    "description": "Exposed surface wiring/conduit and a hanging loose cable dropping from the ceiling slab near the fan and AC unit",
+    "view": "wall_y090/wall_y270",
+    "count": 1
+   },
+   {
+    "element": "desktop_workstation_load",
+    "description": "Numerous powered desktop monitors, gaming CPU towers (with RGB lighting) and laptops on the desks, implying floor-box/desk power and data points; tangle of power/data cabling at desk edges",
+    "view": "wall_y090/wall_y180/wall_y270/equirect"
+   },
+   {
+    "element": "smoke_detector",
+    "description": "Small dark ceiling-mounted device (likely smoke detector / sensor) on the gypsum ceiling",
+    "view": "wall_y270/equirect",
+    "count": 1
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Exposed loose cable/conduit hanging from ceiling slab near ceiling fan and AC unit (wall_y090/wall_y270) - untidy/incomplete electrical concealment",
+   "Heavy tangle of unmanaged power and data cabling at desk edges around CPU towers (wall_y090/wall_y180) - cable-management not completed",
+   "Faint hairline marks/streaks on the gypsum ceiling near conduit drops (wall_y270) - possible surface blemish, verify not a crack or stain"
+  ],
+  "summary": "Location t24 (walkthrough 48s) is the open WORKSPACE of the office floor, captured mid-occupancy with staff working at desks. Structural elements: painted white plaster walls, a tall blank curved white accent/partition wall in the foreground (reception side), multiple exposed dark-grey RCC down-stand beams, a gypsum false ceiling with an angled curved cove bulkhead, full-height glass-partition cabins in the mid-ground, a flush cabin door, and aluminium balcony sliding doors/glazing dressed with sheer curtains and vertical blinds on two sides. Electrical: continuous warm cove LED along the bulkhead, recessed multi-cell downlights, ~4 down-rod ceiling fans, linear tube lights over far desks, ~3 dark slim AC indoor units/diffusers, a wall CCTV camera, a likely ceiling smoke detector, and a dense load of powered desktops/gaming CPU towers/laptops. No plumbing fixtures are visible. Defects/incomplete work: a loose cable/conduit hangs from the slab near the fan/AC, desk cabling is unmanaged, and faint surface marks appear on the gypsum ceiling near the conduit drop. Finish state is finished/occupied (finished_with_furniture)."
+ },
+ {
+  "tag": "t25",
+  "area": "workspace",
+  "area_confidence": 0.93,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Painted white perimeter and partition walls enclosing the open workspace; clean plastered/painted finish",
+    "view": "equirect, y000, y090, y180, y270"
+   },
+   {
+    "element": "beams/ceiling bulkheads",
+    "description": "Dark grey/charcoal recessed bulkhead bands and false-ceiling drops running across the workspace ceiling between the white cove panels",
+    "view": "equirect, y090, y180, y270"
+   },
+   {
+    "element": "glass partition",
+    "description": "Floor-to-ceiling glass partitions of the meeting CABINs visible bounding the open workspace, with framed glass panels",
+    "view": "equirect, y180"
+   },
+   {
+    "element": "door",
+    "description": "Single flush door (white frame, lever handle) in the far wall near the cabin/corridor on the y180 side",
+    "view": "y180"
+   },
+   {
+    "element": "sliding doors",
+    "description": "Aluminium-framed full-height sliding doors / glazing along the external wall, fitted with sheer curtains and vertical blinds, giving onto balcony",
+    "view": "equirect, y000, y090, y270"
+   },
+   {
+    "element": "glazing/windows",
+    "description": "Large external glazed openings behind the sheer curtains/vertical blinds on the balcony-facing walls",
+    "view": "y090, y270"
+   },
+   {
+    "element": "partition",
+    "description": "Low fabric desk-screen partitions dividing the bench desk clusters within the workspace",
+    "view": "equirect, y180, y270"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "cove/indirect LED",
+    "description": "Continuous warm cove (indirect) LED lighting along the stepped gypsum false-ceiling perimeter",
+    "count": 1,
+    "view": "equirect, y000, y090, y180, y270"
+   },
+   {
+    "element": "recessed downlights",
+    "description": "Recessed ceiling downlights distributed across the false ceiling",
+    "count": 6,
+    "view": "equirect, y090, y180, y270, ceiling"
+   },
+   {
+    "element": "panel/tube light",
+    "description": "Linear suspended/recessed LED panel light fixtures over the desk clusters",
+    "count": 2,
+    "view": "y180, y270"
+   },
+   {
+    "element": "ceiling fan",
+    "description": "White ceiling fans mounted on down-rods in the open workspace",
+    "count": 3,
+    "view": "equirect, y090, y180, y270"
+   },
+   {
+    "element": "AC indoor unit",
+    "description": "Wall-mounted / cassette AC indoor units: a wall split unit on the curtained wall and a recessed ceiling cassette grille",
+    "count": 2,
+    "view": "equirect, y090, y270"
+   },
+   {
+    "element": "power socket",
+    "description": "Desktop CPU towers and monitors powered from desk-level sockets; trailing power/data cables bundled under bench desks",
+    "count": 1,
+    "view": "equirect, y090, y270, ceiling"
+   },
+   {
+    "element": "data/network point",
+    "description": "Network/data cabling bundled at the bench desks feeding workstations",
+    "count": 1,
+    "view": "y090, ceiling"
+   },
+   {
+    "element": "CCTV",
+    "description": "Small dark ceiling-mounted dome/CCTV device on the workspace ceiling slab",
+    "count": 1,
+    "view": "y270"
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Exposed/loose bundled power and data cabling trailing under and over the bench desks (CPU towers) - untidy cable management",
+   "Wall-mounted AC unit on y090 has visible drain/refrigerant pipe running down the wall surface (surface-run, not concealed)",
+   "Minor hairline mark/seam visible on ceiling near fan down-rod on y090 - verify not a crack"
+  ],
+  "summary": "Location t25 is inside the large open WORKSPACE: long white bench-desk clusters with monitors, CPU towers and seated staff on both sides, low fabric desk screens between them, and floor-to-ceiling glass-partition cabins bounding the space. Walls are painted white and fully finished; flooring is tiled. Ceiling is a stepped gypsum false ceiling with warm cove (indirect) LED, recessed downlights, linear LED panels, 3 ceiling fans, AC indoor units (one wall split with a surface-run drain pipe, one ceiling cassette) and what appears to be a ceiling CCTV dome. External balcony-facing walls have aluminium sliding doors/glazing with sheer curtains and vertical blinds; a flush door sits in the far cabin/corridor wall. No plumbing fixtures are visible. Main as-built flags are untidy exposed power/data cabling at the workstations and a surface-run AC drain pipe."
+ },
+ {
+  "tag": "t26",
+  "area": "workspace",
+  "area_confidence": 0.93,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Painted white plastered perimeter walls in finished condition",
+    "view": "y000/y090/y180/y270/equirect"
+   },
+   {
+    "element": "false_ceiling",
+    "description": "Gypsum false ceiling with stepped cove detail and a deep grey/charcoal recessed bulkhead band running across the workspace",
+    "view": "y000/y180/ceiling/equirect"
+   },
+   {
+    "element": "ceiling_bulkhead",
+    "description": "Black-painted linear ceiling bulkheads/service beams crossing the open ceiling, several runs",
+    "view": "y090/y180/y270/equirect"
+   },
+   {
+    "element": "glass_partition",
+    "description": "Floor-to-ceiling framed glass partition walls enclosing cabin(s) with glass door, seen across the open workspace",
+    "view": "y180/y270/equirect"
+   },
+   {
+    "element": "sliding_door_glazing",
+    "description": "Aluminium-framed glazing/sliding doors to balcony dressed with full-height sheer white curtains",
+    "view": "y090/y270/equirect"
+   },
+   {
+    "element": "window",
+    "description": "Windows fitted with grey vertical blinds along one wall",
+    "view": "y000/y090/y270/equirect"
+   },
+   {
+    "element": "door",
+    "description": "Flush hinged door (cabin/service) with lever handle in side wall",
+    "view": "y180/y270"
+   },
+   {
+    "element": "floor",
+    "description": "Tiled / vitrified flooring, finished",
+    "view": "y180/y270/ceiling/equirect"
+   },
+   {
+    "element": "level_change",
+    "description": "Threshold/level change at balcony sliding-door line",
+    "view": "y090/equirect"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "cove_led",
+    "description": "Continuous cove / indirect warm LED strip lighting around the false-ceiling perimeter and bulkhead edge",
+    "view": "y000/y180/equirect/ceiling",
+    "count": 1
+   },
+   {
+    "element": "recessed_downlight",
+    "description": "Recessed ceiling downlights in the gypsum ceiling",
+    "view": "y000/y180/equirect",
+    "count": 4
+   },
+   {
+    "element": "panel_light",
+    "description": "Linear LED panel/tube light fixtures over the desk clusters",
+    "view": "y270",
+    "count": 2
+   },
+   {
+    "element": "ceiling_fan",
+    "description": "White ceiling fans suspended from the slab/bulkhead",
+    "view": "y090/y270/equirect",
+    "count": 3
+   },
+   {
+    "element": "ac_indoor_unit",
+    "description": "White ceiling-mounted AC indoor units / cassette-ductable supply grilles",
+    "view": "y090/y270/equirect",
+    "count": 3
+   },
+   {
+    "element": "wall_control_box",
+    "description": "Wall-mounted white box (AC controller / access point / sensor) on column",
+    "view": "y090/y180",
+    "count": 1
+   },
+   {
+    "element": "exposed_wiring",
+    "description": "Loose / exposed wires hanging down from ceiling fan and pendant points, not concealed",
+    "view": "y090/y180/equirect",
+    "count": 2
+   },
+   {
+    "element": "desktop_pc",
+    "description": "Gaming desktop PC towers with RGB lighting on desks",
+    "view": "y090/y180/y270/ceiling",
+    "count": 3
+   },
+   {
+    "element": "monitor",
+    "description": "Multiple desktop monitors at workstation clusters",
+    "view": "y090/y180/y270/equirect",
+    "count": 8
+   },
+   {
+    "element": "laptop",
+    "description": "Laptops in use across the desk clusters",
+    "view": "y180/y270/equirect",
+    "count": 5
+   },
+   {
+    "element": "whiteboard",
+    "description": "Mobile whiteboard near far cluster (non-electrical but noted equipment)",
+    "view": "y090/equirect",
+    "count": 1
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Exposed/loose wiring hanging from ceiling fan and pendant light points (not concealed or terminated)",
+   "Dangling cables routed loosely under/around monitors on desks",
+   "Cove LED appears unlit/dim in places vs others - possible non-uniform fitting (minor)"
+  ],
+  "summary": "Location t26 (52s) is inside the large open WORKSPACE, looking across desk clusters toward the glass-partition cabins on one side and curtained balcony glazing on the other. Occupied by staff at gaming-PC/monitor/laptop workstations. Structural: painted white walls, gypsum false ceiling with cove detail and charcoal bulkhead band, black linear service bulkheads, framed glass cabin partitions with glass door, aluminium balcony sliding glazing with sheer curtains, windows with vertical blinds, one flush hinged door, tiled floor with a balcony threshold level change. Electrical: cove LED, recessed downlights, linear panel/tube lights, ~3 white ceiling fans, ~3 ceiling AC indoor units/supply grilles, a wall control box, plus desk-level PCs/monitors/laptops. No plumbing visible. Defects: loose/exposed wiring dangling from ceiling fan and pendant points and untidy cable routing at desks; uneven cove illumination. Finish state: finished and furnished/occupied."
+ },
+ {
+  "tag": "t27",
+  "area": "workspace",
+  "area_confidence": 0.9,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Painted white plaster walls throughout; one wall has a grey diagonal accent-paint band (geometric two-tone), seen near the toilet/cabin entry door and reception side",
+    "view": "equirect, wall_y180, wall_y270"
+   },
+   {
+    "element": "glass_partition",
+    "description": "Full-height framed glass partition wall enclosing a glass-partition CABIN; orange/green lounge sofa and desks visible through it",
+    "view": "wall_y180, equirect"
+   },
+   {
+    "element": "glass_door",
+    "description": "Framed glass swing door (single leaf, dark frame) in the glass partition giving access to the cabin/lounge, with green entry mat on floor",
+    "view": "wall_y180"
+   },
+   {
+    "element": "door",
+    "description": "Flush solid hinged door (single leaf, with lever handle) in the painted wall on the diagonal-accent wall, likely a cabin/toilet/service entry",
+    "view": "wall_y270"
+   },
+   {
+    "element": "window_glazing",
+    "description": "Large floor-to-ceiling perimeter glazing / sliding-door window walls on two-to-three sides fitted with grey vertical blinds and white sheer curtains (balcony-side aluminium glazing)",
+    "view": "wall_y000, wall_y090, equirect, wall_y270"
+   },
+   {
+    "element": "ceiling_bulkhead",
+    "description": "Gypsum false-ceiling with a large curved cove bulkhead drop over the workspace plus dark linear suspended ceiling baffles/fins (rectangular fin housings) running across the bay",
+    "view": "equirect, ceiling, wall_y180"
+   },
+   {
+    "element": "tiled_floor",
+    "description": "Tiled flooring (light large-format tiles) under desks; light wood-look tile near the cabin glass door",
+    "view": "wall_y000, wall_y180, ceiling"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "cove_led",
+    "description": "Indirect cove LED strip lighting along the curved gypsum bulkhead giving warm uplight wash",
+    "view": "equirect, wall_y000, wall_y180",
+    "count": 1
+   },
+   {
+    "element": "recessed_downlight",
+    "description": "Recessed round LED downlights set into the gypsum false ceiling",
+    "view": "wall_y000, wall_y180, ceiling",
+    "count": 4
+   },
+   {
+    "element": "panel_light",
+    "description": "Recessed rectangular panel/troffer light(s) flush in the false ceiling over the workspace",
+    "view": "equirect, wall_y270, ceiling",
+    "count": 2
+   },
+   {
+    "element": "linear_fixture",
+    "description": "Dark-housing linear suspended/recessed light fittings integrated with the ceiling baffles",
+    "view": "wall_y180, wall_y270, ceiling",
+    "count": 2
+   },
+   {
+    "element": "ceiling_fan",
+    "description": "White ceiling fans suspended from the slab/false ceiling over the desk clusters",
+    "view": "wall_y090, wall_y180, equirect, ceiling",
+    "count": 3
+   },
+   {
+    "element": "ac_indoor_unit",
+    "description": "Wall-mounted split-type AC indoor unit (white, hi-wall) mounted high on the painted wall near the whiteboard",
+    "view": "wall_y090, equirect",
+    "count": 1
+   },
+   {
+    "element": "cctv_camera",
+    "description": "Ceiling/wall-mounted dome CCTV camera near the AC unit",
+    "view": "wall_y090",
+    "count": 1
+   },
+   {
+    "element": "exposed_wiring",
+    "description": "Loose/exposed cabling bundles at desks feeding monitors and the AlienWare desktop PC tower; data/power leads draped over desk edges",
+    "view": "wall_y180, equirect, ceiling",
+    "count": 1
+   },
+   {
+    "element": "ceiling_wiring_drop",
+    "description": "Thin wiring/suspension drops hanging from the slab to fans and fixtures (visible cable drops across ceiling)",
+    "view": "wall_y000, wall_y090, ceiling",
+    "count": 1
+   },
+   {
+    "element": "switch_socket_plate",
+    "description": "Modular switch/socket plates on workspace walls (small modular plates visible on painted walls)",
+    "view": "wall_y180, wall_y270",
+    "count": 2
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Loose/exposed cabling at desk clusters (power and data leads draped over desk edges, around AlienWare PC) - cable-management incomplete",
+   "Thin wiring/suspension drops left hanging from slab near fans/fixtures - possible un-dressed conduit/cabling",
+   "Faint hairline marks visible on painted wall/ceiling near cove (inconclusive - could be shadow/seam rather than crack)"
+  ],
+  "summary": "Location t27 (54s) is in the open WORKSPACE of the office floor: the photographer stands among the desk clusters (~32-40 seats, multiple staff working at monitors/laptops). Structural features: painted white walls with a grey diagonal accent band, a full-height framed glass-partition CABIN with a glass swing door (green mat) and orange lounge sofa beyond, a flush solid door on the accent wall, perimeter floor-to-ceiling glazing/sliding doors with vertical blinds and sheer curtains on two-to-three sides, a curved gypsum cove bulkhead with dark linear ceiling baffles, and tiled flooring. Electrical: indirect cove LED, recessed downlights (~4), recessed panel/troffer lights, dark linear suspended fixtures, three ceiling fans, a wall-mounted split AC indoor unit, a dome CCTV camera, modular switch/socket plates, and notable loose/exposed cabling at the desks plus thin wiring drops from the slab. No plumbing fixtures are visible in this area. Finish state is finished_with_furniture. Main flags: incomplete cable management at desks and hanging wiring drops; a couple of faint wall/ceiling marks are inconclusive."
+ },
+ {
+  "tag": "t28",
+  "area": "workspace",
+  "area_confidence": 0.88,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Painted white plaster perimeter and partition walls throughout the open floor; a triangular dark grey accent paint band runs along the lower wall on the left/west side near a flush door (visible y270 and equirect)",
+    "view": "y270, equirect, y000"
+   },
+   {
+    "element": "door",
+    "description": "Flush single leaf door set into the white wall on the west side (workspace access/corridor or room entry), framed in dark trim",
+    "view": "y270, equirect"
+   },
+   {
+    "element": "ceiling_bulkhead",
+    "description": "Gypsum false-ceiling with large curved/oval cove drop bulkhead carrying indirect LED, plus several dark linear bulkhead/track channels crossing the ceiling",
+    "view": "equirect, y000, y090, ceiling"
+   },
+   {
+    "element": "glass_partition",
+    "description": "Floor-to-ceiling framed glass partition wall (black mullions) enclosing a glazed CABIN; framed sliding/swing glass door with vertical black pull handle visible",
+    "view": "y180, y090, equirect"
+   },
+   {
+    "element": "window_glazing",
+    "description": "Large window openings along the perimeter fitted with sheer/vertical blind curtains (multiple bays, north and east walls)",
+    "view": "y000, y090, y180, equirect"
+   },
+   {
+    "element": "partition",
+    "description": "Low fabric/laminate desk-divider screens (knee-high cubicle partitions) running along the desk clusters",
+    "view": "y000, y270, equirect"
+   },
+   {
+    "element": "slab_floor",
+    "description": "Tiled/vitrified flooring (light beige) throughout workspace; lighter timber-look flooring visible inside the glazed cabin beyond the partition",
+    "view": "y180, ceiling, equirect"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "cove_led",
+    "description": "Indirect warm-white cove LED concealed in the curved oval ceiling drop and linear bulkheads, giving the warm glow seen along the ceiling edges",
+    "view": "equirect, y000, ceiling",
+    "count": 1
+   },
+   {
+    "element": "recessed_downlight",
+    "description": "Recessed circular and small square downlights set into the false ceiling and inside the cabin ceiling",
+    "view": "y090, y180, ceiling",
+    "count": 6
+   },
+   {
+    "element": "panel_light",
+    "description": "Recessed linear/troffer panel light fixtures (white rectangular) in the ceiling over the workspace",
+    "view": "y090, y270",
+    "count": 3
+   },
+   {
+    "element": "ceiling_fan",
+    "description": "White ceiling fans suspended from the slab over the open workspace",
+    "view": "y090, y270, equirect",
+    "count": 3
+   },
+   {
+    "element": "ac_indoor_unit",
+    "description": "Wall-mounted split AC indoor units (white) high on the walls; one clearly on the left wall and one visible inside/near the glazed cabin",
+    "view": "y090, y180",
+    "count": 2
+   },
+   {
+    "element": "desktop_computer",
+    "description": "Workstations with monitors, an Alienware desktop tower with RGB lighting, headphones and peripherals on the foreground desk",
+    "view": "y090, y180, equirect, ceiling",
+    "count": 4
+   },
+   {
+    "element": "pendant_drop_wiring",
+    "description": "Loose pendant/fan suspension cords and a thin dangling wire hanging from the ceiling (one near the glass partition appears to be a free-hanging cable)",
+    "view": "y090, y180, equirect",
+    "count": 2
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Thin loose/free-hanging cable dangling from the ceiling near the glass partition (y180, y090) - appears to be an unterminated suspension wire or stray conductor",
+   "Minor cabling clutter: exposed peripheral and headphone cables loose across the foreground desks",
+   "Vertical blind/sheer curtains hang slightly uneven on some perimeter window bays (cosmetic)"
+  ],
+  "summary": "Timestamp t28 is inside the open WORKSPACE, camera held at a desk cluster looking across the floor. Structural elements: painted white plaster walls with a grey triangular accent band and a flush door on the west wall; a large curved oval cove-lit gypsum false-ceiling drop with dark linear bulkhead channels; a floor-to-ceiling black-framed glass-partition CABIN (with framed glass door and pull handle) to one side; perimeter window glazing with sheer/vertical blinds; low desk-divider screens; tiled flooring (timber-look inside the cabin). Electrical: warm cove LED, recessed downlights, linear panel lights, ~3 ceiling fans, ~2 wall-split AC indoor units, multiple workstations/monitors incl. an RGB Alienware tower, plus a couple of loose ceiling suspension cords/wires. No plumbing fixtures visible. Main defect flags are a thin free-hanging cable near the glass partition and general desk cabling clutter. Finish state is essentially complete and occupied (finished_with_furniture)."
+ },
+ {
+  "tag": "t29",
+  "area": "workspace",
+  "area_confidence": 0.88,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "view": "y270/equirect",
+    "description": "Solid painted partition wall forming a corridor/walkway on one side of the workspace, two-tone finish (white above, grey dado band)"
+   },
+   {
+    "element": "glass_partition",
+    "view": "y180/equirect",
+    "description": "Black-framed full-height glass partition wall separating workspace from a glass cabin; multiple glazed panels"
+   },
+   {
+    "element": "glass_door",
+    "view": "y180",
+    "description": "Framed glass swing door within the glass partition, with vertical black pull handle, leading into the cabin"
+   },
+   {
+    "element": "door",
+    "view": "y270",
+    "description": "Single flush door set into the solid corridor wall"
+   },
+   {
+    "element": "doorway",
+    "view": "y270/equirect",
+    "description": "Open doorway / passage at the end of the corridor leading toward a brighter adjacent area"
+   },
+   {
+    "element": "beam_bulkhead",
+    "view": "y000/y090/y180",
+    "description": "Dark linear ceiling bulkheads / surface channels running across the slab soffit"
+   },
+   {
+    "element": "false_ceiling_cove",
+    "view": "equirect/y000",
+    "description": "Gypsum false ceiling with large curved cove (indirect-lit) feature over the workspace"
+   },
+   {
+    "element": "glazing_with_curtains",
+    "view": "y090/y180",
+    "description": "Perimeter window/sliding-door glazing with sheer curtains and vertical blinds along the far walls"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "recessed_downlight",
+    "view": "equirect/y000/y180",
+    "count": 8,
+    "description": "Recessed circular LED downlights distributed across the gypsum false ceiling"
+   },
+   {
+    "element": "cove_led",
+    "view": "equirect/y000",
+    "count": 1,
+    "description": "Warm indirect cove LED lighting concealed in the curved false-ceiling feature"
+   },
+   {
+    "element": "linear_pendant_light",
+    "view": "y000/y090/y270",
+    "count": 3,
+    "description": "Suspended/pendant linear light fittings hung from the ceiling over desk clusters"
+   },
+   {
+    "element": "ac_indoor_unit",
+    "view": "y090/y180",
+    "count": 2,
+    "description": "Wall-mounted split-AC indoor units (one on workspace wall, one inside glass cabin)"
+   },
+   {
+    "element": "ceiling_fan",
+    "view": "y090/y180",
+    "count": 2,
+    "description": "Ceiling-suspended fans over the workspace and cabin areas"
+   },
+   {
+    "element": "exposed_conduit",
+    "view": "y000/y090/y270",
+    "count": 1,
+    "description": "Black surface-mounted conduit / cable runs and loose dangling cables visible along the slab soffit"
+   },
+   {
+    "element": "data_power_desk",
+    "view": "y000/y090/ceiling",
+    "description": "Desktop monitors, laptops and powered curved gaming monitor implying floor/desk power and data outlets; loose cable tangle on desk"
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Exposed black conduit and loose dangling cables hanging from the ceiling slab in multiple views (y000/y090/y270)",
+   "Tangle of loose power/data cables on the desk around the curved monitor (y090/y180/ceiling)",
+   "Suspended fittings with visibly slack wiring drops from the soffit"
+  ],
+  "summary": "Location t29 (58s) is inside the large open WORKSPACE, standing among benching desk clusters at the boundary with a glass-partition cabin. Structural: solid two-tone painted corridor wall with a flush door and an open passage on one side; a black-framed full-height glass partition with a framed glass swing door (vertical pull handle) into a cabin on the other side; gypsum false ceiling with a curved cove feature, dark linear bulkheads/channels, and perimeter sliding-door glazing with sheer curtains/vertical blinds. Electrical: ~8 recessed downlights, warm cove LED, ~3 suspended linear pendant lights, 2 wall-mounted split-AC indoor units, 2 ceiling fans, powered desktop/gaming monitors and laptops; notably exposed black conduit and loose dangling cables from the soffit. Plumbing: none visible. Finish state is finished/furnished. Key defects: exposed conduit and loose hanging/desk cabling (electrical safety/incomplete tidy-up)."
+ },
+ {
+  "tag": "t30",
+  "area": "workspace",
+  "area_confidence": 0.82,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Painted white plastered perimeter walls and internal partition walls, fully finished",
+    "view": "y000/y090/y180/y270/equirect"
+   },
+   {
+    "element": "glass_partition",
+    "description": "Floor-to-ceiling glass partition wall (frameless glass with black mullions) enclosing a cabin/lounge to the right; reflections of sofa and desk visible in glass",
+    "view": "y090/y180/equirect"
+   },
+   {
+    "element": "partition",
+    "description": "Low desk-mounted fabric/glass screen partitions between facing workstation rows in the open workspace",
+    "view": "y000/y090/ceiling"
+   },
+   {
+    "element": "beam",
+    "description": "Multiple deep exposed/boxed-in ceiling beams or bulkheads running across the open ceiling (some clad dark grey)",
+    "view": "y000/equirect/ceiling"
+   },
+   {
+    "element": "ceiling_bulkhead",
+    "description": "Gypsum false-ceiling bulkhead with curved/dropped cove edge over the workspace and a curved accent soffit near the partition",
+    "view": "equirect/y000"
+   },
+   {
+    "element": "door",
+    "description": "Open doorway/passage at far end of workspace leading toward an entrance/lit area with a person standing",
+    "view": "y270/equirect"
+   },
+   {
+    "element": "window",
+    "description": "Large windows along the perimeter fitted with grey vertical blinds / sheer curtains (balcony side glazing)",
+    "view": "y180/y090/y270/equirect"
+   },
+   {
+    "element": "railing",
+    "description": "Black metal staircase/void railing visible looking down past the camera at the floor edge",
+    "view": "ceiling"
+   },
+   {
+    "element": "staircase",
+    "description": "Stair/void opening edge with railing adjacent to the camera position (down-look distorted)",
+    "view": "ceiling"
+   },
+   {
+    "element": "column",
+    "description": "Vertical wall/column return between cabin glass and corridor opening; structural pier framing the doorway",
+    "view": "y270/y090"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "linear_pendant_light",
+    "description": "Black rectangular suspended linear LED light troughs hung over the workstation rows",
+    "count": 4,
+    "view": "y000/equirect/ceiling"
+   },
+   {
+    "element": "cove_led",
+    "description": "Indirect/cove LED strip lighting along the dropped gypsum ceiling edge glowing warm",
+    "view": "y000/equirect"
+   },
+   {
+    "element": "recessed_downlight",
+    "description": "Recessed ceiling downlights / small spotlights in the gypsum ceiling and over cabin",
+    "count": 6,
+    "view": "y180/y090/equirect"
+   },
+   {
+    "element": "panel_light",
+    "description": "Recessed square LED panel light + a multi-lamp recessed spotlight bar in the cabin ceiling",
+    "count": 2,
+    "view": "y180"
+   },
+   {
+    "element": "ceiling_fan",
+    "description": "White ceiling fans mounted under the slab in the workspace and cabin",
+    "count": 3,
+    "view": "y090/y180/equirect"
+   },
+   {
+    "element": "ac_indoor_unit",
+    "description": "Wall-mounted split AC indoor units (one in cabin on right wall, one near workspace wall, one near reception side)",
+    "count": 3,
+    "view": "y000/y090/y180/equirect"
+   },
+   {
+    "element": "monitor_workstation_power",
+    "description": "Workstations powered with desktop monitors/laptops (one displaying '34'), implying desk-level power/data feeds in service",
+    "count": 1,
+    "view": "y000/y090/equirect"
+   },
+   {
+    "element": "switch_socket_plate",
+    "description": "Modular switch/socket plates on workspace wall (faint plates visible near whiteboard wall)",
+    "count": 2,
+    "view": "y090"
+   },
+   {
+    "element": "exposed_conduit",
+    "description": "Loose dropped wire/cable hanging from ceiling slab near a light fixture (single dangling lead)",
+    "count": 1,
+    "view": "y000/y090"
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Loose/dangling wire hanging from the ceiling slab near a pendant light fixture (y000/y090) - incomplete cable management or disconnected lead",
+   "Selfie-stick / operator body occludes a large portion of the lower 360, so floor-level and some wall fixtures cannot be fully verified at this station"
+  ],
+  "summary": "Station t30 is on the open WORKSPACE floor at its boundary with a glass-partition CABIN/lounge and near a stair void. Finish is complete and furnished: painted white walls, gypsum false ceiling with warm cove LED, suspended black linear LED light troughs over desk rows, recessed downlights, multiple ceiling fans, and 3 wall-mounted split AC indoor units. Long workstation clusters with monitors/laptops and mesh task chairs fill the room; one screen reads '34'. To the right a frameless glass partition (black mullions) encloses a cabin with a single executive desk and an L-shaped lounge sofa with orange cushions, lit by a square LED panel and spotlight bar, with vertical-blind windows on the balcony side. A doorway at the far end leads toward a lit entrance area. A black metal railing/stair void edge is visible in the down-look. No plumbing fixtures are visible. Notable defect: a loose wire dangling from the slab near a ceiling light fixture; the operator/selfie-stick also blocks the lower view, limiting floor-level verification."
+ },
+ {
+  "tag": "t31",
+  "area": "reception",
+  "area_confidence": 0.55,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "glass_partition",
+    "view": "equirect, wall_y000, wall_y090",
+    "description": "Floor-to-ceiling glass-partition cabin wall with black aluminium framing; includes a curved/arched-top frame at the cabin entrance separating the lounge from the open workspace"
+   },
+   {
+    "element": "wall",
+    "view": "all views",
+    "description": "Painted white plastered partition/perimeter walls; large blank wall faces in wall_y180, wall_y270"
+   },
+   {
+    "element": "column",
+    "view": "wall_y180",
+    "description": "White-finished RCC column/pier embedded in the window-wall line near the desk cluster"
+   },
+   {
+    "element": "beam_bulkhead",
+    "view": "wall_y000, wall_y090",
+    "description": "Gypsum ceiling bulkhead / dropped soffit running along the cabin glass line"
+   },
+   {
+    "element": "window_glazing",
+    "view": "equirect, wall_y090, wall_y180, wall_y270",
+    "description": "Perimeter window glazing on multiple sides dressed with grey vertical blinds and sheer curtains"
+   },
+   {
+    "element": "partition",
+    "view": "wall_y270",
+    "description": "Dark aluminium/glass partition edge (cabin or doorway jamb) at right of frame"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "ac_indoor_unit",
+    "view": "equirect, wall_y090, wall_y180, wall_y270",
+    "description": "Wall-mounted split AC indoor (hi-wall) units; at least two distinct units visible on white walls",
+    "count": 2
+   },
+   {
+    "element": "ceiling_fan",
+    "view": "equirect, wall_y000, wall_y090, wall_y180",
+    "description": "Ceiling-mounted fans over the open workspace; multiple visible",
+    "count": 3
+   },
+   {
+    "element": "recessed_downlight",
+    "view": "equirect, wall_y090, ceiling",
+    "description": "Recessed LED downlights in gypsum false ceiling, including a clustered 4-spot fixture"
+   },
+   {
+    "element": "cove_led",
+    "view": "equirect, wall_y000, wall_y090",
+    "description": "Cove / indirect LED strip lighting in the false-ceiling perimeter and over the cabin soffit"
+   },
+   {
+    "element": "switch_socket_plate",
+    "view": "wall_y090, wall_y180, wall_y270",
+    "description": "Modular switch/socket plates mounted on white walls (one low socket plate, one mid-height plate)",
+    "count": 3
+   },
+   {
+    "element": "monitor_workstation",
+    "view": "equirect, wall_y000, wall_y090, wall_y180",
+    "description": "Desktop monitors / workstations (incl. RGB-lit PC) on the bench desks - indicates live power/data points at desks"
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Floor cleanout/trap cover sits flush in finished tiled floor in wall_y180 - verify it is a proper sealed cover, not an open drain",
+   "Loose whiteboard leaning against the cabin glass partition (wall_y090) - temporary/incomplete fit-out item",
+   "Several views heavily obstructed by the photographer (selfie), limiting full inspection of the wall behind"
+  ],
+  "summary": "Walkthrough point t31 (62s) sits at the reception/lounge edge where a curved-back olive/orange lounge sofa fronts a floor-to-ceiling glass-partition cabin (black aluminium frame with an arched entrance), opening into the open workspace with bench-desk clusters, monitors and task chairs. Interior is finished and furnished: painted white walls, gypsum false ceiling with cove LED, recessed downlights and multiple ceiling fans, perimeter window glazing with grey vertical blinds and sheer curtains. Electrical includes 2+ wall split-AC indoor units, 3 ceiling fans, recessed/cove lighting, and several modular switch/socket plates. No plumbing fixtures are visible from this point. Minor flags: a flush floor cleanout/trap cover in the finished floor and a loose whiteboard leaning on the cabin glass. Area call is reception/lounge with moderate confidence given the workspace bleeds directly into view."
+ },
+ {
+  "tag": "t32",
+  "area": "cabin",
+  "area_confidence": 0.82,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Painted white plaster walls forming the cabin enclosure, seen on all sides; plain blank wall on the 270/0 side carrying AC and socket",
+    "view": "equirect, y000, y270"
+   },
+   {
+    "element": "glass_partition",
+    "description": "Floor-to-ceiling glass partition wall with black metal mullions/frame separating this cabin from the open workspace; a hinged glass door is visible open at the corner. Reflections of the open office and a seated person seen through it",
+    "view": "y000, y090, equirect"
+   },
+   {
+    "element": "glazing",
+    "description": "Two exterior windows at the room corner fitted with grey vertical-louvre blinds (one on each of two perpendicular walls), plus an additional window glimpsed at far left",
+    "view": "y180, y090"
+   },
+   {
+    "element": "beam",
+    "description": "Gypsum false-ceiling bulkhead / cove perimeter drop framing a central recessed ceiling panel above the desk and sofa",
+    "view": "y090, y180, ceiling"
+   },
+   {
+    "element": "slab",
+    "description": "Vitrified tile flooring (large-format, light beige) with visible grout joints; level floor, glossy reflections",
+    "view": "y090, y180, ceiling"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "ac_indoor_unit",
+    "description": "Wall-mounted split AC indoor unit (white) high on the blank wall; same unit seen distorted in ceiling view",
+    "view": "equirect, y180, ceiling",
+    "count": 1
+   },
+   {
+    "element": "ceiling_fan",
+    "description": "White ceiling fan(s) mounted on the false-ceiling recessed panel; one clearly over the desk/sofa area, another partly visible at frame edge",
+    "view": "y090, y180",
+    "count": 2
+   },
+   {
+    "element": "cove_led",
+    "description": "Cove / indirect LED lighting in the perimeter false-ceiling pocket, visible as a warm glow strip along the bulkhead",
+    "view": "y090, equirect",
+    "count": 1
+   },
+   {
+    "element": "downlight",
+    "description": "Recessed ceiling downlights in the false ceiling (single small spot lights), several visible",
+    "view": "y090, y180, equirect",
+    "count": 3
+   },
+   {
+    "element": "led_spotlight_cluster",
+    "description": "A 3-4 lamp track/grid spotlight fixture (square plate with multiple small spots) recessed in the ceiling near the partition",
+    "view": "y090",
+    "count": 1
+   },
+   {
+    "element": "switch_socket_plate",
+    "description": "Modular switch/socket plate (3-module: socket + switches) on the blank white wall at mid height near the AC",
+    "view": "equirect, y270",
+    "count": 1
+   },
+   {
+    "element": "socket_below_window",
+    "description": "Modular socket/switchboard plate low on the wall below the corner window, with a black cable/cord plugged in and trailing across the floor",
+    "view": "y180",
+    "count": 1
+   },
+   {
+    "element": "desktop_pc_monitors",
+    "description": "Desk setup with a glass-side gaming PC tower (RGB visible), dual large monitors and peripherals on the director desk - powered electrical equipment",
+    "view": "y090, y180",
+    "count": 1
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Loose power cable/cord plugged into the low socket below the corner window and trailing loosely across the floor (y180) - trip hazard / temporary wiring",
+   "Heavy reliance on multi-gang desk extension and tangled cabling around the PC/monitors on the desk (y090) - cable management incomplete"
+  ],
+  "summary": "Walkthrough position t32 is inside one of the three glass-partition CABINs (private office). It is fully finished and furnished: painted white walls, gypsum false ceiling with a recessed central panel, cove indirect LED plus recessed downlights and a multi-spot fixture, vitrified tile flooring. The defining feature is a floor-to-ceiling black-framed glass partition wall (with an open hinged glass door) separating the cabin from the open workspace, through which a seated person and office desks are visible. Furniture: a long mustard/olive-green sofa with orange cushions along the glass wall, and a large director-style desk with a glass-panel gaming PC tower, dual monitors and a leather executive chair. ELECTRICAL: 1 wall-mounted split AC indoor unit, 2 ceiling fans, cove LED, ~3 recessed downlights plus a 3-4 lamp spotlight cluster, one mid-wall modular switch/socket plate and one low socket below the window with a cable plugged in. STRUCTURAL: painted walls, the glazed cabin partition + glass door, two corner exterior windows with grey vertical blinds, false-ceiling bulkheads, tiled slab. PLUMBING: none visible. DEFECTS: a loose power cord trailing across the floor from the low window socket (trip hazard / temporary) and untidy cable management at the desk; no cracks, dampness or structural issues observed."
+ },
+ {
+  "tag": "t33",
+  "area": "cabin",
+  "area_confidence": 0.6,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "wall",
+    "description": "Painted white plaster walls on all sides; long blank wall at y000/y270 with split-AC unit, glazed partition wall at y000, window wall at y090/y180",
+    "view": "all"
+   },
+   {
+    "element": "glass_partition",
+    "description": "Black-framed full-height glass partition separating this room from adjacent glass cabin / workspace; includes a hinged glass door leaf",
+    "view": "wall_y000, wall_y090, equirect"
+   },
+   {
+    "element": "glazing",
+    "description": "Two exterior windows fitted with grey vertical-blind louvres on the y180 wall, plus additional window on y090 wall",
+    "view": "wall_y180, wall_y090"
+   },
+   {
+    "element": "beam",
+    "description": "Gypsum false-ceiling bulkheads/cove drops framing the recessed ceiling pocket",
+    "view": "wall_y180, ceiling, equirect"
+   },
+   {
+    "element": "floor",
+    "description": "Glossy vitrified tile flooring with skirting; reflective surface",
+    "view": "wall_y180, ceiling, wall_y090"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "ac_indoor_unit",
+    "description": "Wall-mounted split AC indoor unit (Daikin) high on the blank wall",
+    "view": "wall_y000, wall_y270, equirect",
+    "count": 1
+   },
+   {
+    "element": "ceiling_fan",
+    "description": "Ceiling fans mounted to false ceiling (one over desk area at y090, one near y180)",
+    "view": "wall_y090, wall_y180, equirect, ceiling",
+    "count": 2
+   },
+   {
+    "element": "recessed_downlight",
+    "description": "Recessed LED downlights / linear panel light set into gypsum false ceiling",
+    "view": "wall_y000, wall_y180, equirect",
+    "count": 4
+   },
+   {
+    "element": "cove_led",
+    "description": "Cove / indirect LED glow visible above window heads and ceiling pocket",
+    "view": "wall_y180, wall_y090",
+    "count": 1
+   },
+   {
+    "element": "modular_switchboard",
+    "description": "Modular switch/socket plate on wall below window and on blank wall near AC",
+    "view": "wall_y180, wall_y000, wall_y270",
+    "count": 3
+   },
+   {
+    "element": "power_socket",
+    "description": "Wall socket plate near floor at window wall feeding desk equipment",
+    "view": "wall_y180",
+    "count": 1
+   },
+   {
+    "element": "monitor",
+    "description": "Ultrawide curved monitor plus a second flat monitor on the desk (workstation electrical load)",
+    "view": "wall_y090",
+    "count": 2
+   },
+   {
+    "element": "loose_wiring",
+    "description": "Loose power/data cable running across the floor from desk/storage unit to wall socket - not yet dressed/concealed",
+    "view": "wall_y180",
+    "count": 1
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Loose cable trailing across the floor near the y180 window wall - trip hazard / cable management incomplete",
+   "Possible faint scuff/shadow marks on the otherwise blank y270/y000 white wall (cosmetic, low confidence)"
+  ],
+  "summary": "Glass-partition corner CABIN / private manager office within the workspace zone at t33 (66s). Finished and furnished: painted white walls, gypsum false ceiling with cove detail and recessed downlights, glossy vitrified tile floor, and grey vertical-blind windows on two sides. Furniture includes a long light-wood desk, several black mesh ergonomic chairs, an ultrawide curved monitor plus a second monitor, and a beige/green lounge sofa with orange cushions. STRUCTURAL: painted walls, black-framed glass partition with a glass door, two/three windows, false-ceiling bulkheads, tiled floor. ELECTRICAL: 1 wall-mounted split AC indoor unit (Daikin), 2 ceiling fans, ~4 recessed downlights, cove LED, ~3 modular switch/socket plates, 1 low power socket, 2 desk monitors. PLUMBING: none visible. DEFECTS: a loose cable trails across the floor by the window wall (cable management incomplete / minor trip hazard); otherwise clean. Area confidence moderate (0.6) - it has a private cabin character (own AC, sofa, glass partition) but is open to the adjoining workspace."
+ },
+ {
+  "tag": "t34",
+  "area": "cabin",
+  "area_confidence": 0.85,
+  "finish_state": "finished_with_furniture",
+  "structural": [
+   {
+    "element": "glass_partition",
+    "description": "Black-framed full-height glass partition wall separating this cabin from the open workspace",
+    "view": "equirect, wall_y000, wall_y180"
+   },
+   {
+    "element": "glass_door",
+    "description": "Hinged black-framed glass door set into the partition, giving access to the workspace",
+    "view": "wall_y000"
+   },
+   {
+    "element": "wall",
+    "description": "Painted white solid masonry walls forming the cabin enclosure on the non-glazed sides",
+    "view": "wall_y000, wall_y270, equirect"
+   },
+   {
+    "element": "window_glazing",
+    "description": "Two runs of external window glazing on adjacent (balcony-facing) walls, dressed with grey vertical-louvre blinds",
+    "view": "wall_y090, wall_y180, wall_y270"
+   },
+   {
+    "element": "beam_bulkhead",
+    "description": "Gypsum false-ceiling bulkheads / cove drop running around the room perimeter and as a central recessed tray",
+    "view": "ceiling, wall_y090, equirect"
+   },
+   {
+    "element": "tiled_floor",
+    "description": "Light large-format tiled flooring with skirting",
+    "view": "wall_y000, wall_y270, ceiling"
+   }
+  ],
+  "electrical": [
+   {
+    "element": "ac_indoor_unit",
+    "description": "Wall-mounted split AC indoor unit (high on wall above partition line)",
+    "view": "wall_y000, equirect",
+    "count": 1
+   },
+   {
+    "element": "ac_indoor_unit",
+    "description": "Second wall-mounted split AC indoor unit on the window-side wall",
+    "view": "wall_y270",
+    "count": 1
+   },
+   {
+    "element": "ceiling_fan",
+    "description": "Ceiling fans suspended from the false ceiling (one over central area, one toward sofa side)",
+    "view": "equirect, wall_y000, wall_y090",
+    "count": 2
+   },
+   {
+    "element": "cove_led",
+    "description": "Indirect cove LED lighting in the perimeter false-ceiling channel",
+    "view": "ceiling, equirect, wall_y090"
+   },
+   {
+    "element": "recessed_downlight",
+    "description": "Recessed LED downlights set into the gypsum false ceiling",
+    "view": "ceiling, equirect, wall_y090, wall_y000"
+   },
+   {
+    "element": "modular_switchboard",
+    "description": "Modular switch/socket plate on the solid wall near the partition",
+    "view": "wall_y180, wall_y090",
+    "count": 2
+   },
+   {
+    "element": "power_socket",
+    "description": "Socket plate at low level near the window skirting with a black cable plugged in and trailing down to the floor",
+    "view": "wall_y180",
+    "count": 1
+   },
+   {
+    "element": "cctv_monitor",
+    "description": "Desk monitor displaying a multi-camera CCTV grid feed (security monitoring screen)",
+    "view": "wall_y090, equirect",
+    "count": 1
+   },
+   {
+    "element": "exposed_wiring",
+    "description": "Loose/exposed cabling running under and behind the desk and across the floor to the credenza",
+    "view": "wall_y090, ceiling, equirect"
+   }
+  ],
+  "plumbing": [],
+  "possible_defects": [
+   "Loose/exposed cabling under and behind the desk running across the floor - cable management incomplete",
+   "Black power cable trailing down the window-side wall from a low socket to the floor (wall_y180) - untidy, minor trip/snag risk"
+  ],
+  "summary": "Glass-partitioned private cabin (director/manager office) viewed at t34, fully finished and furnished. A black-framed glass partition with a hinged glass door separates it from the open workspace; two adjacent balcony-facing window runs are dressed with grey vertical louvre blinds. The room has a large desk with dual wide monitors plus a CCTV multi-camera monitor, a grey credenza, executive chairs and a green/orange lounge sofa. Electrical: two wall split-AC indoor units, two ceiling fans, gypsum false ceiling with cove LED and recessed downlights, 2-3 modular switch/socket plates, and a CCTV monitoring screen. No plumbing fixtures are visible. Surfaces are painted, tiled and defect-free; only minor issues are loose cabling under the desk and a cable trailing down the wall to a floor-level socket."
+ }
+]

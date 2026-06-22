@@ -1,0 +1,16 @@
+{
+ "lead": "A 70-second Insta360 360\u00b0 walkthrough of the HSR office (typical floor) was reconstructed in 3D \u2014 307 of 318 perspective views solved at 1.05 px reprojection error \u2014 and registered to the architectural plan \u2014 with the walk's start hard-anchored to the lift-lobby entry door you marked. In every area the camera actually entered, the built shell conforms to the design. The audit's value is in what it flags: one critical coverage gap, two life-safety items to physically verify, and a short list of finishing and electrical snags. Refuted claims were removed by an adversarial verification pass.",
+ "callout": "<b>Critical coverage gap \u2014 plumbing cannot be signed off.</b> The walkthrough never entered the men's/women's toilets, the pantry, or the lift/stair core, so none of the four drawn plumbing fixtures (2 WCs, 2 wash-basins, pantry sink) were filmed. A dedicated wet-area pass is required before any plumbing or wet-core verification.",
+ "n_findings": 15,
+ "n_critical": 1,
+ "n_major": 4,
+ "coverage_pct": "~75%",
+ "limitations": [
+  "The walk's START is now pinned exactly to the user-marked entry door, which fixes orientation and scale; placement elsewhere is interpolated from semantic anchors (\u00b1~1 m near the route, looser far from it). Monocular SfM is scale-recovered from the plan, not surveyed \u2014 a screening tool, not a measured site survey.",
+  "This Mac has no CUDA GPU, so reconstruction is sparse (camera path + point cloud) \u2014 a dense watertight mesh and true wall-by-wall millimetre deviation were not computed.",
+  "The supplied plan is architectural and carries NO electrical/MEP layer, so electrical findings are judged as as-built condition vs design intent (concealed services) and safety/NBC code \u2014 not plan-position mismatches.",
+  "Toilets, pantry and the vertical-transport core were never filmed \u2014 those disciplines are UNVERIFIED, not 'passed'.",
+  "Guard-rail heights and possible hairline cracks cannot be measured from 360 imagery (barrel distortion near floor/ceiling) \u2014 they are flagged for physical check, not asserted as defects.",
+  "Every candidate finding was adversarially re-checked against the source frames; refuted items (e.g. an 'exposed concrete beam' that is actually a finished ceiling, and a suspected 'water stain') were dropped."
+ ]
+}

@@ -1,0 +1,19 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "sthyra-cpm",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [".claude/static-server.mjs"],
+      "port": 4318,
+      "autoPort": true
+    },
+    {
+      "name": "asbuilt-report",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-m", "http.server", "8801", "--directory", "asbuilt360/out"],
+      "port": 8801,
+      "autoPort": true
+    }
+  ]
+}

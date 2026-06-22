@@ -1,0 +1,120 @@
+{
+ "overall_dims": "Overall building footprint (printed on the dimension lines): WIDTH 45'-10\" (broken as 4'-2\" + 41'-8\") and HEIGHT/DEPTH 65'-10\". In metric: 45'-10\" approx 13.97 m wide x 65'-10\" approx 20.07 m deep (45.83 ft x 65.83 ft). Additional left-margin running dimensions printed top-to-bottom: 1'-2\", 3', 8'-6\", 14'-5\", and 5'. Top-edge running dimensions: 4'-2\", 3', 1'-2\" tied into the 41'-8\" interior span. Finished floor level of this plan is marked \"+11'9\" LVL\".",
+ "rooms": [
+  {
+   "name": "BALCONY (north / top)",
+   "dims": "runs full width along top edge (no separate dim string; tied to overall 41'-8\")",
+   "location_note": "top edge, spanning left-to-right above the workspace"
+  },
+  {
+   "name": "BALCONY (west / left, upper)",
+   "dims": "narrow strip, labelled 'BALCONY' (vertical text)",
+   "location_note": "left edge, mid-upper, outside the SLIDING DOOR line"
+  },
+  {
+   "name": "BALCONY (west / left, lower)",
+   "dims": "narrow strip, labelled 'BALCONY' (vertical text)",
+   "location_note": "left edge, lower, outside the lower SLIDING DOOR"
+  },
+  {
+   "name": "BALCONY (south / bottom)",
+   "dims": "44'8\" X 5'0\"",
+   "location_note": "bottom edge, full width below reception"
+  },
+  {
+   "name": "WORKSPACE",
+   "dims": "open-plan, no boxed dim string (occupies the large central-left bay; 4 desk clusters of 8 = 32 workstations)",
+   "location_note": "centre-left, the large open area between the left sliding-door wall and the central partition"
+  },
+  {
+   "name": "RECEPTION",
+   "dims": "23'4\" X 17'6\"",
+   "location_note": "lower-centre-left, below the WORKSPACE, behind the ACCENT WALL"
+  },
+  {
+   "name": "ACCENT WALL",
+   "dims": "curved feature wall (label 'ACCENT WALL', no dim)",
+   "location_note": "centre-left, separating WORKSPACE from RECEPTION, with a curved sofa/seat element"
+  },
+  {
+   "name": "CABIN (top-right)",
+   "dims": "10'7\" X 8'2\"",
+   "location_note": "top-right corner; meeting/office cabin with table + chairs"
+  },
+  {
+   "name": "CABIN (upper-right)",
+   "dims": "10'7\" X 8'2\"",
+   "location_note": "right side, just below the top-right cabin"
+  },
+  {
+   "name": "M.TOILET (Men's)",
+   "dims": "8'8\" X 4'0\"",
+   "location_note": "right-centre, in the central wet-services spine; shows a WC pan"
+  },
+  {
+   "name": "F.TOILET (Women's)",
+   "dims": "8'8\" X 4'0\"",
+   "location_note": "right-centre, directly below M.TOILET; shows a WC pan"
+  },
+  {
+   "name": "PANTRY",
+   "dims": "5'0\" X 8'0\"",
+   "location_note": "centre, mid-height, between the workspace partition and the central core"
+  },
+  {
+   "name": "CABIN (centre-right)",
+   "dims": "11'4\" X 11'7\"",
+   "location_note": "right-centre, below the toilets; larger cabin with chairs"
+  },
+  {
+   "name": "CABIN (lower-right)",
+   "dims": "13'8\" X 9'2\"",
+   "location_note": "right side, lower; cabin with table + chairs"
+  },
+  {
+   "name": "LIFT",
+   "dims": "5'0\" X 6'0\"",
+   "location_note": "lower-right / centre, the vertical-transport core"
+  },
+  {
+   "name": "STAIRCASE",
+   "dims": "no dim string; marked with 'UP' and 'DN' arrows",
+   "location_note": "lower-right, immediately left of the LIFT, forming the core with it"
+  }
+ ],
+ "overall_dims_note": "",
+ "plumbing_fixtures": [
+  "WC pan (water closet) in M.TOILET - 8'8\" X 4'0\", right-centre spine",
+  "WC pan (water closet) in F.TOILET - 8'8\" X 4'0\", directly below M.TOILET",
+  "Wash-basin counter with 2 round basins drawn on the wall between the workspace and the toilet block (the two circles on the vanity slab just left of M.TOILET)",
+  "Pantry sink implied within PANTRY 5'0\" X 8'0\" (counter drawn; a single sink symbol at the pantry counter)"
+ ],
+ "electrical_shown": [
+  "NONE. This is a purely architectural floor-plan sheet (DRG.TITLE 'GROUND FLOOR PLAN'). No electrical symbols are drawn - no light points, switches, sockets, DBs, fans or conduit runs appear anywhere on the sheet. Electrical layout would be on a separate services drawing."
+ ],
+ "doors_openings": [
+  "Main reception entry door (single leaf, swing shown) at the bottom-centre, opening from the south balcony into RECEPTION",
+  "Door into top-right CABIN (single leaf with quarter-circle swing arc)",
+  "Door into the second right-side CABIN (single leaf, swing arc)",
+  "Door into M.TOILET (single leaf, swing arc) off the central circulation",
+  "Door into F.TOILET (single leaf, swing arc)",
+  "Door into PANTRY (single leaf, swing arc)",
+  "Door into centre-right CABIN 11'4\" X 11'7\" (single leaf, swing arc)",
+  "Door into lower-right CABIN 13'8\" X 9'2\" (single leaf, swing arc)",
+  "Door/opening from circulation into the LIFT/STAIR core",
+  "Open doorway/opening from WORKSPACE into the RECEPTION area past the ACCENT WALL"
+ ],
+ "structural": [
+  "Columns are drawn as the small filled (green-shaded) rectangles embedded in the perimeter and core walls. Approximate count: ~14-16 columns.",
+  "Left (west) sliding-door wall: a column at the top-left corner, then a regular line of columns down the wall (approx 4-5) flanking the two SLIDING DOOR openings and the balcony returns.",
+  "Top (north) wall: column at top-left corner and top-right corner bracketing the balcony span.",
+  "Central/core spine: columns flanking the toilet block and pantry partitions (approx 3-4), including at the M.TOILET / F.TOILET wall junctions and the PANTRY corner.",
+  "Right (east) wall: columns at the cabin partition junctions (top-right corner, mid-right by the toilets, lower-right by the cabins).",
+  "Bottom (south) wall: columns at the bottom-left and bottom-right corners and one flanking the reception entry.",
+  "Vertical-transport core (LIFT 5'0\"X6'0\" + STAIRCASE) is a structural concrete core in the lower-right."
+ ],
+ "north_orientation": "An ORIENTATION compass rose is printed at the very top of the title-block column (top-right of the sheet). It is labelled N at the top, S at the bottom, with E on the left and W on the right (an unconventional/mirrored E-W labelling as drawn). North therefore points to the top of the sheet, so the long top BALCONY is the north elevation and the entry/RECEPTION balcony at the bottom is the south side.",
+ "general_notes_text": "GENERAL NOTES:\\n01. All dimensions are in Feet and Inches.\\n02. All dimensions are to be read and not to be measured.\\n03. All levels are finished floor levels.\\n04. All dimensions are of finished surfaces.\\n05. In case there is any ambiguity/discrepancy between the Architectural drawings and other consultant drawings, this ambiguity/discrepancy to be brought to the notice of the Architect before commencement of the work.\\n06. The civil contractor shall cross check all service drawings. And any ambiguity there-in shall be brought to the notice of the Architect before commencement of work on site.\\n07. This drawing is the property of Designerz Palette. It should not be used without the prior permission of the Architect.\\n\\nTitle-block notes also state: '1. Last revised drawing shall supersede all previous drawings. 2. On receipt of the revised drawing, relevant previous drawing shall be returned to the Architect's office.'",
+ "scale_note": "SCALE: NTS (Not To Scale). A GRAPHICAL SCALE bar is printed at the bottom of the title block with graduations reading 5', 10', 15' (i.e. a 0-5-10-15 ft graphic scale). Because the textual scale is 'NTS', Note 02 applies: dimensions are to be read from the strings, not measured off the sheet.",
+ "columns_note": "Columns are the small solid green/filled rectangles set into the walls. They could not all be counted with certainty from the crops; estimated 14-16 total, located at every perimeter corner, regularly along the left sliding-door wall, and at the core/toilet/cabin partition junctions. Treat the count as approximate."
+}

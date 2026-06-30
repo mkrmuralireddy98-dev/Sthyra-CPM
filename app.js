@@ -462,6 +462,19 @@
   /* ---------------------------------------------------------- HELPERS */
   const $ = (s, r=document) => r.querySelector(s);
   const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+  // HTML-escape any backend/user-supplied value before concatenating into innerHTML.
+  // App-authored markup (e.g. KPI vals carrying <span class="unit">) is NOT passed through this.
+  const esc = s => String(s==null?"":s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+  // Transient, non-blocking notice — additive UI that only appears when a persistence call fails.
+  function notify(msg, tone){
+    let host = $("#cpmToasts");
+    if(!host){ host = document.createElement("div"); host.id = "cpmToasts"; host.className = "cpm-toasts"; document.body.appendChild(host); }
+    const el = document.createElement("div");
+    el.className = "cpm-toast cpm-toast--" + (tone || "warn");
+    el.textContent = msg;
+    host.appendChild(el);
+    setTimeout(() => { el.classList.add("is-out"); setTimeout(() => el.remove(), 300); }, 4000);
+  }
   const toneClass = t => ({crit:"pill--crit",warn:"pill--warn",ok:"pill--ok",accent:"pill--neutral",neutral:"pill--ghost",low:"pill--neutral"}[t] || "pill--neutral");
   const toneColor = t => ({crit:"var(--crit)",warn:"var(--warn)",ok:"var(--ok)",accent:"var(--accent)",low:"var(--ink-3)",neutral:"var(--ink-3)"}[t] || "var(--ink-3)");
 
@@ -1007,7 +1020,7 @@
     '<div class="card card--flush">'+
       '<table class="tbl"><thead><tr><th>ID</th><th>Issue</th><th>Location</th><th>Owner</th><th>Age</th><th>Severity</th><th class="t-r">Status</th></tr></thead>'+
       '<tbody>'+ISSUES.map(s=>'<tr class="clickable" data-issue="'+s.id+'">'+
-        '<td class="num">'+s.id+'</td><td class="strong">'+s.t+'</td><td>'+s.loc+'</td><td>'+s.who+'</td><td class="num">'+s.age+'</td>'+
+        '<td class="num">'+s.id+'</td><td class="strong">'+esc(s.t)+'</td><td>'+esc(s.loc)+'</td><td>'+esc(s.who)+'</td><td class="num">'+s.age+'</td>'+
         '<td><span class="pill '+toneClass(s.sev)+'"><span class="dot"></span>'+(s.sev==="crit"?"Critical":s.sev==="warn"?"Medium":"Low")+'</span></td>'+
         '<td class="t-r"><span class="pill '+(s.status==="Closed"?"pill--ok":s.status==="In review"?"pill--neutral":"pill--ghost")+'">'+s.status+'</span></td>'+
       '</tr>').join("")+'</tbody></table>'+
@@ -1478,13 +1491,13 @@
   function issueDrawer(id){
     const s=ISSUES.filter(x=>x.id===id)[0]; if(!s)return;
     openDrawer(
-      '<div class="drawer__head"><div><div class="drawer__eyebrow">'+s.id+' · '+(s.sev==="crit"?"Critical":s.sev==="warn"?"Medium":"Low")+'</div><div class="drawer__title">'+s.t+'</div></div><button class="drawer__close" data-act="close">×</button></div>'+
+      '<div class="drawer__head"><div><div class="drawer__eyebrow">'+s.id+' · '+(s.sev==="crit"?"Critical":s.sev==="warn"?"Medium":"Low")+'</div><div class="drawer__title">'+esc(s.t)+'</div></div><button class="drawer__close" data-act="close">×</button></div>'+
       '<div class="drawer__body">'+
         '<div class="drawer-photo"><span class="cam__live"><span class="dot"></span>EVIDENCE</span><i style="left:30%;top:28%;width:34%;height:46%"></i></div>'+
         '<div class="kv">'+
-          '<div class="kv__row"><span class="kv__k">Location</span><span class="kv__v">'+s.loc+'</span></div>'+
-          '<div class="kv__row"><span class="kv__k">Responsible</span><span class="kv__v">'+s.resp+'</span></div>'+
-          '<div class="kv__row"><span class="kv__k">Drawing ref</span><span class="kv__v">'+s.drawing+'</span></div>'+
+          '<div class="kv__row"><span class="kv__k">Location</span><span class="kv__v">'+esc(s.loc)+'</span></div>'+
+          '<div class="kv__row"><span class="kv__k">Responsible</span><span class="kv__v">'+esc(s.resp)+'</span></div>'+
+          '<div class="kv__row"><span class="kv__k">Drawing ref</span><span class="kv__v">'+esc(s.drawing)+'</span></div>'+
           '<div class="kv__row"><span class="kv__k">Age</span><span class="kv__v">'+s.age+'</span></div>'+
           '<div class="kv__row"><span class="kv__k">Status</span><span class="kv__v">'+s.status+'</span></div>'+
         '</div>'+
@@ -1492,7 +1505,7 @@
         '<div class="chk__item"><span class="chk__box pending"></span><span class="chk__label">Surface preparation</span><span class="chk__meta">Failed</span></div>'+
         '<div class="subhead">Thread</div>'+
         '<div class="thread">'+
-          '<div class="thread__msg"><div class="thread__who">Quality agent <small>auto</small></div><div class="thread__txt">Flagged from photo — confidence 0.86. Routed to '+s.resp+'.</div></div>'+
+          '<div class="thread__msg"><div class="thread__who">Quality agent <small>auto</small></div><div class="thread__txt">Flagged from photo — confidence 0.86. Routed to '+esc(s.resp)+'.</div></div>'+
           '<div class="thread__msg"><div class="thread__who">Eng. Ramesh <small>5h ago</small></div><div class="thread__txt">Asked contractor to re-clean and re-capture before proceeding.</div></div>'+
         '</div>'+
         '<div class="subhead">Reach the owner</div>'+
@@ -1572,7 +1585,7 @@
       title = "Open quality issues";
       const open = ISSUES.filter(x=>x.status!=="Closed"), crit = open.filter(x=>x.sev==="crit").length;
       lead = open.length+" open · "+crit+" critical. Tap an issue for evidence, owner and a way to reach them.";
-      body = '<div class="stack-12">'+open.map(s=>'<div class="alert" data-issue="'+s.id+'" style="cursor:pointer"><span class="alert__mark" style="background:'+toneColor(s.sev)+'"></span><div class="alert__body"><div class="alert__t" style="font-size:13px">'+s.t+'</div><div class="alert__d">'+s.loc+' · '+s.resp+'</div><div class="alert__meta"><span>'+s.id+'</span><span class="pill '+toneClass(s.sev)+'"><span class="dot"></span>'+(s.sev==="crit"?"Critical":s.sev==="warn"?"Medium":"Low")+'</span></div></div></div>').join("")+'</div>';
+      body = '<div class="stack-12">'+open.map(s=>'<div class="alert" data-issue="'+s.id+'" style="cursor:pointer"><span class="alert__mark" style="background:'+toneColor(s.sev)+'"></span><div class="alert__body"><div class="alert__t" style="font-size:13px">'+esc(s.t)+'</div><div class="alert__d">'+esc(s.loc)+' · '+esc(s.resp)+'</div><div class="alert__meta"><span>'+s.id+'</span><span class="pill '+toneClass(s.sev)+'"><span class="dot"></span>'+(s.sev==="crit"?"Critical":s.sev==="warn"?"Medium":"Low")+'</span></div></div></div>').join("")+'</div>';
       cta = ['Open Issues board','issues'];
     } else if(L === "Cameras online"){
       title = "Camera status";
@@ -1644,7 +1657,7 @@
         if(!r.ok) throw new Error(t + " HTTP " + r.status);
         return r.json();
       }
-      const d = await Promise.all([
+      const settled = await Promise.allSettled([
         get("cpm_project","select=*&limit=1"),
         get("cpm_kpis","select=label,val,foot,bar,tone&order=sort"),
         get("cpm_attention","select=tone,t,d,actions&order=sort"),
@@ -1675,6 +1688,8 @@
         get("cpm_qc_items","select=*&order=stage_id,sort"),
         get("cpm_estimate","select=stage,family,material,base,unit,wastage,total,source,confidence&order=sort")
       ]);
+      const d = settled.map(s => s.status === "fulfilled" ? s.value : null);
+      settled.forEach((s, i) => { if(s.status === "rejected") console.error("[cpm] table #" + i + " load failed:", (s.reason && s.reason.message) || s.reason); });
       if(d[0] && d[0][0]) Object.assign(PROJECT, { name:d[0][0].name, meta:d[0][0].meta, health:d[0][0].health, healthDelta:d[0][0].health_delta });
       replaceArr(KPIS, d[1]); replaceArr(ATTENTION, d[2]); replaceArr(FEED, d[3]); replaceArr(ISSUES, d[4]);
       replaceArr(MATERIALS, d[5]); replaceArr(MAT_ALERTS, d[6]); replaceArr(WORKPKGS, d[7]); replaceArr(PAYMENTS, d[8]);
@@ -1692,19 +1707,28 @@
       replaceArr(QC, d[25]);
       replaceArr(QSTAGES, d[26]); replaceArr(QITEMS, d[27]);
       replaceArr(EST, d[28]);
-      backendLive = true;
-      return true;
-    }catch(e){ return false; }
+      backendLive = settled.some(s => s.status === "fulfilled");
+      return backendLive;
+    }catch(e){ console.error("[cpm] loadBackend failed", e); return false; }
   }
 
   // write-back: resolving an issue persists to Postgres
   async function resolveIssue(id){
     const it = ISSUES.filter(x => x.id === id)[0];
+    const prev = it ? it.status : null;
     if(it) it.status = "Closed";
     closeDrawer();
     if(state.view === "issues") render();
     if(backendLive){
-      try{ await sb("/cpm_issues?id=eq." + encodeURIComponent(id), { method:"PATCH", headers:{ "Content-Type":"application/json", "Prefer":"return=minimal" }, body: JSON.stringify({ status:"Closed" }) }); }catch(e){}
+      try{
+        const r = await sb("/cpm_issues?id=eq." + encodeURIComponent(id), { method:"PATCH", headers:{ "Content-Type":"application/json", "Prefer":"return=minimal" }, body: JSON.stringify({ status:"Closed" }) });
+        if(!r.ok) throw new Error("HTTP " + r.status);
+      }catch(e){
+        if(it) it.status = prev;
+        if(state.view === "issues") render();
+        notify("Couldn't save — issue not resolved (" + e.message + ")", "crit");
+        console.error("[cpm] resolveIssue failed", id, e);
+      }
     }
   }
 
@@ -1713,16 +1737,16 @@
     const q = QC.filter(x=>x.id===+id)[0]; if(!q) return;
     const opts = ["Pass","Rework","Pending"];
     openDrawer(
-      '<div class="drawer__head"><div><div class="drawer__eyebrow">Quality check · '+q.phase+'</div><div class="drawer__title">'+q.name+'</div></div><button class="drawer__close" data-act="close">×</button></div>'+
+      '<div class="drawer__head"><div><div class="drawer__eyebrow">Quality check · '+esc(q.phase)+'</div><div class="drawer__title">'+esc(q.name)+'</div></div><button class="drawer__close" data-act="close">×</button></div>'+
       '<div class="drawer__body" data-qc-id="'+q.id+'">'+
         '<div class="kv"><div class="kv__row"><span class="kv__k">Current</span><span class="kv__v"><span class="pill '+toneClass(QC_STATUS_TONE[q.status])+'"><span class="dot"></span>'+q.status+'</span></span></div>'+
-          '<div class="kv__row"><span class="kv__k">Last reviewed</span><span class="kv__v">'+(q.checked_at?(q.checked_at+(q.inspector?" · "+q.inspector:"")):"—")+'</span></div></div>'+
+          '<div class="kv__row"><span class="kv__k">Last reviewed</span><span class="kv__v">'+(q.checked_at?(esc(q.checked_at)+(q.inspector?" · "+esc(q.inspector):"")):"—")+'</span></div></div>'+
         '<div class="subhead">Verdict</div>'+
         '<div class="qc-opts">'+opts.map(o=>'<button class="qc-opt '+(q.status===o?"is-sel":"")+'" data-qc-status="'+o+'">'+o+'</button>').join("")+'</div>'+
         '<div class="subhead">Rating</div>'+
         qcStars(q.rating||0, "qc-stars--input")+
         '<div class="subhead">Feedback</div>'+
-        '<textarea id="qcFeedback" class="qc-textarea" placeholder="What was checked, what passed, what needs rework…">'+(q.feedback||"")+'</textarea>'+
+        '<textarea id="qcFeedback" class="qc-textarea" placeholder="What was checked, what passed, what needs rework…">'+esc(q.feedback||"")+'</textarea>'+
       '</div>'+
       '<div class="drawer__foot"><button class="ghostbtn" data-act="close">Cancel</button><button class="solidbtn" data-act="qc-submit" data-id="'+q.id+'">Submit quality check</button></div>'
     );
@@ -1734,15 +1758,32 @@
     const status = selOpt ? selOpt.dataset.qcStatus : q.status;
     const rating = $$("#drawer .qc-stars--input span.on").length || null;
     const ta = $("#qcFeedback"); const feedback = ta ? ta.value.trim() : q.feedback;
+    const prev = { status:q.status, rating:q.rating, feedback:q.feedback, inspector:q.inspector, checked_at:q.checked_at };
     Object.assign(q, { status:status, rating:rating, feedback:feedback, inspector:"Eng. Ramesh", checked_at:"13 Jun" });
     closeDrawer();
     render();
     if(backendLive){
-      try{ await sb("/cpm_qc_processes?id=eq."+encodeURIComponent(id), { method:"PATCH", headers:{ "Content-Type":"application/json", "Prefer":"return=minimal" }, body: JSON.stringify({ status:status, rating:rating, feedback:feedback, inspector:"Eng. Ramesh", checked_at:"13 Jun" }) }); }catch(e){}
+      try{
+        const r = await sb("/cpm_qc_processes?id=eq."+encodeURIComponent(id), { method:"PATCH", headers:{ "Content-Type":"application/json", "Prefer":"return=minimal" }, body: JSON.stringify({ status:status, rating:rating, feedback:feedback, inspector:"Eng. Ramesh", checked_at:"13 Jun" }) });
+        if(!r.ok) throw new Error("HTTP " + r.status);
+      }catch(e){
+        Object.assign(q, prev); render();
+        notify("Couldn't save the quality check (" + e.message + ")", "crit");
+        console.error("[cpm] submitQC failed", id, e);
+      }
     }
   }
   // stage-gate write-backs (persist to Postgres)
-  function qcPatch(table, id, patch){ if(backendLive){ try{ sb("/"+table+"?id=eq."+id, { method:"PATCH", headers:{ "Content-Type":"application/json", "Prefer":"return=minimal" }, body: JSON.stringify(patch) }); }catch(e){} } }
+  async function qcPatch(table, id, patch){
+    if(!backendLive) return;
+    try{
+      const r = await sb("/"+table+"?id=eq."+id, { method:"PATCH", headers:{ "Content-Type":"application/json", "Prefer":"return=minimal" }, body: JSON.stringify(patch) });
+      if(!r.ok) throw new Error("HTTP " + r.status);
+    }catch(e){
+      notify("Couldn't save change to " + table.replace("cpm_","") + " (" + e.message + ")", "warn");
+      console.error("[cpm] qcPatch failed", table, id, e);
+    }
+  }
   function setQcItem(itemId, status){
     const x=QITEMS.filter(i=>i.id===+itemId)[0]; if(!x) return;
     x.status=status;
@@ -1790,7 +1831,7 @@
           ch.on("postgres_changes", { event:"*", schema:"public", table:t }, onRealtime);
         });
         ch.subscribe(function(status){ if(status === "SUBSCRIBED"){ realtimeOn = true; setFoot("on"); } });
-      }catch(e){}
+      }catch(e){ console.error("[cpm] realtime init failed", e); }
     };
     document.head.appendChild(s);
   }

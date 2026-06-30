@@ -1,7 +1,7 @@
 // Seeds the stage-wise material estimate (quantity take-off → recipe → wastage → BOQ) into Supabase.
 // Run: node .claude/est-seed.mjs
 const BASE="https://rajvfosoxgkyanwmdphq.supabase.co/rest/v1";
-const KEY="sb_publishable_u3pa8Z9iEZE8A7GSZnGXOQ_dAsjUbOp";
+const KEY=process.env.SUPABASE_KEY || "sb_publishable_u3pa8Z9iEZE8A7GSZnGXOQ_dAsjUbOp";
 
 // [stage, family, material, base, unit, wastage%, source, confidence]
 const R = [

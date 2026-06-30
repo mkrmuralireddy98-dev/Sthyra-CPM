@@ -1,7 +1,7 @@
 // Seeds the stage-gate quality system into Supabase via REST (upsert, idempotent).
 // Run: node .claude/qc-seed.mjs
 const BASE = "https://rajvfosoxgkyanwmdphq.supabase.co/rest/v1";
-const KEY = "sb_publishable_u3pa8Z9iEZE8A7GSZnGXOQ_dAsjUbOp";
+const KEY = process.env.SUPABASE_KEY || "sb_publishable_u3pa8Z9iEZE8A7GSZnGXOQ_dAsjUbOp";
 
 // item tuple: [grp, name, type, required, severity, unit, target, value, status, photo]
 // grp B=Before work D=During work A=After work G=General

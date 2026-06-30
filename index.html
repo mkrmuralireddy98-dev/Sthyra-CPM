@@ -877,6 +877,13 @@ em{font-style:italic}
 .cpm-toast--warn{border-left-color:var(--warn,#9A7B2E)}
 .cpm-toast.is-out{opacity:0;transform:translateY(8px)}
 
+
+/* ---- auth (sign-in drawer + signed-in avatar ring) ---- */
+.auth-input{width:100%;box-sizing:border-box;font-family:var(--f-ui);font-size:14px;padding:10px 12px;border:1px solid var(--hair-2);border-radius:4px;background:var(--paper-2);color:var(--ink);margin-bottom:4px}
+.auth-input:focus{outline:none;border-color:var(--accent)}
+.avatar.is-authed{box-shadow:0 0 0 2px var(--ok),0 0 0 4px var(--paper)}
+.cpm-toast--ok{border-left-color:var(--ok,#5a7a5a)}
+
   </style>
 </head>
 <body>
@@ -2615,9 +2622,11 @@ window.__SthyraConfig = {
   // Backend identity is single-sourced in config.js (inlined first by build.mjs). See ARCH-3.
   const BACKEND = window.__SthyraConfig || {};
   let backendLive = false;
+  let authToken = null, authUser = null, sbClient = null;
   function sb(path, opts){
     opts = opts || {};
-    opts.headers = Object.assign({ apikey: BACKEND.key, Authorization: "Bearer " + BACKEND.key }, opts.headers || {});
+    const bearer = authToken || BACKEND.key;   // signed-in inspector's JWT for writes; publishable key for anon reads
+    opts.headers = Object.assign({ apikey: BACKEND.key, Authorization: "Bearer " + bearer }, opts.headers || {});
     return fetch(BACKEND.url + path, opts);
   }
   function replaceArr(arr, rows){ if(!Array.isArray(rows)) return; arr.length = 0; rows.forEach(r => arr.push(r)); }
@@ -2684,6 +2693,7 @@ window.__SthyraConfig = {
 
   // write-back: resolving an issue persists to Postgres
   async function resolveIssue(id){
+    if(!requireAuth()) return;
     const it = ISSUES.filter(x => x.id === id)[0];
     const prev = it ? it.status : null;
     if(it) it.status = "Closed";
@@ -2723,6 +2733,7 @@ window.__SthyraConfig = {
   }
   // write-back: submitting a quality check persists to Postgres + pushes via realtime
   async function submitQC(id){
+    if(!requireAuth()) return;
     const q = QC.filter(x=>x.id===+id)[0]; if(!q) return;
     const selOpt = $("#drawer .qc-opt.is-sel");
     const status = selOpt ? selOpt.dataset.qcStatus : q.status;
@@ -2755,6 +2766,7 @@ window.__SthyraConfig = {
     }
   }
   function setQcItem(itemId, status){
+    if(!requireAuth()) return;
     const x=QITEMS.filter(i=>i.id===+itemId)[0]; if(!x) return;
     x.status=status;
     const st=QSTAGES.filter(s=>s.id===x.stage_id)[0]; if(st) st.score=qcScore(st.id);
@@ -2768,6 +2780,7 @@ window.__SthyraConfig = {
     qcPatch("cpm_qc_items", x.id, { value:value });
   }
   function setQcStage(stageId, status){
+    if(!requireAuth()) return;
     const s=QSTAGES.filter(x=>x.id===+stageId)[0]; if(!s) return;
     s.status=status; s.score=qcScore(s.id)||s.score;
     const approved=QC_APPROVED.indexOf(status)!==-1;
@@ -2792,22 +2805,78 @@ window.__SthyraConfig = {
       Promise.all(tables.map(refetchTable)).then(function(){ if(state.view !== "walk") render(); setFoot("update"); });
     }, 350);
   }
-  function startRealtime(){
-    if(!backendLive || window.__cpmRT) return;
-    window.__cpmRT = true;
-    const s = document.createElement("script");
-    s.src = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2";
-    s.onload = function(){
+  /* ---- Auth (Supabase) — reads stay open, writes require a signed-in inspector (SEC-1/SEC-5) ---- */
+  function applySession(session){
+    authToken = session ? session.access_token : null;
+    authUser  = session ? (session.user || null) : null;
+    updateAuthChip();
+  }
+  function updateAuthChip(){
+    const a = $(".avatar"); if(!a) return;
+    if(authUser){ a.classList.add("is-authed"); a.title = "Signed in: " + authUser.email + " — click to sign out"; }
+    else { a.classList.remove("is-authed"); a.title = "Sign in to approve & save"; }
+  }
+  // load supabase-js once; one client serves both auth (session) and realtime
+  function loadSupabase(cb){
+    if(sbClient) return cb(sbClient);
+    if(window.__sbLoad){ window.__sbLoad.push(cb); return; }
+    window.__sbLoad = [cb];
+    const el = document.createElement("script");
+    el.src = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2";
+    el.onload = function(){
       try{
-        rtClient = window.supabase.createClient(BACKEND.base, BACKEND.anonKey);
-        const ch = rtClient.channel("cpm-live");
+        sbClient = window.supabase.createClient(BACKEND.base, BACKEND.anonKey, { auth:{ persistSession:true, autoRefreshToken:true, storageKey:"sthyra-auth" } });
+        sbClient.auth.getSession().then(function(r){ applySession(r.data ? r.data.session : null); });
+        sbClient.auth.onAuthStateChange(function(_e, session){ applySession(session); });
+      }catch(e){ console.error("[cpm] supabase init failed", e); }
+      const q = window.__sbLoad || []; window.__sbLoad = null;
+      q.forEach(function(fn){ try{ fn(sbClient); }catch(_){} });
+    };
+    document.head.appendChild(el);
+  }
+  function signIn(email, pw){
+    loadSupabase(function(c){
+      if(!c){ notify("Auth unavailable", "crit"); return; }
+      c.auth.signInWithPassword({ email:email, password:pw }).then(function(r){
+        if(r.error){ notify("Sign-in failed: " + r.error.message, "crit"); return; }
+        applySession(r.data.session); closeDrawer(); notify("Signed in as " + r.data.user.email, "ok"); render();
+      });
+    });
+  }
+  function signOut(){
+    loadSupabase(function(c){ if(c) c.auth.signOut().then(function(){ applySession(null); notify("Signed out", "warn"); render(); }); });
+  }
+  function requireAuth(){
+    if(authToken) return true;
+    notify("Sign in to save changes", "warn");
+    authDrawer();
+    return false;
+  }
+  function authDrawer(){
+    openDrawer(
+      '<div class="drawer__head"><div><div class="drawer__eyebrow">Sthyra · Inspector access</div><div class="drawer__title">Sign in to save</div></div><button class="drawer__close" data-act="close">×</button></div>'+
+      '<div class="drawer__body">'+
+        '<p class="muted" style="font-size:13px;line-height:1.6;margin:0 0 16px">Reading the dashboard is open. Saving — approvals, issue resolution, quality verdicts — requires a signed-in inspector so every change is attributable.</p>'+
+        '<div class="subhead">Email</div><input id="authEmail" class="auth-input" type="email" value="inspector@sthyra.demo" autocomplete="username">'+
+        '<div class="subhead">Password</div><input id="authPw" class="auth-input" type="password" value="Sthyra@2026" autocomplete="current-password">'+
+      '</div>'+
+      '<div class="drawer__foot"><button class="ghostbtn" data-act="close">Cancel</button><button class="solidbtn" data-act="signin">Sign in</button></div>'
+    );
+  }
+  function startRealtime(){
+    if(window.__cpmRT) return;
+    window.__cpmRT = true;
+    loadSupabase(function(client){
+      if(!client) return;
+      try{
+        rtClient = client;
+        const ch = client.channel("cpm-live");
         Object.keys(MANIFEST).filter(function(k){ return MANIFEST[k].rt; }).forEach(function(k){
           ch.on("postgres_changes", { event:"*", schema:"public", table:MANIFEST[k].name }, onRealtime);
         });
         ch.subscribe(function(status){ if(status === "SUBSCRIBED"){ realtimeOn = true; setFoot("on"); } });
       }catch(e){ console.error("[cpm] realtime init failed", e); }
-    };
-    document.head.appendChild(s);
+    });
   }
 
   /* ---------------------------------------------------------- RENDER */
@@ -2910,8 +2979,10 @@ window.__SthyraConfig = {
     $("#view").addEventListener("change", e=>{ const m=e.target.closest("[data-qc-meas]"); if(m){ setQcItemValue(m.dataset.qcMeas, m.value); } });
 
     $("#scrim").addEventListener("click", closeDrawer);
+    const av = $(".avatar"); if(av){ av.style.cursor = "pointer"; av.addEventListener("click", function(){ authUser ? signOut() : authDrawer(); }); }
     $("#drawer").addEventListener("click", e=>{
       if(e.target.closest("[data-act='close']")){ closeDrawer(); return; }
+      if(e.target.closest("[data-act='signin']")){ signIn(($("#authEmail")||{}).value, ($("#authPw")||{}).value); return; }
       const rb=e.target.closest("[data-act='resolve']"); if(rb){ resolveIssue(rb.dataset.id); return; }
       const qs=e.target.closest("[data-qc-status]"); if(qs){ $$("#drawer .qc-opt").forEach(x=>x.classList.toggle("is-sel", x===qs)); return; }
       const str=e.target.closest("[data-qc-star]"); if(str){ const nn=+str.dataset.qcStar; $$("#drawer .qc-stars--input span").forEach((x,i)=>x.classList.toggle("on", i<nn)); return; }

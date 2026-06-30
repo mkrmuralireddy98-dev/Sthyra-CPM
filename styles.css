@@ -866,3 +866,10 @@ em{font-style:italic}
 .cpm-toast--crit{border-left-color:var(--crit,#8A2A33)}
 .cpm-toast--warn{border-left-color:var(--warn,#9A7B2E)}
 .cpm-toast.is-out{opacity:0;transform:translateY(8px)}
+
+
+/* ---- auth (sign-in drawer + signed-in avatar ring) ---- */
+.auth-input{width:100%;box-sizing:border-box;font-family:var(--f-ui);font-size:14px;padding:10px 12px;border:1px solid var(--hair-2);border-radius:4px;background:var(--paper-2);color:var(--ink);margin-bottom:4px}
+.auth-input:focus{outline:none;border-color:var(--accent)}
+.avatar.is-authed{box-shadow:0 0 0 2px var(--ok),0 0 0 4px var(--paper)}
+.cpm-toast--ok{border-left-color:var(--ok,#5a7a5a)}

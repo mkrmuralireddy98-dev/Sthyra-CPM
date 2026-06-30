@@ -869,6 +869,21 @@ em{font-style:italic}
   .wp-row__name{flex-basis:140px}
 }
 
+
+/* ---- transient persistence-failure notice (additive; only shown on save error) ---- */
+.cpm-toasts{position:fixed;right:18px;bottom:18px;z-index:9999;display:flex;flex-direction:column;gap:8px;max-width:340px}
+.cpm-toast{font-family:var(--f-ui,inherit);font-size:13px;line-height:1.4;color:#fff;background:var(--char,#1A1A1A);border-left:3px solid var(--warn,#9A7B2E);border-radius:4px;padding:10px 13px;box-shadow:0 6px 24px rgba(0,0,0,.22);transition:opacity .3s,transform .3s}
+.cpm-toast--crit{border-left-color:var(--crit,#8A2A33)}
+.cpm-toast--warn{border-left-color:var(--warn,#9A7B2E)}
+.cpm-toast.is-out{opacity:0;transform:translateY(8px)}
+
+
+/* ---- auth (sign-in drawer + signed-in avatar ring) ---- */
+.auth-input{width:100%;box-sizing:border-box;font-family:var(--f-ui);font-size:14px;padding:10px 12px;border:1px solid var(--hair-2);border-radius:4px;background:var(--paper-2);color:var(--ink);margin-bottom:4px}
+.auth-input:focus{outline:none;border-color:var(--accent)}
+.avatar.is-authed{box-shadow:0 0 0 2px var(--ok),0 0 0 4px var(--paper)}
+.cpm-toast--ok{border-left-color:var(--ok,#5a7a5a)}
+
   </style>
 </head>
 <body>
@@ -952,6 +967,20 @@ em{font-style:italic}
   <div class="drawer-scrim" id="scrim" hidden></div>
   <aside class="drawer" id="drawer" hidden aria-modal="true" role="dialog"></aside>
 
+  <script>
+/* Sthyra CPM — single source of backend identity (ARCH-3 / DUP-1 / SEC-4 / MAINT-3).
+   Inlined FIRST by build.mjs and supervisor.build.mjs, so app.js and supervisor.js
+   both read window.__SthyraConfig instead of each hardcoding the URL + keys.
+   The key is a Supabase publishable/anon key — RLS is the real security boundary
+   (see supabase/migrations/0001_harden_rls.sql). Rotating it is now a one-file edit. */
+window.__SthyraConfig = {
+  base:    "https://rajvfosoxgkyanwmdphq.supabase.co",
+  url:     "https://rajvfosoxgkyanwmdphq.supabase.co/rest/v1",
+  key:     "sb_publishable_u3pa8Z9iEZE8A7GSZnGXOQ_dAsjUbOp",
+  anonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhanZmb3NveGdreWFud21kcGhxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAxMDg3MDgsImV4cCI6MjA5NTY4NDcwOH0.MejkaPs8AFleMTTGDqk_v1TJcb_3y9-E1ptj_adIgOI"
+};
+
+  </script>
   <script>
 /* ============================================================
    STHYRA CPM — app logic, mock data, views, interactions
@@ -1417,6 +1446,19 @@ em{font-style:italic}
   /* ---------------------------------------------------------- HELPERS */
   const $ = (s, r=document) => r.querySelector(s);
   const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+  // HTML-escape any backend/user-supplied value before concatenating into innerHTML.
+  // App-authored markup (e.g. KPI vals carrying <span class="unit">) is NOT passed through this.
+  const esc = s => String(s==null?"":s).replace(/[&<>"']/g, c => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;" }[c]));
+  // Transient, non-blocking notice — additive UI that only appears when a persistence call fails.
+  function notify(msg, tone){
+    let host = $("#cpmToasts");
+    if(!host){ host = document.createElement("div"); host.id = "cpmToasts"; host.className = "cpm-toasts"; document.body.appendChild(host); }
+    const el = document.createElement("div");
+    el.className = "cpm-toast cpm-toast--" + (tone || "warn");
+    el.textContent = msg;
+    host.appendChild(el);
+    setTimeout(() => { el.classList.add("is-out"); setTimeout(() => el.remove(), 300); }, 4000);
+  }
   const toneClass = t => ({crit:"pill--crit",warn:"pill--warn",ok:"pill--ok",accent:"pill--neutral",neutral:"pill--ghost",low:"pill--neutral"}[t] || "pill--neutral");
   const toneColor = t => ({crit:"var(--crit)",warn:"var(--warn)",ok:"var(--ok)",accent:"var(--accent)",low:"var(--ink-3)",neutral:"var(--ink-3)"}[t] || "var(--ink-3)");
 
@@ -1962,7 +2004,7 @@ em{font-style:italic}
     '<div class="card card--flush">'+
       '<table class="tbl"><thead><tr><th>ID</th><th>Issue</th><th>Location</th><th>Owner</th><th>Age</th><th>Severity</th><th class="t-r">Status</th></tr></thead>'+
       '<tbody>'+ISSUES.map(s=>'<tr class="clickable" data-issue="'+s.id+'">'+
-        '<td class="num">'+s.id+'</td><td class="strong">'+s.t+'</td><td>'+s.loc+'</td><td>'+s.who+'</td><td class="num">'+s.age+'</td>'+
+        '<td class="num">'+s.id+'</td><td class="strong">'+esc(s.t)+'</td><td>'+esc(s.loc)+'</td><td>'+esc(s.who)+'</td><td class="num">'+s.age+'</td>'+
         '<td><span class="pill '+toneClass(s.sev)+'"><span class="dot"></span>'+(s.sev==="crit"?"Critical":s.sev==="warn"?"Medium":"Low")+'</span></td>'+
         '<td class="t-r"><span class="pill '+(s.status==="Closed"?"pill--ok":s.status==="In review"?"pill--neutral":"pill--ghost")+'">'+s.status+'</span></td>'+
       '</tr>').join("")+'</tbody></table>'+
@@ -2433,13 +2475,13 @@ em{font-style:italic}
   function issueDrawer(id){
     const s=ISSUES.filter(x=>x.id===id)[0]; if(!s)return;
     openDrawer(
-      '<div class="drawer__head"><div><div class="drawer__eyebrow">'+s.id+' · '+(s.sev==="crit"?"Critical":s.sev==="warn"?"Medium":"Low")+'</div><div class="drawer__title">'+s.t+'</div></div><button class="drawer__close" data-act="close">×</button></div>'+
+      '<div class="drawer__head"><div><div class="drawer__eyebrow">'+s.id+' · '+(s.sev==="crit"?"Critical":s.sev==="warn"?"Medium":"Low")+'</div><div class="drawer__title">'+esc(s.t)+'</div></div><button class="drawer__close" data-act="close">×</button></div>'+
       '<div class="drawer__body">'+
         '<div class="drawer-photo"><span class="cam__live"><span class="dot"></span>EVIDENCE</span><i style="left:30%;top:28%;width:34%;height:46%"></i></div>'+
         '<div class="kv">'+
-          '<div class="kv__row"><span class="kv__k">Location</span><span class="kv__v">'+s.loc+'</span></div>'+
-          '<div class="kv__row"><span class="kv__k">Responsible</span><span class="kv__v">'+s.resp+'</span></div>'+
-          '<div class="kv__row"><span class="kv__k">Drawing ref</span><span class="kv__v">'+s.drawing+'</span></div>'+
+          '<div class="kv__row"><span class="kv__k">Location</span><span class="kv__v">'+esc(s.loc)+'</span></div>'+
+          '<div class="kv__row"><span class="kv__k">Responsible</span><span class="kv__v">'+esc(s.resp)+'</span></div>'+
+          '<div class="kv__row"><span class="kv__k">Drawing ref</span><span class="kv__v">'+esc(s.drawing)+'</span></div>'+
           '<div class="kv__row"><span class="kv__k">Age</span><span class="kv__v">'+s.age+'</span></div>'+
           '<div class="kv__row"><span class="kv__k">Status</span><span class="kv__v">'+s.status+'</span></div>'+
         '</div>'+
@@ -2447,7 +2489,7 @@ em{font-style:italic}
         '<div class="chk__item"><span class="chk__box pending"></span><span class="chk__label">Surface preparation</span><span class="chk__meta">Failed</span></div>'+
         '<div class="subhead">Thread</div>'+
         '<div class="thread">'+
-          '<div class="thread__msg"><div class="thread__who">Quality agent <small>auto</small></div><div class="thread__txt">Flagged from photo — confidence 0.86. Routed to '+s.resp+'.</div></div>'+
+          '<div class="thread__msg"><div class="thread__who">Quality agent <small>auto</small></div><div class="thread__txt">Flagged from photo — confidence 0.86. Routed to '+esc(s.resp)+'.</div></div>'+
           '<div class="thread__msg"><div class="thread__who">Eng. Ramesh <small>5h ago</small></div><div class="thread__txt">Asked contractor to re-clean and re-capture before proceeding.</div></div>'+
         '</div>'+
         '<div class="subhead">Reach the owner</div>'+
@@ -2527,7 +2569,7 @@ em{font-style:italic}
       title = "Open quality issues";
       const open = ISSUES.filter(x=>x.status!=="Closed"), crit = open.filter(x=>x.sev==="crit").length;
       lead = open.length+" open · "+crit+" critical. Tap an issue for evidence, owner and a way to reach them.";
-      body = '<div class="stack-12">'+open.map(s=>'<div class="alert" data-issue="'+s.id+'" style="cursor:pointer"><span class="alert__mark" style="background:'+toneColor(s.sev)+'"></span><div class="alert__body"><div class="alert__t" style="font-size:13px">'+s.t+'</div><div class="alert__d">'+s.loc+' · '+s.resp+'</div><div class="alert__meta"><span>'+s.id+'</span><span class="pill '+toneClass(s.sev)+'"><span class="dot"></span>'+(s.sev==="crit"?"Critical":s.sev==="warn"?"Medium":"Low")+'</span></div></div></div>').join("")+'</div>';
+      body = '<div class="stack-12">'+open.map(s=>'<div class="alert" data-issue="'+s.id+'" style="cursor:pointer"><span class="alert__mark" style="background:'+toneColor(s.sev)+'"></span><div class="alert__body"><div class="alert__t" style="font-size:13px">'+esc(s.t)+'</div><div class="alert__d">'+esc(s.loc)+' · '+esc(s.resp)+'</div><div class="alert__meta"><span>'+s.id+'</span><span class="pill '+toneClass(s.sev)+'"><span class="dot"></span>'+(s.sev==="crit"?"Critical":s.sev==="warn"?"Medium":"Low")+'</span></div></div></div>').join("")+'</div>';
       cta = ['Open Issues board','issues'];
     } else if(L === "Cameras online"){
       title = "Camera status";
@@ -2577,89 +2619,96 @@ em{font-style:italic}
   }
 
   /* ---------------------------------------------------------- BACKEND (Supabase) */
-  const BACKEND = {
-    base: "https://rajvfosoxgkyanwmdphq.supabase.co",
-    url: "https://rajvfosoxgkyanwmdphq.supabase.co/rest/v1",
-    key: "sb_publishable_u3pa8Z9iEZE8A7GSZnGXOQ_dAsjUbOp",
-    anonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhanZmb3NveGdreWFud21kcGhxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAxMDg3MDgsImV4cCI6MjA5NTY4NDcwOH0.MejkaPs8AFleMTTGDqk_v1TJcb_3y9-E1ptj_adIgOI"
-  };
+  // Backend identity is single-sourced in config.js (inlined first by build.mjs). See ARCH-3.
+  const BACKEND = window.__SthyraConfig || {};
   let backendLive = false;
+  let authToken = null, authUser = null, sbClient = null;
   function sb(path, opts){
     opts = opts || {};
-    opts.headers = Object.assign({ apikey: BACKEND.key, Authorization: "Bearer " + BACKEND.key }, opts.headers || {});
+    const bearer = authToken || BACKEND.key;   // signed-in inspector's JWT for writes; publishable key for anon reads
+    opts.headers = Object.assign({ apikey: BACKEND.key, Authorization: "Bearer " + bearer }, opts.headers || {});
     return fetch(BACKEND.url + path, opts);
   }
   function replaceArr(arr, rows){ if(!Array.isArray(rows)) return; arr.length = 0; rows.forEach(r => arr.push(r)); }
 
-  // fetch all datasets, patch the in-memory data in place (render reads the same refs)
+  // Single declarative manifest: table name + query + how to apply its rows + realtime flag.
+  // Replaces the positional Promise.all -> d[0..28] coupling (ARCH-2 / ARCH-8 / MAINT-1).
+  const MANIFEST = {
+    project:        { name:"cpm_project", q:"select=*&limit=1", rt:true, apply:r=>{ if(r&&r[0]) Object.assign(PROJECT,{ name:r[0].name, meta:r[0].meta, health:r[0].health, healthDelta:r[0].health_delta }); } },
+    kpis:           { name:"cpm_kpis", q:"select=label,val,foot,bar,tone&order=sort", rt:true, apply:r=>replaceArr(KPIS,r) },
+    attention:      { name:"cpm_attention", q:"select=tone,t,d,actions&order=sort", rt:true, apply:r=>replaceArr(ATTENTION,r) },
+    feed:           { name:"cpm_feed", q:"select=t,txt&order=sort", rt:true, apply:r=>replaceArr(FEED,r) },
+    issues:         { name:"cpm_issues", q:"select=id,t,loc,sev,who,status,age,resp,drawing&order=sort", rt:true, apply:r=>replaceArr(ISSUES,r) },
+    materials:      { name:"cpm_materials", q:"select=name,unit,stock,days,rate,status,po&order=sort", rt:true, apply:r=>replaceArr(MATERIALS,r) },
+    material_alerts:{ name:"cpm_material_alerts", q:"select=tone,t,d,meta,act&order=sort", rt:true, apply:r=>replaceArr(MAT_ALERTS,r) },
+    work_packages:  { name:"cpm_work_packages", q:"select=name,code,pct,status,lbl&order=sort", rt:true, apply:r=>replaceArr(WORKPKGS,r) },
+    payments:       { name:"cpm_payments", q:"select=contractor,milestone,claim,checks,release,held,amount,note&order=sort", rt:true, apply:r=>replaceArr(PAYMENTS,r) },
+    scorecards:     { name:"cpm_scorecards", q:"select=name,trade,score,m&order=sort", rt:true, apply:r=>replaceArr(SCORECARDS,r) },
+    labor_teams:    { name:"cpm_labor_teams", q:"select=team,count&order=sort", rt:true, apply:r=>replaceArr(LABOR_TEAMS,(r||[]).map(x=>[x.team,x.count])) },
+    agents:         { name:"cpm_agents", q:"select=icon,name,job,live,last&order=sort", rt:true, apply:r=>replaceArr(AGENTS,r) },
+    alerts:         { name:"cpm_alerts", q:"select=level,title,detail,agent&order=sort", rt:true, apply:r=>{ const al=r||[]; ALERTS.crit.length=0; ALERTS.warn.length=0; ALERTS.low.length=0; al.forEach(a=>{ if(ALERTS[a.level]) ALERTS[a.level].push([a.title,a.detail,a.agent]); }); } },
+    cameras:        { name:"cpm_cameras", q:"select=zone,people,time,bbox,off&order=sort", rt:false, apply:r=>replaceArr(CAMERAS,r) },
+    zones:          { name:"cpm_zones", q:"select=id,name,count,x,y,w,h&order=sort", rt:false, apply:r=>replaceArr(ZONES,r) },
+    timeline:       { name:"cpm_timeline", q:"select=date,tag,labor,mat,work,issues&order=sort", rt:false, apply:r=>replaceArr(TIMELINE,r) },
+    checklist:      { name:"cpm_checklist", q:"select=grp,items&order=sort", rt:false, apply:r=>replaceArr(CHECKLIST,(r||[]).map(x=>({ group:x.grp, items:x.items }))) },
+    qr:             { name:"cpm_qr", q:"select=id,name,type,pending,last&order=sort", rt:false, apply:r=>replaceArr(QRLOCS,r) },
+    proof:          { name:"cpm_proof", q:"select=stage,state,note,tone,clean&order=sort", rt:false, apply:r=>replaceArr(PROOF,r) },
+    defects:        { name:"cpm_defects", q:"select=t,d,conf,box&order=sort", rt:false, apply:r=>replaceArr(DEFECTS,r) },
+    pour:           { name:"cpm_pour", q:"select=*&limit=1", rt:false, apply:r=>{ if(r&&r[0]){ const p=r[0]; Object.assign(POUR,{ id:p.pour_id, grade:p.grade, rmc:p.rmc, trucks:p.trucks, batch:p.batch, arrival:p.arrival, start:p.start_t, end:p.end_t, slump:p.slump, cubes:p.cubes, vol:p.vol, weather:p.weather, labor:p.labor, curing:p.curing, approval:p.approval, reminders:p.reminders }); } } },
+    mat_flow:       { name:"cpm_mat_flow", q:"select=step&order=sort", rt:false, apply:r=>replaceArr(MAT_FLOW,(r||[]).map(x=>x.step)) },
+    draw_mismatch:  { name:"cpm_draw_mismatch", q:"select=t,d,sev&order=sort", rt:false, apply:r=>replaceArr(DRAW_MISMATCH,r) },
+    draw_sets:      { name:"cpm_draw_sets", q:"select=name,rng,status&order=sort", rt:false, apply:r=>replaceArr(DRAW_SETS,(r||[]).map(x=>[x.name,x.rng,x.status])) },
+    walk_scenes:    { name:"cpm_walk_scenes", q:"select=name,floor,note,draw,flag,mx,my,stage&order=sort", rt:false, apply:r=>replaceArr(WALK_SCENES,r) },
+    qc_processes:   { name:"cpm_qc_processes", q:"select=id,sort,name,phase,status,rating,feedback,inspector,checked_at&order=sort", rt:true, apply:r=>replaceArr(QC,r) },
+    qc_stages:      { name:"cpm_qc_stages", q:"select=*&order=sort", rt:true, apply:r=>replaceArr(QSTAGES,r) },
+    qc_items:       { name:"cpm_qc_items", q:"select=*&order=stage_id,sort", rt:true, apply:r=>replaceArr(QITEMS,r) },
+    estimate:       { name:"cpm_estimate", q:"select=stage,family,material,base,unit,wastage,total,source,confidence&order=sort", rt:false, apply:r=>replaceArr(EST,r) }
+  };
+  async function getTable(m){
+    const r = await sb("/" + m.name + "?" + m.q);
+    if(!r.ok) throw new Error(m.name + " HTTP " + r.status);
+    return r.json();
+  }
+  // fetch every table; apply each independently so one failure can't blank the rest (PERF-4)
   async function loadBackend(){
     try{
-      async function get(t, q){
-        const r = await sb("/" + t + "?" + (q || "select=*"));
-        if(!r.ok) throw new Error(t + " HTTP " + r.status);
-        return r.json();
-      }
-      const d = await Promise.all([
-        get("cpm_project","select=*&limit=1"),
-        get("cpm_kpis","select=label,val,foot,bar,tone&order=sort"),
-        get("cpm_attention","select=tone,t,d,actions&order=sort"),
-        get("cpm_feed","select=t,txt&order=sort"),
-        get("cpm_issues","select=id,t,loc,sev,who,status,age,resp,drawing&order=sort"),
-        get("cpm_materials","select=name,unit,stock,days,rate,status,po&order=sort"),
-        get("cpm_material_alerts","select=tone,t,d,meta,act&order=sort"),
-        get("cpm_work_packages","select=name,code,pct,status,lbl&order=sort"),
-        get("cpm_payments","select=contractor,milestone,claim,checks,release,held,amount,note&order=sort"),
-        get("cpm_scorecards","select=name,trade,score,m&order=sort"),
-        get("cpm_labor_teams","select=team,count&order=sort"),
-        get("cpm_agents","select=icon,name,job,live,last&order=sort"),
-        get("cpm_alerts","select=level,title,detail,agent&order=sort"),
-        get("cpm_cameras","select=zone,people,time,bbox,off&order=sort"),
-        get("cpm_zones","select=id,name,count,x,y,w,h&order=sort"),
-        get("cpm_timeline","select=date,tag,labor,mat,work,issues&order=sort"),
-        get("cpm_checklist","select=grp,items&order=sort"),
-        get("cpm_qr","select=id,name,type,pending,last&order=sort"),
-        get("cpm_proof","select=stage,state,note,tone,clean&order=sort"),
-        get("cpm_defects","select=t,d,conf,box&order=sort"),
-        get("cpm_pour","select=*&limit=1"),
-        get("cpm_mat_flow","select=step&order=sort"),
-        get("cpm_draw_mismatch","select=t,d,sev&order=sort"),
-        get("cpm_draw_sets","select=name,rng,status&order=sort"),
-        get("cpm_walk_scenes","select=name,floor,note,draw,flag,mx,my,stage&order=sort"),
-        get("cpm_qc_processes","select=id,sort,name,phase,status,rating,feedback,inspector,checked_at&order=sort"),
-        get("cpm_qc_stages","select=*&order=sort"),
-        get("cpm_qc_items","select=*&order=stage_id,sort"),
-        get("cpm_estimate","select=stage,family,material,base,unit,wastage,total,source,confidence&order=sort")
-      ]);
-      if(d[0] && d[0][0]) Object.assign(PROJECT, { name:d[0][0].name, meta:d[0][0].meta, health:d[0][0].health, healthDelta:d[0][0].health_delta });
-      replaceArr(KPIS, d[1]); replaceArr(ATTENTION, d[2]); replaceArr(FEED, d[3]); replaceArr(ISSUES, d[4]);
-      replaceArr(MATERIALS, d[5]); replaceArr(MAT_ALERTS, d[6]); replaceArr(WORKPKGS, d[7]); replaceArr(PAYMENTS, d[8]);
-      replaceArr(SCORECARDS, d[9]); replaceArr(LABOR_TEAMS, (d[10]||[]).map(r=>[r.team, r.count])); replaceArr(AGENTS, d[11]);
-      const al = d[12] || [];
-      ALERTS.crit.length = 0; ALERTS.warn.length = 0; ALERTS.low.length = 0;
-      al.forEach(a => { if(ALERTS[a.level]) ALERTS[a.level].push([a.title, a.detail, a.agent]); });
-      replaceArr(CAMERAS, d[13]); replaceArr(ZONES, d[14]); replaceArr(TIMELINE, d[15]);
-      replaceArr(CHECKLIST, (d[16]||[]).map(r => ({ group:r.grp, items:r.items })));
-      replaceArr(QRLOCS, d[17]); replaceArr(PROOF, d[18]); replaceArr(DEFECTS, d[19]);
-      if(d[20] && d[20][0]){ const p=d[20][0]; Object.assign(POUR, { id:p.pour_id, grade:p.grade, rmc:p.rmc, trucks:p.trucks, batch:p.batch, arrival:p.arrival, start:p.start_t, end:p.end_t, slump:p.slump, cubes:p.cubes, vol:p.vol, weather:p.weather, labor:p.labor, curing:p.curing, approval:p.approval, reminders:p.reminders }); }
-      replaceArr(MAT_FLOW, (d[21]||[]).map(r => r.step));
-      replaceArr(DRAW_MISMATCH, d[22]); replaceArr(DRAW_SETS, (d[23]||[]).map(r => [r.name, r.rng, r.status]));
-      replaceArr(WALK_SCENES, d[24]);
-      replaceArr(QC, d[25]);
-      replaceArr(QSTAGES, d[26]); replaceArr(QITEMS, d[27]);
-      replaceArr(EST, d[28]);
-      backendLive = true;
-      return true;
-    }catch(e){ return false; }
+      const keys = Object.keys(MANIFEST);
+      const settled = await Promise.allSettled(keys.map(k => getTable(MANIFEST[k])));
+      settled.forEach((res, i) => {
+        const k = keys[i];
+        if(res.status === "fulfilled"){ try{ MANIFEST[k].apply(res.value); }catch(e){ console.error("[cpm] apply " + k + " failed", e); } }
+        else console.error("[cpm] load " + MANIFEST[k].name + " failed:", (res.reason && res.reason.message) || res.reason);
+      });
+      backendLive = settled.some(res => res.status === "fulfilled");
+      return backendLive;
+    }catch(e){ console.error("[cpm] loadBackend failed", e); return false; }
+  }
+  // refetch ONLY the changed table (was: full 29-table reload on every realtime event) — PERF-1 / SCALE-2
+  async function refetchTable(tableName){
+    const k = Object.keys(MANIFEST).filter(key => MANIFEST[key].name === tableName)[0];
+    if(!k) return;
+    try{ MANIFEST[k].apply(await getTable(MANIFEST[k])); }
+    catch(e){ console.error("[cpm] refetch " + tableName + " failed", e); }
   }
 
   // write-back: resolving an issue persists to Postgres
   async function resolveIssue(id){
+    if(!requireAuth()) return;
     const it = ISSUES.filter(x => x.id === id)[0];
+    const prev = it ? it.status : null;
     if(it) it.status = "Closed";
     closeDrawer();
     if(state.view === "issues") render();
     if(backendLive){
-      try{ await sb("/cpm_issues?id=eq." + encodeURIComponent(id), { method:"PATCH", headers:{ "Content-Type":"application/json", "Prefer":"return=minimal" }, body: JSON.stringify({ status:"Closed" }) }); }catch(e){}
+      try{
+        const r = await sb("/cpm_issues?id=eq." + encodeURIComponent(id), { method:"PATCH", headers:{ "Content-Type":"application/json", "Prefer":"return=minimal" }, body: JSON.stringify({ status:"Closed" }) });
+        if(!r.ok) throw new Error("HTTP " + r.status);
+      }catch(e){
+        if(it) it.status = prev;
+        if(state.view === "issues") render();
+        notify("Couldn't save — issue not resolved (" + e.message + ")", "crit");
+        console.error("[cpm] resolveIssue failed", id, e);
+      }
     }
   }
 
@@ -2668,37 +2717,56 @@ em{font-style:italic}
     const q = QC.filter(x=>x.id===+id)[0]; if(!q) return;
     const opts = ["Pass","Rework","Pending"];
     openDrawer(
-      '<div class="drawer__head"><div><div class="drawer__eyebrow">Quality check · '+q.phase+'</div><div class="drawer__title">'+q.name+'</div></div><button class="drawer__close" data-act="close">×</button></div>'+
+      '<div class="drawer__head"><div><div class="drawer__eyebrow">Quality check · '+esc(q.phase)+'</div><div class="drawer__title">'+esc(q.name)+'</div></div><button class="drawer__close" data-act="close">×</button></div>'+
       '<div class="drawer__body" data-qc-id="'+q.id+'">'+
         '<div class="kv"><div class="kv__row"><span class="kv__k">Current</span><span class="kv__v"><span class="pill '+toneClass(QC_STATUS_TONE[q.status])+'"><span class="dot"></span>'+q.status+'</span></span></div>'+
-          '<div class="kv__row"><span class="kv__k">Last reviewed</span><span class="kv__v">'+(q.checked_at?(q.checked_at+(q.inspector?" · "+q.inspector:"")):"—")+'</span></div></div>'+
+          '<div class="kv__row"><span class="kv__k">Last reviewed</span><span class="kv__v">'+(q.checked_at?(esc(q.checked_at)+(q.inspector?" · "+esc(q.inspector):"")):"—")+'</span></div></div>'+
         '<div class="subhead">Verdict</div>'+
         '<div class="qc-opts">'+opts.map(o=>'<button class="qc-opt '+(q.status===o?"is-sel":"")+'" data-qc-status="'+o+'">'+o+'</button>').join("")+'</div>'+
         '<div class="subhead">Rating</div>'+
         qcStars(q.rating||0, "qc-stars--input")+
         '<div class="subhead">Feedback</div>'+
-        '<textarea id="qcFeedback" class="qc-textarea" placeholder="What was checked, what passed, what needs rework…">'+(q.feedback||"")+'</textarea>'+
+        '<textarea id="qcFeedback" class="qc-textarea" placeholder="What was checked, what passed, what needs rework…">'+esc(q.feedback||"")+'</textarea>'+
       '</div>'+
       '<div class="drawer__foot"><button class="ghostbtn" data-act="close">Cancel</button><button class="solidbtn" data-act="qc-submit" data-id="'+q.id+'">Submit quality check</button></div>'
     );
   }
   // write-back: submitting a quality check persists to Postgres + pushes via realtime
   async function submitQC(id){
+    if(!requireAuth()) return;
     const q = QC.filter(x=>x.id===+id)[0]; if(!q) return;
     const selOpt = $("#drawer .qc-opt.is-sel");
     const status = selOpt ? selOpt.dataset.qcStatus : q.status;
     const rating = $$("#drawer .qc-stars--input span.on").length || null;
     const ta = $("#qcFeedback"); const feedback = ta ? ta.value.trim() : q.feedback;
+    const prev = { status:q.status, rating:q.rating, feedback:q.feedback, inspector:q.inspector, checked_at:q.checked_at };
     Object.assign(q, { status:status, rating:rating, feedback:feedback, inspector:"Eng. Ramesh", checked_at:"13 Jun" });
     closeDrawer();
     render();
     if(backendLive){
-      try{ await sb("/cpm_qc_processes?id=eq."+encodeURIComponent(id), { method:"PATCH", headers:{ "Content-Type":"application/json", "Prefer":"return=minimal" }, body: JSON.stringify({ status:status, rating:rating, feedback:feedback, inspector:"Eng. Ramesh", checked_at:"13 Jun" }) }); }catch(e){}
+      try{
+        const r = await sb("/cpm_qc_processes?id=eq."+encodeURIComponent(id), { method:"PATCH", headers:{ "Content-Type":"application/json", "Prefer":"return=minimal" }, body: JSON.stringify({ status:status, rating:rating, feedback:feedback, inspector:"Eng. Ramesh", checked_at:"13 Jun" }) });
+        if(!r.ok) throw new Error("HTTP " + r.status);
+      }catch(e){
+        Object.assign(q, prev); render();
+        notify("Couldn't save the quality check (" + e.message + ")", "crit");
+        console.error("[cpm] submitQC failed", id, e);
+      }
     }
   }
   // stage-gate write-backs (persist to Postgres)
-  function qcPatch(table, id, patch){ if(backendLive){ try{ sb("/"+table+"?id=eq."+id, { method:"PATCH", headers:{ "Content-Type":"application/json", "Prefer":"return=minimal" }, body: JSON.stringify(patch) }); }catch(e){} } }
+  async function qcPatch(table, id, patch){
+    if(!backendLive) return;
+    try{
+      const r = await sb("/"+table+"?id=eq."+id, { method:"PATCH", headers:{ "Content-Type":"application/json", "Prefer":"return=minimal" }, body: JSON.stringify(patch) });
+      if(!r.ok) throw new Error("HTTP " + r.status);
+    }catch(e){
+      notify("Couldn't save change to " + table.replace("cpm_","") + " (" + e.message + ")", "warn");
+      console.error("[cpm] qcPatch failed", table, id, e);
+    }
+  }
   function setQcItem(itemId, status){
+    if(!requireAuth()) return;
     const x=QITEMS.filter(i=>i.id===+itemId)[0]; if(!x) return;
     x.status=status;
     const st=QSTAGES.filter(s=>s.id===x.stage_id)[0]; if(st) st.score=qcScore(st.id);
@@ -2712,6 +2780,7 @@ em{font-style:italic}
     qcPatch("cpm_qc_items", x.id, { value:value });
   }
   function setQcStage(stageId, status){
+    if(!requireAuth()) return;
     const s=QSTAGES.filter(x=>x.id===+stageId)[0]; if(!s) return;
     s.status=status; s.score=qcScore(s.id)||s.score;
     const approved=QC_APPROVED.indexOf(status)!==-1;
@@ -2726,28 +2795,88 @@ em{font-style:italic}
     const f = $("#footStamp"); if(!f) return;
     f.textContent = kind === "update" ? "● Live · Supabase · updated just now" : "● Live · Supabase · realtime on";
   }
-  function onRealtime(){
+  let rtPending = {};
+  function onRealtime(payload){
+    const t = payload && payload.table; if(!t) return;
+    rtPending[t] = true;                          // coalesce the tables touched within the debounce window
     if(rtTimer) clearTimeout(rtTimer);
     rtTimer = setTimeout(function(){
-      loadBackend().then(function(ok){ if(ok){ if(state.view !== "walk") render(); setFoot("update"); } });
+      const tables = Object.keys(rtPending); rtPending = {};
+      Promise.all(tables.map(refetchTable)).then(function(){ if(state.view !== "walk") render(); setFoot("update"); });
     }, 350);
   }
-  function startRealtime(){
-    if(!backendLive || window.__cpmRT) return;
-    window.__cpmRT = true;
-    const s = document.createElement("script");
-    s.src = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2";
-    s.onload = function(){
+  /* ---- Auth (Supabase) — reads stay open, writes require a signed-in inspector (SEC-1/SEC-5) ---- */
+  function applySession(session){
+    authToken = session ? session.access_token : null;
+    authUser  = session ? (session.user || null) : null;
+    updateAuthChip();
+  }
+  function updateAuthChip(){
+    const a = $(".avatar"); if(!a) return;
+    if(authUser){ a.classList.add("is-authed"); a.title = "Signed in: " + authUser.email + " — click to sign out"; }
+    else { a.classList.remove("is-authed"); a.title = "Sign in to approve & save"; }
+  }
+  // load supabase-js once; one client serves both auth (session) and realtime
+  function loadSupabase(cb){
+    if(sbClient) return cb(sbClient);
+    if(window.__sbLoad){ window.__sbLoad.push(cb); return; }
+    window.__sbLoad = [cb];
+    const el = document.createElement("script");
+    el.src = "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2";
+    el.onload = function(){
       try{
-        rtClient = window.supabase.createClient(BACKEND.base, BACKEND.anonKey);
-        const ch = rtClient.channel("cpm-live");
-        ["cpm_project","cpm_kpis","cpm_attention","cpm_feed","cpm_issues","cpm_materials","cpm_material_alerts","cpm_work_packages","cpm_payments","cpm_scorecards","cpm_labor_teams","cpm_agents","cpm_alerts","cpm_qc_processes","cpm_qc_stages","cpm_qc_items"].forEach(function(t){
-          ch.on("postgres_changes", { event:"*", schema:"public", table:t }, onRealtime);
+        sbClient = window.supabase.createClient(BACKEND.base, BACKEND.anonKey, { auth:{ persistSession:true, autoRefreshToken:true, storageKey:"sthyra-auth" } });
+        sbClient.auth.getSession().then(function(r){ applySession(r.data ? r.data.session : null); });
+        sbClient.auth.onAuthStateChange(function(_e, session){ applySession(session); });
+      }catch(e){ console.error("[cpm] supabase init failed", e); }
+      const q = window.__sbLoad || []; window.__sbLoad = null;
+      q.forEach(function(fn){ try{ fn(sbClient); }catch(_){} });
+    };
+    document.head.appendChild(el);
+  }
+  function signIn(email, pw){
+    loadSupabase(function(c){
+      if(!c){ notify("Auth unavailable", "crit"); return; }
+      c.auth.signInWithPassword({ email:email, password:pw }).then(function(r){
+        if(r.error){ notify("Sign-in failed: " + r.error.message, "crit"); return; }
+        applySession(r.data.session); closeDrawer(); notify("Signed in as " + r.data.user.email, "ok"); render();
+      });
+    });
+  }
+  function signOut(){
+    loadSupabase(function(c){ if(c) c.auth.signOut().then(function(){ applySession(null); notify("Signed out", "warn"); render(); }); });
+  }
+  function requireAuth(){
+    if(authToken) return true;
+    notify("Sign in to save changes", "warn");
+    authDrawer();
+    return false;
+  }
+  function authDrawer(){
+    openDrawer(
+      '<div class="drawer__head"><div><div class="drawer__eyebrow">Sthyra · Inspector access</div><div class="drawer__title">Sign in to save</div></div><button class="drawer__close" data-act="close">×</button></div>'+
+      '<div class="drawer__body">'+
+        '<p class="muted" style="font-size:13px;line-height:1.6;margin:0 0 16px">Reading the dashboard is open. Saving — approvals, issue resolution, quality verdicts — requires a signed-in inspector so every change is attributable.</p>'+
+        '<div class="subhead">Email</div><input id="authEmail" class="auth-input" type="email" value="inspector@sthyra.demo" autocomplete="username">'+
+        '<div class="subhead">Password</div><input id="authPw" class="auth-input" type="password" value="Sthyra@2026" autocomplete="current-password">'+
+      '</div>'+
+      '<div class="drawer__foot"><button class="ghostbtn" data-act="close">Cancel</button><button class="solidbtn" data-act="signin">Sign in</button></div>'
+    );
+  }
+  function startRealtime(){
+    if(window.__cpmRT) return;
+    window.__cpmRT = true;
+    loadSupabase(function(client){
+      if(!client) return;
+      try{
+        rtClient = client;
+        const ch = client.channel("cpm-live");
+        Object.keys(MANIFEST).filter(function(k){ return MANIFEST[k].rt; }).forEach(function(k){
+          ch.on("postgres_changes", { event:"*", schema:"public", table:MANIFEST[k].name }, onRealtime);
         });
         ch.subscribe(function(status){ if(status === "SUBSCRIBED"){ realtimeOn = true; setFoot("on"); } });
-      }catch(e){}
-    };
-    document.head.appendChild(s);
+      }catch(e){ console.error("[cpm] realtime init failed", e); }
+    });
   }
 
   /* ---------------------------------------------------------- RENDER */
@@ -2850,8 +2979,10 @@ em{font-style:italic}
     $("#view").addEventListener("change", e=>{ const m=e.target.closest("[data-qc-meas]"); if(m){ setQcItemValue(m.dataset.qcMeas, m.value); } });
 
     $("#scrim").addEventListener("click", closeDrawer);
+    const av = $(".avatar"); if(av){ av.style.cursor = "pointer"; av.addEventListener("click", function(){ authUser ? signOut() : authDrawer(); }); }
     $("#drawer").addEventListener("click", e=>{
       if(e.target.closest("[data-act='close']")){ closeDrawer(); return; }
+      if(e.target.closest("[data-act='signin']")){ signIn(($("#authEmail")||{}).value, ($("#authPw")||{}).value); return; }
       const rb=e.target.closest("[data-act='resolve']"); if(rb){ resolveIssue(rb.dataset.id); return; }
       const qs=e.target.closest("[data-qc-status]"); if(qs){ $$("#drawer .qc-opt").forEach(x=>x.classList.toggle("is-sel", x===qs)); return; }
       const str=e.target.closest("[data-qc-star]"); if(str){ const nn=+str.dataset.qcStar; $$("#drawer .qc-stars--input span").forEach((x,i)=>x.classList.toggle("on", i<nn)); return; }

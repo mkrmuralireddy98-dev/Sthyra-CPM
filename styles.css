@@ -858,3 +858,18 @@ em{font-style:italic}
   .page-title{font-size:27px}
   .wp-row__name{flex-basis:140px}
 }
+
+
+/* ---- transient persistence-failure notice (additive; only shown on save error) ---- */
+.cpm-toasts{position:fixed;right:18px;bottom:18px;z-index:9999;display:flex;flex-direction:column;gap:8px;max-width:340px}
+.cpm-toast{font-family:var(--f-ui,inherit);font-size:13px;line-height:1.4;color:#fff;background:var(--char,#1A1A1A);border-left:3px solid var(--warn,#9A7B2E);border-radius:4px;padding:10px 13px;box-shadow:0 6px 24px rgba(0,0,0,.22);transition:opacity .3s,transform .3s}
+.cpm-toast--crit{border-left-color:var(--crit,#8A2A33)}
+.cpm-toast--warn{border-left-color:var(--warn,#9A7B2E)}
+.cpm-toast.is-out{opacity:0;transform:translateY(8px)}
+
+
+/* ---- auth (sign-in drawer + signed-in avatar ring) ---- */
+.auth-input{width:100%;box-sizing:border-box;font-family:var(--f-ui);font-size:14px;padding:10px 12px;border:1px solid var(--hair-2);border-radius:4px;background:var(--paper-2);color:var(--ink);margin-bottom:4px}
+.auth-input:focus{outline:none;border-color:var(--accent)}
+.avatar.is-authed{box-shadow:0 0 0 2px var(--ok),0 0 0 4px var(--paper)}
+.cpm-toast--ok{border-left-color:var(--ok,#5a7a5a)}

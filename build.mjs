@@ -6,7 +6,10 @@
    String.replace, whose $$/$& patterns would corrupt the JS). */
 import { readFileSync, writeFileSync, statSync } from "node:fs";
 
+// Escape the only byte sequence that can prematurely close an inline <script> (MAINT-5).
+const safe = s => s.split("</script").join("<" + String.fromCharCode(92) + "/script");
 const css = readFileSync("styles.css", "utf8");
+const cfg = readFileSync("config.js", "utf8");   // single source of backend identity (ARCH-3)
 const js  = readFileSync("app.js", "utf8");
 
 const html = `<!DOCTYPE html>
@@ -104,7 +107,10 @@ ${css}
   <aside class="drawer" id="drawer" hidden aria-modal="true" role="dialog"></aside>
 
   <script>
-${js}
+${cfg}
+  </script>
+  <script>
+${safe(js)}
   </script>
 </body>
 </html>

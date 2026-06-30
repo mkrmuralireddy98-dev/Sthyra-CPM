@@ -21,6 +21,7 @@ const URL = process.env.SUPABASE_URL || 'https://rajvfosoxgkyanwmdphq.supabase.c
 const ANON = process.env.SUPABASE_KEY || 'sb_publishable_u3pa8Z9iEZE8A7GSZnGXOQ_dAsjUbOp';
 const SERVICE = process.env.SERVICE_ROLE || null;          // optional — enables writes
 const captureId = process.argv[2] || 'CAP-0613-01';
+const cid = encodeURIComponent(captureId);   // SEC-5: prevent PostgREST query injection via the CLI arg
 
 const READ = { apikey: ANON, Authorization: `Bearer ${ANON}` };
 const WRITE = SERVICE ? { apikey: SERVICE, Authorization: `Bearer ${SERVICE}`, 'Content-Type': 'application/json' } : null;
@@ -45,13 +46,13 @@ async function run() {
   if (!WRITE) log(`  ⚠  AI model is a deterministic STUB (detect.mjs). See its header to wire a real\n     YOLOv8+SAM2 / VLM endpoint. Results below are reproducible, not from real CV.`);
 
   // ---- 0. select capture ----
-  const cap = (await get('cpm_captures', `id=eq.${captureId}&select=*`))[0];
+  const cap = (await get('cpm_captures', `id=eq.${cid}&select=*`))[0];
   if (!cap) return log(`  ✗ capture ${captureId} not found`);
   log(`\n  Project ${cap.project} · ${cap.tower} · ${cap.floor} · ${cap.device}`);
 
   // ---- 1. frames (extracted @ 1.5s; here we read the mapped analysis frames) ----
   stage(1, 'Extract + map frames', `${cap.frame_count} @1.5s · reading mapped analysis frames`);
-  const frames = await get('cpm_frames', `capture_id=eq.${captureId}&select=*&order=idx`);
+  const frames = await get('cpm_frames', `capture_id=eq.${cid}&select=*&order=idx`);
   log(`        ${frames.length} frames mapped across zones: ${[...new Set(frames.map(f => f.zone))].join(', ')}`);
 
   // ---- 2. align BIM (planned elements for this floor) ----
@@ -97,7 +98,7 @@ async function run() {
       severity: d.severity, confidence: d.confidence, note: d.note,
       status: toFile.includes(d) ? 'issue_created' : (d.severity === 'low' ? 'verified' : 'open'), sort: i + 1,
     })));
-    await patch('cpm_captures', `id=eq.${captureId}`, { status: 'analyzed', processing_step: 6 });
+    await patch('cpm_captures', `id=eq.${cid}`, { status: 'analyzed', processing_step: 6 });
     log(`        ✓ wrote ${matched.length} detections + ${discs.length} discrepancies`);
   }
 

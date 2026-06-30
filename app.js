@@ -1635,12 +1635,8 @@
   }
 
   /* ---------------------------------------------------------- BACKEND (Supabase) */
-  const BACKEND = {
-    base: "https://rajvfosoxgkyanwmdphq.supabase.co",
-    url: "https://rajvfosoxgkyanwmdphq.supabase.co/rest/v1",
-    key: "sb_publishable_u3pa8Z9iEZE8A7GSZnGXOQ_dAsjUbOp",
-    anonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJhanZmb3NveGdreWFud21kcGhxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAxMDg3MDgsImV4cCI6MjA5NTY4NDcwOH0.MejkaPs8AFleMTTGDqk_v1TJcb_3y9-E1ptj_adIgOI"
-  };
+  // Backend identity is single-sourced in config.js (inlined first by build.mjs). See ARCH-3.
+  const BACKEND = window.__SthyraConfig || {};
   let backendLive = false;
   function sb(path, opts){
     opts = opts || {};

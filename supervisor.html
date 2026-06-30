@@ -693,6 +693,9 @@ body{
 }
 @media (min-width:1080px){ .stage__aside{display:block} }
 
+/* signed-in avatar ring */
+.avatar.is-authed{box-shadow:0 0 0 2px var(--ok),0 0 0 4px var(--paper)}
+
   </style>
 </head>
 <body>
@@ -1199,18 +1202,28 @@ var I={
 /* ------------------------------------------------------------ BACKEND (Supabase, sth_* tables) */
 var BACKEND = window.__SthyraConfig || {};   // single-sourced in config.js (ARCH-3)
 var backendLive=false;
-function sb(path,opts){opts=opts||{};opts.headers=Object.assign({apikey:BACKEND.key,Authorization:"Bearer "+BACKEND.key},opts.headers||{});return fetch(BACKEND.url+path,opts);}
+function sb(path,opts){opts=opts||{};var bearer=authToken||BACKEND.key;opts.headers=Object.assign({apikey:BACKEND.key,Authorization:"Bearer "+bearer},opts.headers||{});return fetch(BACKEND.url+path,opts);}
 function sbGet(path){return sb(path,{}).then(function(r){backendLive=r.ok;return r.ok?r.json():[];}).catch(function(){return [];});}
 function sbInsert(table,row){return sb("/"+table,{method:"POST",headers:{"Content-Type":"application/json",Prefer:"return=representation"},body:JSON.stringify(row)}).then(function(r){return r.json();}).then(function(a){return Array.isArray(a)?a[0]:a;});}
 function sbInsertMany(table,rows){return sb("/"+table,{method:"POST",headers:{"Content-Type":"application/json",Prefer:"return=minimal"},body:JSON.stringify(rows)});}
 function sbPatch(table,id,patch){return sb("/"+table+"?id=eq."+encodeURIComponent(id),{method:"PATCH",headers:{"Content-Type":"application/json",Prefer:"return=representation"},body:JSON.stringify(patch)}).then(function(r){return r.json();}).then(function(a){return a&&a[0];});}
 function sbDelete(table,id){return sb("/"+table+"?id=eq."+encodeURIComponent(id),{method:"DELETE",headers:{Prefer:"return=minimal"}});}
 function uploadMedia(file,key){
-  return fetch(BACKEND.base+"/storage/v1/object/sth-media/"+key,{method:"POST",headers:{apikey:BACKEND.key,Authorization:"Bearer "+BACKEND.key,"x-upsert":"true","Content-Type":file.type||"application/octet-stream"},body:file})
+  var bearer=authToken||BACKEND.key;   // signed-in inspector's JWT; no x-upsert so an upload can't overwrite existing media (SEC-2)
+  return fetch(BACKEND.base+"/storage/v1/object/sth-media/"+key,{method:"POST",headers:{apikey:BACKEND.key,Authorization:"Bearer "+bearer,"Content-Type":file.type||"application/octet-stream"},body:file})
     .then(function(r){ if(!r.ok) throw new Error("upload "+r.status); return BACKEND.base+"/storage/v1/object/public/sth-media/"+key; });
 }
+/* ---- Auth (Supabase) — reads + shared links stay open, writes require a signed-in inspector (SEC-1) ---- */
+var authToken=null, authUser=null, sbClient=null;
+function applySession(ss){ authToken=ss?ss.access_token:null; authUser=ss?(ss.user||null):null; updateAuthChip(); }
+function updateAuthChip(){ var a=$(".avatar"); if(!a) return; if(authUser){ a.classList.add("is-authed"); a.title="Signed in: "+authUser.email+" — tap to sign out"; } else { a.classList.remove("is-authed"); a.title="Sign in to save"; } }
+function loadSupabase(cb){ if(sbClient) return cb(sbClient); if(window.__sbLoad){ window.__sbLoad.push(cb); return; } window.__sbLoad=[cb]; var el=document.createElement("script"); el.src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"; el.onload=function(){ try{ sbClient=window.supabase.createClient(BACKEND.base,BACKEND.anonKey,{auth:{persistSession:true,autoRefreshToken:true,storageKey:"sthyra-auth"}}); sbClient.auth.getSession().then(function(r){ applySession(r.data?r.data.session:null); }); sbClient.auth.onAuthStateChange(function(_e,ss){ applySession(ss); }); }catch(e){ try{console.error("[sth] supabase init",e);}catch(_){} } var q=window.__sbLoad||[]; window.__sbLoad=null; q.forEach(function(fn){ try{ fn(sbClient); }catch(_){} }); }; document.head.appendChild(el); }
+function signIn(email,pw){ loadSupabase(function(c){ if(!c){ toast("Auth unavailable","warn"); return; } c.auth.signInWithPassword({email:email,password:pw}).then(function(r){ if(r.error){ toast("Sign-in failed: "+r.error.message,"warn"); return; } applySession(r.data.session); closeSheet(); toast("Signed in as "+r.data.user.email); render(); }); }); }
+function signOut(){ loadSupabase(function(c){ if(c) c.auth.signOut().then(function(){ applySession(null); toast("Signed out"); render(); }); }); }
+function requireAuth(){ if(authToken) return true; toast("Sign in to save changes","warn"); authSheet(); return false; }
+function authSheet(){ sheet("Sthyra · Inspector access","Sign in to save", '<div class="muted" style="font-size:12.5px;margin-bottom:10px">Reading and shared links stay open. Saving — captures, notes, calibration — needs a signed-in inspector so every change is attributable.</div><label class="eyebrow">Email</label><input id="auEmail" type="email" value="inspector@sthyra.demo" style="width:100%;padding:11px;border-radius:8px;border:1px solid var(--hair-2);background:var(--paper-2);font-size:13px;margin:6px 0 12px"/><label class="eyebrow">Password</label><input id="auPw" type="password" value="Sthyra@2026" style="width:100%;padding:11px;border-radius:8px;border:1px solid var(--hair-2);background:var(--paper-2);font-size:13px;margin-top:6px"/>', '<button class="btn btn--solid" data-act="do-signin">Sign in</button>'); }
 function uid(){return Math.floor(Date.now()).toString(36)+"-"+Math.floor(Math.random()*1e9).toString(36);}
-function token(){var a="abcdefghijkmnpqrstuvwxyz23456789",s="";for(var i=0;i<10;i++)s+=a[Math.floor(Math.random()*a.length)];return s;}
+function token(){var a="abcdefghijkmnpqrstuvwxyz23456789ABCDEFGHJKLMNPQRSTUVWXYZ",n=22,b=new Uint8Array(n),s="";(window.crypto||window.msCrypto).getRandomValues(b);for(var i=0;i<n;i++)s+=a[b[i]%a.length];return s;}
 
 /* ------------------------------------------------------------ STATE */
 var state={
@@ -1663,6 +1676,8 @@ function onClick(e){
   var a=act.dataset.act, id=act.dataset.id;
   switch(a){
     case "close-sheet": closeSheet(); break;
+    case "do-signin": signIn(($("#auEmail")||{}).value,($("#auPw")||{}).value); break;
+    case "copy-share": try{navigator.clipboard.writeText(act.dataset.link||"");}catch(_){} toast("Link copied"); break;
     case "goto-projects": nav("projects",null); break;
     case "goto-plan": nav("plan",null); break;
 
@@ -1731,11 +1746,12 @@ function onPlanTap(el,e){
   else if(state.planMode==="control"){ savePlanPoint(pl,"control",c); }
 }
 function saveStartPoint(pl,c){
+  if(!requireAuth())return;
   var existing=(planPointsCache[pl.id]||[]).filter(function(x){return x.kind==="start";})[0];
   var p=existing?sbPatch("sth_plan_points",existing.id,{px:c.x,py:c.y}):sbInsert("sth_plan_points",{plan_id:pl.id,kind:"start",px:c.x,py:c.y,label:"Start"});
   p.then(function(){return ensurePlanPointsFresh(pl.id);}).then(function(){state.planMode=null;toast("Start point saved");render();});
 }
-function savePlanPoint(pl,kind,c){sbInsert("sth_plan_points",{plan_id:pl.id,kind:kind,px:c.x,py:c.y}).then(function(){return ensurePlanPointsFresh(pl.id);}).then(function(){toast("Control point added");render();});}
+function savePlanPoint(pl,kind,c){if(!requireAuth())return;sbInsert("sth_plan_points",{plan_id:pl.id,kind:kind,px:c.x,py:c.y}).then(function(){return ensurePlanPointsFresh(pl.id);}).then(function(){toast("Control point added");render();});}
 function ensurePlanPointsFresh(planId){return sbGet("/sth_plan_points?select=*&plan_id=eq."+encodeURIComponent(planId)).then(function(r){planPointsCache[planId]=r||[];return r;});}
 
 /* ---- calibration ---- */
@@ -1747,6 +1763,7 @@ function sheetCalDistance(){
     '<button class="btn btn--solid" data-act="cal-save-x" onclick="window.__calSave()">Save calibration</button>');
 }
 window.__calSave=function(){
+  if(!requireAuth())return;
   var v=parseFloat($("#calVal").value), u=parseFloat($("#calUnit").value)||1;
   if(!(v>0)){toast("Enter a distance","warn");return;}
   var pl=planOf(state.fid), c=state.cal;
@@ -1761,6 +1778,7 @@ window.__calSave=function(){
 
 /* ---- plan upload ---- */
 function doUploadPlan(){
+  if(!requireAuth())return;
   pickFile("image/*,.png,.jpg,.jpeg,.svg",function(f){
     toast("Uploading plan…");
     var img=new Image(); var url=URL.createObjectURL(f);
@@ -1798,6 +1816,7 @@ function onCapTap(el,e){
   else if(d.step===2){ d.route.push(c); render(); }
 }
 function doSaveCapture(){
+  if(!requireAuth())return;
   var d=state.draft, fl=curFloor(), pl=planOf(fl.id);
   var label=($("#capLabel")&&$("#capLabel").value)||d.label||"Walk";
   var date=($("#capDate")&&$("#capDate").value)||new Date().toISOString().slice(0,10);
@@ -1837,6 +1856,7 @@ function sheetNewProject(){
     '<button class="btn btn--solid" onclick="window.__newProject()">Create</button>');
 }
 window.__newProject=function(){
+  if(!requireAuth())return;
   var name=($("#npName").value||"").trim(); if(!name){toast("Enter a name","warn");return;}
   sbInsert("sth_projects",{name:name,location:($("#npLoc").value||"").trim()}).then(function(p){
     return sbInsert("sth_floors",{project_id:p.id,name:"Floor 1",level:1}).then(function(){return p;});
@@ -1849,6 +1869,7 @@ function sheetNewFloor(pid){
     '<button class="btn btn--solid" onclick="window.__newFloor(\''+pid+'\')">Add floor</button>');
 }
 window.__newFloor=function(pid){
+  if(!requireAuth())return;
   var name=($("#nfName").value||"").trim(); if(!name){toast("Enter a name","warn");return;}
   sbInsert("sth_floors",{project_id:pid,name:name,level:parseInt($("#nfLevel").value,10)||1}).then(function(f){state.fid=f.id;closeSheet();return loadAll();}).then(function(){toast("Floor added");render();});
 };
@@ -1868,6 +1889,7 @@ function sheetNote(opts){
     '<button class="btn btn--solid" onclick="window.__saveNote()">Save note</button>');
 }
 window.__saveNote=function(){
+  if(!requireAuth())return;
   var title=($("#ntTitle").value||"").trim(); if(!title){toast("Enter a title","warn");return;}
   var d=state._noteDraft||{};
   var fl=curFloor();
@@ -1881,7 +1903,7 @@ function sheetNoteView(idn){
     '<div class="muted mono" style="font-size:11px;line-height:1.7">'+(n.assignee?("Assignee: "+esc(n.assignee)+"<br>"):"")+(n.px!=null?("Pinned on plan<br>"):"")+"Created "+fmtDate(n.created_at)+'</div>',
     '<div class="btn-row"><button class="btn btn--ghost" data-act="note-edit" data-id="'+n.id+'">Edit</button>'+(n.status!=="closed"?'<button class="btn btn--solid" data-act="note-close" data-id="'+n.id+'">'+I.check+' Close</button>':'')+'</div>'+'<button class="btn btn--ghost mt-8" data-act="note-del" data-id="'+n.id+'" style="color:var(--accent);border-color:var(--accent-line)">'+I.x+' Delete note</button>');
 }
-function doCloseNote(idn){sbPatch("sth_notes",idn,{status:"closed"}).then(function(){closeSheet();return loadAll();}).then(function(){toast("Note closed");render();});}
+function doCloseNote(idn){if(!requireAuth())return;sbPatch("sth_notes",idn,{status:"closed"}).then(function(){closeSheet();return loadAll();}).then(function(){toast("Note closed");render();});}
 function sheetNoteEdit(idn){
   var n=state.notes.filter(function(x){return x.id===idn;})[0]; if(!n) return;
   var types=["issue","observation","rfi","safety","punch","general"];
@@ -1894,6 +1916,7 @@ function sheetNoteEdit(idn){
     '<button class="btn btn--solid" onclick="window.__updateNote(\''+n.id+'\')">Save changes</button>');
 }
 window.__updateNote=function(idn){
+  if(!requireAuth())return;
   var title=($("#ntTitle").value||"").trim(); if(!title){toast("Enter a title","warn");return;}
   sbPatch("sth_notes",idn,{title:title,type:$("#ntType").value,status:$("#ntStatus").value,assignee:($("#ntAssignee").value||"").trim(),body:($("#ntBody").value||"").trim()})
   .then(function(){closeSheet();return loadAll();}).then(function(){toast("Note updated");render();});
@@ -1905,11 +1928,13 @@ function sheetNoteDelete(idn){
     '<div class="btn-row"><button class="btn btn--ghost" data-act="note-open" data-id="'+n.id+'">Cancel</button><button class="btn btn--solid" style="background:var(--accent);border-color:var(--accent)" onclick="window.__deleteNote(\''+n.id+'\')">'+I.x+' Delete</button></div>');
 }
 window.__deleteNote=function(idn){
+  if(!requireAuth())return;
   sbDelete("sth_notes",idn).then(function(){closeSheet();return loadAll();}).then(function(){toast("Note deleted");render();});
 };
 
 /* ---- share ---- */
 function doShare(){
+  if(!requireAuth())return;
   var cap=curCapture(); if(!cap) return;
   toast("Creating share link…");
   var tk=token(); var exp=new Date(Date.now()+7*24*3600*1000).toISOString();
@@ -1918,7 +1943,7 @@ function doShare(){
     sheet("Share · read-only","Restricted link",
       '<div class="muted" style="font-size:12.5px;margin-bottom:10px">Anyone with this link can view <b>'+esc(cap.label)+'</b> (360 + route) read-only. Expires in 7 days.</div>'+
       '<input value="'+esc(link)+'" readonly onclick="this.select()" style="width:100%;padding:11px;border-radius:8px;border:1px solid var(--hair-2);background:var(--paper-2);font-size:11.5px;font-family:var(--f-mono)"/>',
-      '<button class="btn btn--solid" onclick="(function(){try{navigator.clipboard.writeText(\''+link+'\');}catch(_){}})();window.__toastCopied()">'+I.share+' Copy link</button>');
+      '<button class="btn btn--solid" data-act="copy-share" data-link="'+esc(link)+'">'+I.share+' Copy link</button>');
   }).catch(function(){toast("Could not create link","warn");});
 }
 window.__toastCopied=function(){toast("Link copied");};
@@ -1964,6 +1989,8 @@ function boot(){
   var phone=document.getElementById("phone");
   phone.addEventListener("click",onClick);
   phone.addEventListener("change",onChange);
+  var av=$(".avatar"); if(av){ av.style.cursor="pointer"; av.addEventListener("click",function(){ authUser?signOut():authSheet(); }); }
+  loadSupabase(function(){});
   $("#scrim").addEventListener("click",closeSheet);
   var bell=$("#bell"); if(bell) bell.addEventListener("click",function(){toast("Sthyra reality capture");});
   try{console.log("%cSthyra Reality Capture — MVP","color:#7a2230;font-weight:700");}catch(_){}
